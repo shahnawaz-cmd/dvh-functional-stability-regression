@@ -1,4 +1,8 @@
 name: Playwright Tests
+permissions:
+  contents: read
+  actions: write
+
 on:
   push:
     branches: [ main, master, feat/* ]
@@ -50,6 +54,8 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Debug Artifact ID
+      run: echo "Artifact ID = ${{ steps.upload-report.outputs.artifact-id }}"
     - name: Get Artifact Download URL
       id: artifact-url
       if: always()
@@ -59,7 +65,7 @@ jobs:
         ARTIFACT_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-report.outputs.artifact-id }}"
         echo "url=$ARTIFACT_URL" >> $GITHUB_OUTPUT
     - name: Send Slack Notification
-      if: always()
+      if: always() && steps.upload-report.outputs.artifact-id != ''
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         GITHUB_SERVER: ${{ github.server_url }}
