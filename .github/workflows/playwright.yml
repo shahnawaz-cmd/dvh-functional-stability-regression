@@ -43,6 +43,21 @@ jobs:
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
         PLAYWRIGHT_HTML_REPORT: playwright-report/batch3
+    - uses: actions/upload-artifact@v4
+      id: upload-report
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+    - name: Get Artifact Download URL
+      id: artifact-url
+      if: always()
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        ARTIFACT_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-report.outputs.artifact-id }}"
+        echo "url=$ARTIFACT_URL" >> $GITHUB_OUTPUT
     - name: Send Slack Notification
       if: always()
       env:
@@ -54,6 +69,7 @@ jobs:
         GITHUB_REF: ${{ github.ref_name }}
         GITHUB_SHA_VAL: ${{ github.sha }}
         GITHUB_EVENT: ${{ github.event_name }}
+        ARTIFACT_URL: ${{ steps.artifact-url.outputs.url }}
       run: |
         curl -X POST -H 'Content-type: application/json' -d "$(cat <<EOF
         {
@@ -70,16 +86,10 @@ jobs:
               "type": "section",
               "text": {
                 "type": "mrkdwn",
-                "text": "_QA test suite for Streaming flow validation completed._\n\n*Branch:* \`$GITHUB_REF\`\n*Triggered by:* \`$GITHUB_ACTOR\`\n*Event:* \`$GITHUB_EVENT\`\n*Commit:* \`$GITHUB_SHA_VAL\`\n\n🔗 <$GITHUB_SERVER/$GITHUB_REPO/actions/runs/$GITHUB_RUN|View Workflow Run>"
+                "text": "_QA test suite for Streaming flow validation completed._\n\n*Branch:* \`$GITHUB_REF\`\n*Triggered by:* \`$GITHUB_ACTOR\`\n*Event:* \`$GITHUB_EVENT\`\n*Commit:* \`$GITHUB_SHA_VAL\`\n\n🔗 <$GITHUB_SERVER/$GITHUB_REPO/actions/runs/$GITHUB_RUN|View Workflow Run>\n📦 <$ARTIFACT_URL|Download Playwright Report>"
               }
             }
           ]
         }
         EOF
         )" $SLACK_WEBHOOK_URL
-    - uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
