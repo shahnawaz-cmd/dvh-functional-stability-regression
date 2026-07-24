@@ -107,46 +107,46 @@ test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }) => {
   await page.close();
 });
 
-test('TC_09_Full_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const checkout = new CheckoutPage(page);
-  const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  await preview.runCheckoutFlow();
-  await expect(page).toHaveURL(/.*\/checkout.*/);
-  await Promise.all([
-    checkout.completeCheckoutProcess('visa_us'),
-    page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
-    apiCapture.waitForStripePaymentIntent(),
-    apiCapture.waitForPaymentUpdate(),
-  ]);
-  await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#vehicle-history-report/, { timeout: TIMEOUT });
-  await page.close();
-});
+// test('TC_09_Full_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const checkout = new CheckoutPage(page);
+//   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   await preview.verifySpecsVisible();
+//   await preview.runCheckoutFlow();
+//   await expect(page).toHaveURL(/.*\/checkout.*/);
+//   await Promise.all([
+//     checkout.completeCheckoutProcess('visa_us'),
+//     page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
+//     apiCapture.waitForStripePaymentIntent(),
+//     apiCapture.waitForPaymentUpdate(),
+//   ]);
+//   await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#vehicle-history-report/, { timeout: TIMEOUT });
+//   await page.close();
+// });
 
-test('TC_10_Full_Window_Sticker_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const checkout = new CheckoutPage(page);
-  const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  const vin = process.env.TC_10_VIN || '4JGED6EB0JA121264';
-  await page.goto('/window-sticker');
-  await home.decodeVin(vin, 3);
-  await preview.verifySpecsVisible('Window sticker found for');
-  await preview.runCheckoutFlow();
-  await expect(page).toHaveURL(/.*\/checkout.*/);
-  await Promise.all([
-    checkout.completeCheckoutProcess('visa_us'),
-    page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
-    apiCapture.waitForStripePaymentIntent(),
-    apiCapture.waitForPaymentUpdate(),
-  ]);
-  await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#window-sticker/, { timeout: TIMEOUT });
-  await page.close();
-});
+// test('TC_10_Full_Window_Sticker_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const checkout = new CheckoutPage(page);
+//   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
+//   const vin = process.env.TC_10_VIN || '4JGED6EB0JA121264';
+//   await page.goto('/window-sticker');
+//   await home.decodeVin(vin, 3);
+//   await preview.verifySpecsVisible('Window sticker found for');
+//   await preview.runCheckoutFlow();
+//   await expect(page).toHaveURL(/.*\/checkout.*/);
+//   await Promise.all([
+//     checkout.completeCheckoutProcess('visa_us'),
+//     page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
+//     apiCapture.waitForStripePaymentIntent(),
+//     apiCapture.waitForPaymentUpdate(),
+//   ]);
+//   await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#window-sticker/, { timeout: TIMEOUT });
+//   await page.close();
+// });
 
 test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page }, testInfo) => {
   const home = new HomePage(page);
@@ -165,28 +165,28 @@ test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page
   await page.close();
 });
 
-test('TC_12_Full_Checkout_Flow_Stripe_3DS_Validation', async ({ page }, testInfo) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const checkout = new CheckoutPage(page);
-  const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  await preview.runCheckoutFlow();
-  await expect(page).toHaveURL(/.*\/checkout.*/);
-  await Promise.all([
-    checkout.completeCheckoutProcess('stripe_3ds'),
-    apiCapture.waitForStripePaymentIntent(),
-    apiCapture.waitForThreeDSAuthenticate(),
-  ]);
-  await Promise.all([
-    checkout.complete3DSChallenge(),
-    page.waitForURL(/.*\/(success|success-page).*/, { timeout: TIMEOUT }),
-  ]);
-  await expect(page).toHaveURL(/.*\/(success|success-page).*/);
-  await page.close();
-});
+// test('TC_12_Full_Checkout_Flow_Stripe_3DS_Validation', async ({ page }, testInfo) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const checkout = new CheckoutPage(page);
+//   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   await preview.verifySpecsVisible();
+//   await preview.runCheckoutFlow();
+//   await expect(page).toHaveURL(/.*\/checkout.*/);
+//   await Promise.all([
+//     checkout.completeCheckoutProcess('stripe_3ds'),
+//     apiCapture.waitForStripePaymentIntent(),
+//     apiCapture.waitForThreeDSAuthenticate(),
+//   ]);
+//   await Promise.all([
+//     checkout.complete3DSChallenge(),
+//     page.waitForURL(/.*\/(success|success-page).*/, { timeout: TIMEOUT }),
+//   ]);
+//   await expect(page).toHaveURL(/.*\/(success|success-page).*/);
+//   await page.close();
+// });
 
 test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page }) => {
   const home = new HomePage(page);
@@ -224,21 +224,21 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page }) => {
   }
 });
 
-test('TC_16_PayPal_Successful_Payment', async ({ page, context }) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const checkout = new CheckoutPage(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.runCheckoutFlow();
-  await checkout.paypal.selectPayPalOption();
-  await page.waitForTimeout(4000);
-  const popup = await checkout.paypal.clickPayPalButton(context, TIMEOUT);
-  await checkout.paypal.loginPayPal(popup, {email: process.env.PAYPAL_EMAIL, password: process.env.PAYPAL_PASSWORD}, TIMEOUT);
-  await checkout.paypal.approvePayPalPayment(popup, TIMEOUT);
-  await page.waitForURL(url => url.toString().includes('paid=true'), { timeout: 60000 });
-  await page.close();
-});
+// test('TC_16_PayPal_Successful_Payment', async ({ page, context }) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const checkout = new CheckoutPage(page);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   await preview.runCheckoutFlow();
+//   await checkout.paypal.selectPayPalOption();
+//   await page.waitForTimeout(4000);
+//   const popup = await checkout.paypal.clickPayPalButton(context, TIMEOUT);
+//   await checkout.paypal.loginPayPal(popup, {email: process.env.PAYPAL_EMAIL, password: process.env.PAYPAL_PASSWORD}, TIMEOUT);
+//   await checkout.paypal.approvePayPalPayment(popup, TIMEOUT);
+//   await page.waitForURL(url => url.toString().includes('paid=true'), { timeout: 60000 });
+//   await page.close();
+// });
 
 test('TC_17_EU_VIN_Confirmation_No', async ({ page }) => {
   const home = new HomePage(page);

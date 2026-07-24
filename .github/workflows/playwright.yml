@@ -4,6 +4,12 @@ on:
     branches: [ main, master, feat/* ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    - cron: '0 */6 * * *'
+  push:
+    branches: [ main, master, feat/* ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
   test:
     timeout-minutes: 120
@@ -19,17 +25,17 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests - Batch 1
       continue-on-error: true
-      run: npx playwright test --workers=1 --output=playwright-report/batch1 --grep "TC_(01|02|04|05|06|07|08|09|10|11)_"
+      run: npx playwright test --workers=2 --output=playwright-report/batch1 --grep "TC_(01|02|04|05|06|07|08|09|10|11)_"
       env:
-        BASE_URL: ${{ secrets.BASE_URL || 'https://dvh.vehiclehistory.report/' }}
+        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
         PLAYWRIGHT_HTML_REPORT: playwright-report/batch1
     - name: Run Playwright tests - Batch 2
       continue-on-error: true
-      run: npx playwright test --workers=1 --output=playwright-report/batch2 --grep "TC_(12|13|14|15|16|17|18|19|20|21)_"
+      run: npx playwright test --workers=2 --output=playwright-report/batch2 --grep "TC_(12|13|14|15|16|17|18|19|20|21)_"
       env:
-        BASE_URL: ${{ secrets.BASE_URL || 'https://dvh.vehiclehistory.report/' }}
+        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
         PLAYWRIGHT_HTML_REPORT: playwright-report/batch2
@@ -37,10 +43,44 @@ jobs:
       continue-on-error: true
       run: npx playwright test --workers=1 --output=playwright-report/batch3 --grep "TC_(22|23|24|25)_"
       env:
-        BASE_URL: ${{ secrets.BASE_URL || 'https://dvh.vehiclehistory.report/' }}
+        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
         PLAYWRIGHT_HTML_REPORT: playwright-report/batch3
+    - name: Send Slack Notification
+      if: always()
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        GITHUB_SERVER: ${{ github.server_url }}
+        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_RUN: ${{ github.run_id }}
+        GITHUB_ACTOR: ${{ github.actor }}
+        GITHUB_REF: ${{ github.ref_name }}
+        GITHUB_SHA_VAL: ${{ github.sha }}
+        GITHUB_EVENT: ${{ github.event_name }}
+      run: |
+        curl -X POST -H 'Content-type: application/json' -d "$(cat <<EOF
+        {
+          "blocks": [
+            {
+              "type": "header",
+              "text": {
+                "type": "plain_text",
+                "text": "🚀 dvh-functional-flow-ci  – Playwright CI",
+                "emoji": true
+              }
+            },
+            {
+              "type": "section",
+              "text": {
+                "type": "mrkdwn",
+                "text": "_QA test suite for Streaming flow validation completed._\n\n*Branch:* \`$GITHUB_REF\`\n*Triggered by:* \`$GITHUB_ACTOR\`\n*Event:* \`$GITHUB_EVENT\`\n*Commit:* \`$GITHUB_SHA_VAL\`\n\n🔗 <$GITHUB_SERVER/$GITHUB_REPO/actions/runs/$GITHUB_RUN|View Workflow Run>"
+              }
+            }
+          ]
+        }
+        EOF
+        )" $SLACK_WEBHOOK_URL
     - uses: actions/upload-artifact@v4
       if: always()
       with:

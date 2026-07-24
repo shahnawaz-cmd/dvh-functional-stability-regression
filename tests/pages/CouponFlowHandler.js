@@ -12,10 +12,10 @@ class CouponFlowHandler {
     this.selectedData = null;
   }
 
-  async navigateAndApplyCoupon(homeInstance, vin, timeout = TIMEOUT) {
+  async navigateAndApplyCoupon(homeInstance, vin, timeout = TIMEOUT, couponCode = 'get20') {
     await homeInstance.navigate();
     await homeInstance.decodeVin(vin);
-    await this.page.goto(this.page.url() + '&offer=testing');
+    await this.page.goto(this.page.url() + `&offer=${couponCode}`);
     await this.page.reload(); // Refresh the page after applying coupon via URL
     await this.page.waitForURL(/.*\/preview.*/, { timeout });
   }
