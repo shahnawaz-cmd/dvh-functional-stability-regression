@@ -1,47 +1,5 @@
-name: Playwright Tests
-permissions:
-  contents: read
-  actions: write
 
-on:
-  push:
-    branches: [ main, master, feat/* ]
-  pull_request:
-    branches: [ main, master ]
-  schedule:
-    - cron: '0 */6 * * *'
-jobs:
-  test:
-    timeout-minutes: 120
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests - Batch 1
-      continue-on-error: true
-      run: npx playwright test --workers=2 --output=playwright-report/batch1 --grep "TC_(01|02|04|05|06|07|08|09|10|11)_"
-      env:
-        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
-        PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
-        PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/batch1
-    - name: Run Playwright tests - Batch 2
-      continue-on-error: true
-      run: npx playwright test --workers=2 --output=playwright-report/batch2 --grep "TC_(12|13|14|15|16|17|18|19|20|21)_"
-      env:
-        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
-        PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
-        PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/batch2
-    - name: Run Playwright tests - Batch 3
-      continue-on-error: true
-name: Playwright Tests
+
 permissions:
   contents: read
   actions: write
