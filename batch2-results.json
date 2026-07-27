@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/40db3ef88b48ba2ad205251298b7004aecc70873",
-        "commitHash": "40db3ef88b48ba2ad205251298b7004aecc70873",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30266459573"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+        "commitHash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267162977"
       },
       "gitCommit": {
-        "shortHash": "40db3ef",
-        "hash": "40db3ef88b48ba2ad205251298b7004aecc70873",
-        "subject": "fix: grant contents:write permission for gh-pages deployment",
-        "body": "fix: grant contents:write permission for gh-pages deployment\n",
+        "shortHash": "229be21",
+        "hash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+        "subject": "fix: generate index.html to prevent 404 on github pages",
+        "body": "fix: generate index.html to prevent 404 on github pages\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785155660000
+          "time": 1785156263000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785155660000
+          "time": 1785156263000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/40db3ef88b48ba2ad205251298b7004aecc70873",
-            "commitHash": "40db3ef88b48ba2ad205251298b7004aecc70873",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30266459573"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+            "commitHash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267162977"
           },
           "gitCommit": {
-            "shortHash": "40db3ef",
-            "hash": "40db3ef88b48ba2ad205251298b7004aecc70873",
-            "subject": "fix: grant contents:write permission for gh-pages deployment",
-            "body": "fix: grant contents:write permission for gh-pages deployment\n",
+            "shortHash": "229be21",
+            "hash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
+            "subject": "fix: generate index.html to prevent 404 on github pages",
+            "body": "fix: generate index.html to prevent 404 on github pages\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785155660000
+              "time": 1785156263000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785155660000
+              "time": 1785156263000
             },
             "branch": "main"
           },
@@ -131,12 +131,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38192,
+                  "duration": 37596,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:36:16.067Z",
+                  "startTime": "2026-07-27T12:47:49.747Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -165,12 +165,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5610,
+                  "duration": 5813,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:36:16.076Z",
+                  "startTime": "2026-07-27T12:47:49.727Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -199,12 +199,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4006,
+                  "duration": 4520,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:36:21.858Z",
+                  "startTime": "2026-07-27T12:47:55.676Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -233,12 +233,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 50381,
+                  "duration": 49213,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:36:25.883Z",
+                  "startTime": "2026-07-27T12:48:00.215Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -267,20 +267,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8582,
+                  "duration": 16853,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: 2 Reports, Total Price: $39.98\n"
+                      "text": "✅ Selected plan: 1 Report, Total Price: $19.99\n"
                     },
                     {
                       "text": "✅ Upsell selected. Price: $9.99\n"
                     },
                     {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package2 Reports$29.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$39.98'\u001b[39m,\n  \u001b[32m'$39.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package1 Report$19.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package1 Report$19.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$29.98'\u001b[39m,\n  \u001b[32m'$29.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
                     },
                     {
-                      "text": "✅ Total price $39.98 verified in Order summary.\n"
+                      "text": "✅ Total price $29.98 verified in Order summary.\n"
                     },
                     {
                       "text": "✅ Add-on verified in Order summary.\n"
@@ -288,7 +288,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:36:54.430Z",
+                  "startTime": "2026-07-27T12:48:27.540Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -317,7 +317,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10412,
+                  "duration": 7753,
                   "errors": [],
                   "stdout": [
                     {
@@ -330,22 +330,22 @@
                       "text": "✅ Navigated back to Preview page\n"
                     },
                     {
-                      "text": "✅ Selected plan: 1 Report, Total Price: $19.99\n"
+                      "text": "✅ Selected plan: Unlimited VIN Check, Total Price: $29.99\n"
                     },
                     {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
+                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
                     },
                     {
                       "text": "✅ Email popup did NOT appear, directly navigated\n"
                     },
                     {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package1 Report$19.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package1 Report$19.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$29.98'\u001b[39m,\n  \u001b[32m'$29.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
                     },
                     {
-                      "text": "✅ Total price $29.98 verified in Order summary.\n"
+                      "text": "✅ Total price $29.99 verified in Order summary.\n"
                     },
                     {
-                      "text": "✅ Add-on verified in Order summary.\n"
+                      "text": "✅ No Add-on as expected for UVC.\n"
                     },
                     {
                       "text": "✅ Order summary updated correctly\n"
@@ -353,7 +353,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:37:03.040Z",
+                  "startTime": "2026-07-27T12:48:44.413Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -379,10 +379,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4745,
+                  "duration": 5143,
                   "errors": [],
                   "stdout": [
                     {
@@ -394,7 +394,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:37:13.482Z",
+                  "startTime": "2026-07-27T12:48:49.465Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -420,10 +420,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3865,
+                  "duration": 4089,
                   "errors": [],
                   "stdout": [
                     {
@@ -435,7 +435,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:37:16.281Z",
+                  "startTime": "2026-07-27T12:48:52.186Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -453,8 +453,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-27T12:36:15.531Z",
-    "duration": 64696.945,
+    "startTime": "2026-07-27T12:47:49.196Z",
+    "duration": 67153.678,
     "expected": 8,
     "skipped": 0,
     "unexpected": 0,
