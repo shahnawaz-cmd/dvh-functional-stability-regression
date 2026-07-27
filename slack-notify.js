@@ -66,7 +66,7 @@ const payload = {
             type: "section",
             text: {
                 type: "mrkdwn",
-                text: `*QA Test Suite for Streaming Flow Validation Completed.*\n\n*Overall Status:* ${overallStatus}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}\n\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>`
+                text: `*QA Test Suite for Streaming Flow Validation Completed (${githubEvent === 'schedule' ? 'Scheduled Run' : 'Push/Manual Run'}).*\n\n*Overall Status:* ${overallStatus}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}\n\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>\n🌐 <https://${githubRepo.split('/')[0]}.github.io/${githubRepo.split('/')[1]}/|View Public HTML Report>`
             }
         }
     ]
