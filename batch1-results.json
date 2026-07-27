@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-        "commitHash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267162977"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/39e4ed07262fb0f8916c3af6a01480245aee06f8",
+        "commitHash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267896278"
       },
       "gitCommit": {
-        "shortHash": "229be21",
-        "hash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-        "subject": "fix: generate index.html to prevent 404 on github pages",
-        "body": "fix: generate index.html to prevent 404 on github pages\n",
+        "shortHash": "39e4ed0",
+        "hash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
+        "subject": "feat: add dynamic title and gh pages link to slack payload",
+        "body": "feat: add dynamic title and gh pages link to slack payload\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785156263000
+          "time": 1785156884000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785156263000
+          "time": 1785156884000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-            "commitHash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267162977"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/39e4ed07262fb0f8916c3af6a01480245aee06f8",
+            "commitHash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267896278"
           },
           "gitCommit": {
-            "shortHash": "229be21",
-            "hash": "229be21abebb26ae5dcdc8e2eea03e4851101a3b",
-            "subject": "fix: generate index.html to prevent 404 on github pages",
-            "body": "fix: generate index.html to prevent 404 on github pages\n",
+            "shortHash": "39e4ed0",
+            "hash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
+            "subject": "feat: add dynamic title and gh pages link to slack payload",
+            "body": "feat: add dynamic title and gh pages link to slack payload\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785156263000
+              "time": 1785156884000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785156263000
+              "time": 1785156884000
             },
             "branch": "main"
           },
@@ -131,12 +131,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 16254,
+                  "duration": 38141,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:45:31.847Z",
+                  "startTime": "2026-07-27T12:57:26.681Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -165,12 +165,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5284,
+                  "duration": 5743,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:45:32.020Z",
+                  "startTime": "2026-07-27T12:57:26.660Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -199,12 +199,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 13206,
+                  "duration": 43598,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:45:37.482Z",
+                  "startTime": "2026-07-27T12:57:33.665Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -232,77 +232,18 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 101732,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:62:17",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 21,
-                      "line": 46
-                    },
-                    "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 21,
-                        "line": 46
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:46\n\n  44 |   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {\n  45 |     // Wait for the specific text to appear\n> 46 |     await this.page.waitForSelector(`text=${expectedText}`, { timeout: timeout });\n     |                     ^\n  47 |   }\n  48 |\n  49 |   async verifyAccessRecordButton() {\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:62:17"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-27T12:45:48.472Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 21,
-                    "line": 46
-                  }
-                },
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15549,
+                  "duration": 57838,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-07-27T12:47:30.732Z",
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:58:06.059Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-retry1/trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-2c168a19a781800cd114",
@@ -326,12 +267,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5464,
+                  "duration": 12180,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:45:50.724Z",
+                  "startTime": "2026-07-27T12:58:17.285Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -360,12 +301,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 43939,
+                  "duration": 11720,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:45:56.220Z",
+                  "startTime": "2026-07-27T12:58:29.486Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -394,12 +335,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6695,
+                  "duration": 6780,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:46:40.175Z",
+                  "startTime": "2026-07-27T12:58:41.227Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -428,12 +369,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 46126,
+                  "duration": 20746,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:46:46.888Z",
+                  "startTime": "2026-07-27T12:58:48.027Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -451,11 +392,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-27T12:45:31.009Z",
-    "duration": 137276.573,
-    "expected": 7,
+    "startTime": "2026-07-27T12:57:25.981Z",
+    "duration": 102877.34899999999,
+    "expected": 8,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 1
+    "flaky": 0
   }
 }
