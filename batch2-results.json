@@ -1,0 +1,463 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.18.0/x64/bin/node",
+      "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/node_modules/.bin/playwright",
+      "test",
+      "--workers=2",
+      "--output=playwright-report/batch2",
+      "--grep",
+      "TC_(12|13|14|15|16|17|18|19|20|21)_",
+      "--reporter=html,json"
+    ],
+    "configFile": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright.config.js",
+    "rootDir": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/40db3ef88b48ba2ad205251298b7004aecc70873",
+        "commitHash": "40db3ef88b48ba2ad205251298b7004aecc70873",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30266459573"
+      },
+      "gitCommit": {
+        "shortHash": "40db3ef",
+        "hash": "40db3ef88b48ba2ad205251298b7004aecc70873",
+        "subject": "fix: grant contents:write permission for gh-pages deployment",
+        "body": "fix: grant contents:write permission for gh-pages deployment\n",
+        "author": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785155660000
+        },
+        "committer": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785155660000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/40db3ef88b48ba2ad205251298b7004aecc70873",
+            "commitHash": "40db3ef88b48ba2ad205251298b7004aecc70873",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30266459573"
+          },
+          "gitCommit": {
+            "shortHash": "40db3ef",
+            "hash": "40db3ef88b48ba2ad205251298b7004aecc70873",
+            "subject": "fix: grant contents:write permission for gh-pages deployment",
+            "body": "fix: grant contents:write permission for gh-pages deployment\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785155660000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785155660000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "streaming2-e2e.spec.js",
+      "file": "streaming2-e2e.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_13_Classic_VIN_YMM_Edit_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38192,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:36:16.067Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-d395fc8c3a4f63a07019",
+          "file": "streaming2-e2e.spec.js",
+          "line": 191,
+          "column": 1
+        },
+        {
+          "title": "TC_14_Classic_Manual_Input_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:36:16.076Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-95064b094a3664cdf3ff",
+          "file": "streaming2-e2e.spec.js",
+          "line": 203,
+          "column": 1
+        },
+        {
+          "title": "TC_15_Classic_Editible_Specs_Update",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:36:21.858Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-3c91ed6652d83bf9308d",
+          "file": "streaming2-e2e.spec.js",
+          "line": 215,
+          "column": 1
+        },
+        {
+          "title": "TC_17_EU_VIN_Confirmation_No",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 50381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:36:25.883Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-e9870c422070b49f168f",
+          "file": "streaming2-e2e.spec.js",
+          "line": 243,
+          "column": 1
+        },
+        {
+          "title": "TC_18_Price_Consistency_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8582,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Selected plan: 2 Reports, Total Price: $39.98\n"
+                    },
+                    {
+                      "text": "✅ Upsell selected. Price: $9.99\n"
+                    },
+                    {
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package2 Reports$29.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$39.98'\u001b[39m,\n  \u001b[32m'$39.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "✅ Total price $39.98 verified in Order summary.\n"
+                    },
+                    {
+                      "text": "✅ Add-on verified in Order summary.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:36:54.430Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-61557e82a02136ca6daa",
+          "file": "streaming2-e2e.spec.js",
+          "line": 252,
+          "column": 1
+        },
+        {
+          "title": "TC_19_Email_Cache_Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10412,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "--- Starting TC_19 Email Cache Flow ---\n"
+                    },
+                    {
+                      "text": "✅ Landed on checkout page (1st time)\n"
+                    },
+                    {
+                      "text": "✅ Navigated back to Preview page\n"
+                    },
+                    {
+                      "text": "✅ Selected plan: 1 Report, Total Price: $19.99\n"
+                    },
+                    {
+                      "text": "✅ Upsell selected. Price: $9.99\n"
+                    },
+                    {
+                      "text": "✅ Email popup did NOT appear, directly navigated\n"
+                    },
+                    {
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package1 Report$19.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package1 Report$19.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$29.98'\u001b[39m,\n  \u001b[32m'$29.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "✅ Total price $29.98 verified in Order summary.\n"
+                    },
+                    {
+                      "text": "✅ Add-on verified in Order summary.\n"
+                    },
+                    {
+                      "text": "✅ Order summary updated correctly\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:37:03.040Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-ccffcaba2f148c28393c",
+          "file": "streaming2-e2e.spec.js",
+          "line": 264,
+          "column": 1
+        },
+        {
+          "title": "TC_20_Default_Plan_Checking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4745,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Verified site_settings (default_plan): {\n  id: \u001b[32m'1'\u001b[39m,\n  name: \u001b[32m'Basic'\u001b[39m,\n  code: \u001b[32m'DVH1'\u001b[39m,\n  price: \u001b[32m'19.99'\u001b[39m,\n  nos: \u001b[32m'1'\u001b[39m,\n  gumroad: \u001b[32m'DVH1'\u001b[39m,\n  total: \u001b[32m'19.989999771118164'\u001b[39m,\n  type: \u001b[32m'report'\u001b[39m,\n  currency_sign: \u001b[32m'$'\u001b[39m,\n  currency_code: \u001b[32m'USD'\u001b[39m,\n  c_id: \u001b[32m'16'\u001b[39m\n}\n"
+                    },
+                    {
+                      "text": "✅ Matched and clicked plan: 19.99 $\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:37:13.482Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-6166acc353ef4539c7e8",
+          "file": "streaming2-e2e.spec.js",
+          "line": 275,
+          "column": 1
+        },
+        {
+          "title": "TC_21_Window_Sticker_Default_Plan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3865,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Verified site_settings (default_ws_plan): {\n  id: \u001b[32m'548'\u001b[39m,\n  name: \u001b[32m'Full Price'\u001b[39m,\n  code: \u001b[32m'DVHST1'\u001b[39m,\n  price: \u001b[32m'19.99'\u001b[39m,\n  nos: \u001b[32m'1'\u001b[39m,\n  gumroad: \u001b[32m'DVHST1'\u001b[39m,\n  total: \u001b[32m'19.989999771118164'\u001b[39m,\n  type: \u001b[32m'sticker'\u001b[39m,\n  currency_sign: \u001b[32m'$'\u001b[39m,\n  currency_code: \u001b[32m'USD'\u001b[39m,\n  c_id: \u001b[32m'16'\u001b[39m\n}\n"
+                    },
+                    {
+                      "text": "✅ Matched and clicked plan: 19.99 $\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T12:37:16.281Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-ddc2d935e08e04e8add4",
+          "file": "streaming2-e2e.spec.js",
+          "line": 284,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-27T12:36:15.531Z",
+    "duration": 64696.945,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
