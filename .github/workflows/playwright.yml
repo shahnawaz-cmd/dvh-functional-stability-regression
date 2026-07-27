@@ -1,8 +1,10 @@
-
+name: Playwright Tests
 
 permissions:
   contents: read
   actions: write
+  pages: write
+  id-token: write
 
 on:
   push:
@@ -10,7 +12,7 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0 * * *'
 jobs:
   test:
     timeout-minutes: 120
@@ -24,52 +26,58 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      
     - name: Run Playwright tests - Batch 1
+      id: batch1
       continue-on-error: true
-      run: npx playwright test --workers=2 --output=playwright-report/batch1 --grep "TC_(01|02|04|05|06|07|08|09|10|11)_"
+      run: npx playwright test --workers=2 --output=playwright-report/batch1 --grep "TC_(01|02|04|05|06|07|08|09|10|11)_" --reporter=html,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/batch1
+        PLAYWRIGHT_HTML_REPORT: playwright-report/batch1-html
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/batch1-results.json
+        
     - name: Run Playwright tests - Batch 2
+      id: batch2
       continue-on-error: true
-      run: npx playwright test --workers=2 --output=playwright-report/batch2 --grep "TC_(12|13|14|15|16|17|18|19|20|21)_"
+      run: npx playwright test --workers=2 --output=playwright-report/batch2 --grep "TC_(12|13|14|15|16|17|18|19|20|21)_" --reporter=html,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/batch2
+        PLAYWRIGHT_HTML_REPORT: playwright-report/batch2-html
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/batch2-results.json
+        
     - name: Run Playwright tests - Batch 3
+      id: batch3
       continue-on-error: true
-      run: npx playwright test --workers=1 --output=playwright-report/batch3 --grep "TC_(22|23|24|25)_"
+      run: npx playwright test --workers=1 --output=playwright-report/batch3 --grep "TC_(22|23|24|25)_" --reporter=html,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/batch3
-    - name: Zip Playwright Report
-      if: always()
-      run: zip -r playwright-report.zip playwright-report/
+        PLAYWRIGHT_HTML_REPORT: playwright-report/batch3-html
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/batch3-results.json
+        
     - uses: actions/upload-artifact@v4
       id: upload-report
       if: always()
       with:
         name: playwright-report
-        path: playwright-report.zip
+        path: playwright-report/
         retention-days: 30
-    - name: Debug Artifact ID
-      run: echo "Artifact ID = ${{ steps.upload-report.outputs.artifact-id }}"
-    - name: Get Artifact Download URL
-      id: artifact-url
+
+    - name: Deploy report to GitHub Pages
       if: always()
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        ARTIFACT_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-report.outputs.artifact-id }}"
-        echo "url=$ARTIFACT_URL" >> $GITHUB_OUTPUT
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./playwright-report
+        keep_files: true
+
     - name: Send Slack Notification
-      if: always() && steps.upload-report.outputs.artifact-id != ''
+      if: always()
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         GITHUB_SERVER: ${{ github.server_url }}
@@ -79,27 +87,13 @@ jobs:
         GITHUB_REF: ${{ github.ref_name }}
         GITHUB_SHA_VAL: ${{ github.sha }}
         GITHUB_EVENT: ${{ github.event_name }}
-        ARTIFACT_URL: ${{ steps.artifact-url.outputs.url }}
       run: |
-        curl -X POST -H 'Content-type: application/json' -d "$(cat <<EOF
-        {
-          "blocks": [
-            {
-              "type": "header",
-              "text": {
-                "type": "plain_text",
-                "text": "🚀 dvh-functional-flow-ci  – Playwright CI",
-                "emoji": true
-              }
-            },
-            {
-              "type": "section",
-              "text": {
-                "type": "mrkdwn",
-                "text": "_QA test suite for Streaming flow validation completed._\n\n*Branch:* \`$GITHUB_REF\`\n*Triggered by:* \`$GITHUB_ACTOR\`\n*Event:* \`$GITHUB_EVENT\`\n*Commit:* \`$GITHUB_SHA_VAL\`\n\n🔗 <${GITHUB_SERVER}/${GITHUB_REPO}/actions/runs/${GITHUB_RUN}|View Workflow Run>\n<${ARTIFACT_URL}|:package: Download Playwright Report>"
-              }
-            }
-          ]
-        }
-        EOF
-        )" $SLACK_WEBHOOK_URL
+        node slack-notify.js
+        
+    - name: Fail workflow if any batch failed
+      if: always()
+      run: |
+        if [ "${{ steps.batch1.outcome }}" == "failure" ] || [ "${{ steps.batch2.outcome }}" == "failure" ] || [ "${{ steps.batch3.outcome }}" == "failure" ]; then
+          echo "One or more batches failed"
+          exit 1
+        fi

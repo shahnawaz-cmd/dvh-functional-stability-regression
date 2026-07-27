@@ -1,0 +1,106 @@
+const fs = require('fs');
+const https = require('https');
+const url = require('url');
+
+const files = [
+    'playwright-report/batch1-results.json',
+    'playwright-report/batch2-results.json',
+    'playwright-report/batch3-results.json'
+];
+
+let totalPassed = 0;
+let totalFailed = 0;
+let totalSkipped = 0;
+let totalFlaky = 0;
+
+let hasFailedBatches = false;
+
+for (const file of files) {
+    try {
+        if (fs.existsSync(file)) {
+            const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+            const stats = data.stats;
+            if (stats) {
+                totalPassed += stats.expected || 0;
+                totalFailed += stats.unexpected || 0;
+                totalSkipped += stats.skipped || 0;
+                totalFlaky += stats.flaky || 0;
+            }
+        } else {
+            console.warn(`Report file not found: ${file}`);
+            hasFailedBatches = true; // Assuming if report is missing, batch failed to even run properly
+        }
+    } catch (e) {
+        console.error(`Error reading ${file}:`, e);
+        hasFailedBatches = true;
+    }
+}
+
+const totalTests = totalPassed + totalFailed + totalSkipped + totalFlaky;
+const overallStatus = (totalFailed === 0 && !hasFailedBatches) ? '✅ PASS' : '❌ FAIL';
+
+const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
+if (!slackWebhookUrl) {
+    console.log('SLACK_WEBHOOK_URL is not set. Printing payload for local verification:');
+}
+
+const githubServer = process.env.GITHUB_SERVER || 'https://github.com';
+const githubRepo = process.env.GITHUB_REPO;
+const githubRun = process.env.GITHUB_RUN;
+const githubActor = process.env.GITHUB_ACTOR;
+const githubRef = process.env.GITHUB_REF;
+const githubEvent = process.env.GITHUB_EVENT;
+const githubSha = process.env.GITHUB_SHA_VAL;
+
+const payload = {
+    blocks: [
+        {
+            type: "header",
+            text: {
+                type: "plain_text",
+                text: "🚀 dvh-functional-flow-ci – Playwright CI",
+                emoji: true
+            }
+        },
+        {
+            type: "section",
+            text: {
+                type: "mrkdwn",
+                text: `*QA Test Suite for Streaming Flow Validation Completed.*\n\n*Overall Status:* ${overallStatus}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}\n\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>`
+            }
+        }
+    ]
+};
+
+const payloadString = JSON.stringify(payload, null, 2);
+
+if (!slackWebhookUrl || slackWebhookUrl === 'local') {
+    console.log(payloadString);
+    process.exit(0);
+}
+
+const webhookUrl = new url.URL(slackWebhookUrl);
+
+const options = {
+    hostname: webhookUrl.hostname,
+    port: 443,
+    path: webhookUrl.pathname,
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payloadString)
+    }
+};
+
+const req = https.request(options, (res) => {
+    res.on('data', (d) => {
+        process.stdout.write(d);
+    });
+});
+
+req.on('error', (e) => {
+    console.error('Error sending slack notification:', e);
+});
+
+req.write(payloadString);
+req.end();
