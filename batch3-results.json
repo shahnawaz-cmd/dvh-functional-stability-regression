@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/3126a468267c03ccd1086cd6f1635657d6c2f998",
-        "commitHash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30384170319"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30386143655"
       },
       "gitCommit": {
-        "shortHash": "3126a46",
-        "hash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-        "subject": "Refactor: update browser targets, stability improvements, and slack notifications",
-        "body": "Refactor: update browser targets, stability improvements, and slack notifications\n",
+        "shortHash": "7bde2e5",
+        "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+        "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785260587000
+          "time": 1785262157000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785260587000
+          "time": 1785262157000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "commitHash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30384170319"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30386143655"
           },
           "gitCommit": {
-            "shortHash": "3126a46",
-            "hash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "subject": "Refactor: update browser targets, stability improvements, and slack notifications",
-            "body": "Refactor: update browser targets, stability improvements, and slack notifications\n",
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "branch": "main"
           },
@@ -92,24 +92,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "commitHash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30384170319"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30386143655"
           },
           "gitCommit": {
-            "shortHash": "3126a46",
-            "hash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "subject": "Refactor: update browser targets, stability improvements, and slack notifications",
-            "body": "Refactor: update browser targets, stability improvements, and slack notifications\n",
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "branch": "main"
           },
@@ -130,24 +130,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "commitHash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30384170319"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30386143655"
           },
           "gitCommit": {
-            "shortHash": "3126a46",
-            "hash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "subject": "Refactor: update browser targets, stability improvements, and slack notifications",
-            "body": "Refactor: update browser targets, stability improvements, and slack notifications\n",
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "branch": "main"
           },
@@ -168,24 +168,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "commitHash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30384170319"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30386143655"
           },
           "gitCommit": {
-            "shortHash": "3126a46",
-            "hash": "3126a468267c03ccd1086cd6f1635657d6c2f998",
-            "subject": "Refactor: update browser targets, stability improvements, and slack notifications",
-            "body": "Refactor: update browser targets, stability improvements, and slack notifications\n",
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785260587000
+              "time": 1785262157000
             },
             "branch": "main"
           },
@@ -245,11 +245,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5124,
+                  "duration": 5685,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -260,7 +260,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:52:56.712Z",
+                  "startTime": "2026-07-28T18:18:10.970Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -289,11 +289,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4548,
+                  "duration": 4870,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -304,7 +304,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:52:56.803Z",
+                  "startTime": "2026-07-28T18:18:10.986Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -333,11 +333,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 9795,
+                  "duration": 8590,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: 2 Reports, Total Price: $39.98\n"
+                      "text": "✅ Dynamically selected plan at index 0: \"1 Report\", Price: $19.99\n"
                     },
                     {
                       "text": "✅ Upsell selected. Price: $9.99\n"
@@ -348,7 +348,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:01.525Z",
+                  "startTime": "2026-07-28T18:18:16.064Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -377,23 +377,23 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11306,
+                  "duration": 11939,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:01.979Z",
+                  "startTime": "2026-07-28T18:18:16.810Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "TC_25 checkout coupon data",
                       "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVFF5T0NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXhNVGcyTXpJNFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUk1T0RFME16TTVNekV4SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUl4TnpJdU1UZzBMakl4TUM0eE5qRWlmUT09IiwKICAicmVwb3J0UHJpY2UiOiAxOS45OSwKICAiZGlzY291bnRBbW91bnQiOiA0LAogICJhZGRPbkFtb3VudCI6IDkuOTksCiAgInRvdGFsQW1vdW50IjogMjUuOTgsCiAgImV4cGVjdGVkRGlzY291bnQiOiAzLjk5Nzk5OTk5OTk5OTk5OTgsCiAgImV4cGVjdGVkVG90YWwiOiAyNS45Nzk5OTk5OTk5OTk5OTcsCiAgIm9yZGVyU3VtbWFyeSI6ICJPcmRlciBzdW1tYXJ5XG5QQUNLQUdFXG4xIFJlcG9ydFxuJDE5Ljk5XG5EaXNjb3VudFxuLSQ0LjAwXG5BREQtT05cbldpbmRvdyBTdGlja2VyXG4kOS45OVxuQ291cG9uXG5HRVQyMFxuYXBwbGllZCDigJQgMjAlIG9mZlxuQXBwbHlcblRvdGFsXG4kMjkuOThcbiQyNS45OFxuU2VjdXJlIGNoZWNrb3V0XG5JbnN0YW50IGFjY2VzcyIKfQ=="
+                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVEUzT0NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXlOekF3TXpneFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUl5TkRBek1ETXhOemt5SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTWk0eE9EZ3VPRFl1TVRRNUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
                     },
                     {
                       "name": "TC_25 checkout coupon summary",
                       "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UUXlPQ0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeE1UZzJNekk0UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTVPREUwTXpNNU16RXhJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSXhOekl1TVRnMExqSXhNQzR4TmpFaWZRPT0KUmVwb3J0OiAxOS45OQpEaXNjb3VudDogNC4wMApBZGQtb246IDkuOTkKVG90YWw6IDI1Ljk4"
+                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1URTNPQ0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeU56QXdNemd4UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSXlOREF6TURNeE56a3lJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFNaTR4T0RndU9EWXVNVFE1SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
                     }
                   ]
                 }
@@ -422,11 +422,11 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3974,
+                  "duration": 4249,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -437,7 +437,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:12.262Z",
+                  "startTime": "2026-07-28T18:18:25.396Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -466,11 +466,11 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4298,
+                  "duration": 3783,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -481,7 +481,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:13.887Z",
+                  "startTime": "2026-07-28T18:18:29.458Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -510,14 +510,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 8262,
+                  "duration": 7583,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: Unlimited VIN Check, Total Price: $29.99\n"
+                      "text": "✅ Dynamically selected plan at index 0: \"1 Report\", Price: $19.99\n"
                     },
                     {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
+                      "text": "✅ Upsell selected. Price: $9.99\n"
                     },
                     {
                       "text": "✅ [TC_24] Checkout page reached – test passed\n"
@@ -525,7 +525,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:16.450Z",
+                  "startTime": "2026-07-28T18:18:29.879Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -554,23 +554,23 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11095,
+                  "duration": 10169,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:18.324Z",
+                  "startTime": "2026-07-28T18:18:33.399Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "TC_25 checkout coupon data",
                       "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVGMyTVNJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXhNakF5TmpFMVFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUkwT0RVNU9UWXpNRFEwSWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUl4TnpJdU1UZzBMakl4TUM0eE5qRWlmUT09IiwKICAicmVwb3J0UHJpY2UiOiAxOS45OSwKICAiZGlzY291bnRBbW91bnQiOiA0LAogICJhZGRPbkFtb3VudCI6IDkuOTksCiAgInRvdGFsQW1vdW50IjogMjUuOTgsCiAgImV4cGVjdGVkRGlzY291bnQiOiAzLjk5Nzk5OTk5OTk5OTk5OTgsCiAgImV4cGVjdGVkVG90YWwiOiAyNS45Nzk5OTk5OTk5OTk5OTcsCiAgIm9yZGVyU3VtbWFyeSI6ICJPcmRlciBzdW1tYXJ5XG5QQUNLQUdFXG4xIFJlcG9ydFxuJDE5Ljk5XG5EaXNjb3VudFxuLSQ0LjAwXG5BREQtT05cbldpbmRvdyBTdGlja2VyXG4kOS45OVxuQ291cG9uXG5HRVQyMFxuYXBwbGllZCDigJQgMjAlIG9mZlxuQXBwbHlcblRvdGFsXG4kMjkuOThcbiQyNS45OFxuU2VjdXJlIGNoZWNrb3V0XG5JbnN0YW50IGFjY2VzcyIKfQ=="
+                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVEV6TkNJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXlOekUzTmpFeFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUk0T0RBMk1qVXpPVGc1SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTWk0eE9EZ3VPRFl1TVRRNUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
                     },
                     {
                       "name": "TC_25 checkout coupon summary",
                       "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UYzJNU0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeE1qQXlOakUxUUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTBPRFU1T1RZek1EUTBJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSXhOekl1TVRnMExqSXhNQzR4TmpFaWZRPT0KUmVwb3J0OiAxOS45OQpEaXNjb3VudDogNC4wMApBZGQtb246IDkuOTkKVG90YWw6IDI1Ljk4"
+                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1URXpOQ0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeU56RTNOakV4UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTRPREEyTWpVek9UZzVJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFNaTR4T0RndU9EWXVNVFE1SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
                     }
                   ]
                 }
@@ -599,7 +599,7 @@
                   "workerIndex": 4,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 14368,
+                  "duration": 4174,
                   "errors": [],
                   "stdout": [
                     {
@@ -614,7 +614,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:25.506Z",
+                  "startTime": "2026-07-28T18:18:38.154Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -640,14 +640,14 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11739,
+                  "duration": 3804,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\",\"exitPopupNotPreviewShown_Tue Jul 28 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -658,7 +658,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:29.931Z",
+                  "startTime": "2026-07-28T18:18:42.580Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -684,14 +684,14 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7650,
+                  "duration": 7537,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: 5 Reports, Total Price: $99.95\n"
+                      "text": "✅ Dynamically selected plan at index 2: \"5 Reports\", Price: $99.95\n"
                     },
                     {
                       "text": "✅ Upsell selected. Price: $9.99\n"
@@ -702,7 +702,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:40.048Z",
+                  "startTime": "2026-07-28T18:18:44.224Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -728,26 +728,26 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11028,
+                  "duration": 11852,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:41.806Z",
+                  "startTime": "2026-07-28T18:18:46.399Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "TC_25 checkout coupon data",
                       "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVEEzTWlJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXhNakkxT0RBM1FHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUl5T0RJeU1qSTVOVFE1SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUl4TnpJdU1UZzBMakl4TUM0eE5qRWlmUT09IiwKICAicmVwb3J0UHJpY2UiOiAxOS45OSwKICAiZGlzY291bnRBbW91bnQiOiA0LAogICJhZGRPbkFtb3VudCI6IDkuOTksCiAgInRvdGFsQW1vdW50IjogMjUuOTgsCiAgImV4cGVjdGVkRGlzY291bnQiOiAzLjk5Nzk5OTk5OTk5OTk5OTgsCiAgImV4cGVjdGVkVG90YWwiOiAyNS45Nzk5OTk5OTk5OTk5OTcsCiAgIm9yZGVyU3VtbWFyeSI6ICJPcmRlciBzdW1tYXJ5XG5QQUNLQUdFXG4xIFJlcG9ydFxuJDE5Ljk5XG5EaXNjb3VudFxuLSQ0LjAwXG5BREQtT05cbldpbmRvdyBTdGlja2VyXG4kOS45OVxuQ291cG9uXG5HRVQyMFxuYXBwbGllZCDigJQgMjAlIG9mZlxuQXBwbHlcblRvdGFsXG4kMjkuOThcbiQyNS45OFxuU2VjdXJlIGNoZWNrb3V0XG5JbnN0YW50IGFjY2VzcyIKfQ=="
+                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVFEwTWlJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXlOek13TXpFMVFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUkzT0RFek1qSTBOVGMxSWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTWk0eE9EZ3VPRFl1TVRRNUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
                     },
                     {
                       "name": "TC_25 checkout coupon summary",
                       "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UQTNNaUlzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeE1qSTFPREEzUUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSXlPREl5TWpJNU5UUTVJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSXhOekl1TVRnMExqSXhNQzR4TmpFaWZRPT0KUmVwb3J0OiAxOS45OQpEaXNjb3VudDogNC4wMApBZGQtb246IDkuOTkKVG90YWw6IDI1Ljk4"
+                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UUTBNaUlzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeU56TXdNekUxUUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTNPREV6TWpJME5UYzFJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFNaTR4T0RndU9EWXVNVFE1SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
                     }
                   ]
                 }
@@ -774,9 +774,9 @@
               "results": [
                 {
                   "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12364,
+                  "duration": 3868,
                   "errors": [],
                   "stdout": [
                     {
@@ -791,7 +791,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:48.524Z",
+                  "startTime": "2026-07-28T18:18:52.651Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -817,10 +817,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3720,
+                  "duration": 4187,
                   "errors": [],
                   "stdout": [
                     {
@@ -835,7 +835,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:53.421Z",
+                  "startTime": "2026-07-28T18:18:56.713Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -862,13 +862,13 @@
               "results": [
                 {
                   "workerIndex": 7,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 8023,
+                  "duration": 9327,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: Unlimited VIN Check, Total Price: $29.99\n"
+                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
                     },
                     {
                       "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
@@ -879,7 +879,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:53:57.268Z",
+                  "startTime": "2026-07-28T18:18:58.872Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -906,25 +906,25 @@
               "results": [
                 {
                   "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 19131,
+                  "duration": 9632,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T17:54:01.075Z",
+                  "startTime": "2026-07-28T18:19:00.920Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "TC_25 checkout coupon data",
                       "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVGMxT0NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXhNalV6TXpjeVFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUl5TVRNME9EQXhOakU0SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUl4TnpJdU1UZzBMakl4TUM0eE5qRWlmUT09IiwKICAicmVwb3J0UHJpY2UiOiAxOS45OSwKICAiZGlzY291bnRBbW91bnQiOiA0LAogICJhZGRPbkFtb3VudCI6IDkuOTksCiAgInRvdGFsQW1vdW50IjogMjUuOTgsCiAgImV4cGVjdGVkRGlzY291bnQiOiAzLjk5Nzk5OTk5OTk5OTk5OTgsCiAgImV4cGVjdGVkVG90YWwiOiAyNS45Nzk5OTk5OTk5OTk5OTcsCiAgIm9yZGVyU3VtbWFyeSI6ICJPcmRlciBzdW1tYXJ5XG5QQUNLQUdFXG4xIFJlcG9ydFxuJDE5Ljk5XG5EaXNjb3VudFxuLSQ0LjAwXG5BREQtT05cbldpbmRvdyBTdGlja2VyXG4kOS45OVxuQ291cG9uXG5HRVQyMFxuYXBwbGllZCDigJQgMjAlIG9mZlxuQXBwbHlcblRvdGFsXG4kMjkuOThcbiQyNS45OFxuU2VjdXJlIGNoZWNrb3V0XG5JbnN0YW50IGFjY2VzcyIKfQ=="
+                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVGc1T1NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU1qWXlOelEwT0RrM1FHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUk1TnpNNE16QTJOREEwSWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTWk0eE9EZ3VPRFl1TVRRNUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
                     },
                     {
                       "name": "TC_25 checkout coupon summary",
                       "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UYzFPQ0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeE1qVXpNemN5UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSXlNVE0wT0RBeE5qRTRJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSXhOekl1TVRnMExqSXhNQzR4TmpFaWZRPT0KUmVwb3J0OiAxOS45OQpEaXNjb3VudDogNC4wMApBZGQtb246IDkuOTkKVG90YWw6IDI1Ljk4"
+                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UZzVPU0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTWpZeU56UTBPRGszUUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTVOek00TXpBMk5EQTBJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFNaTR4T0RndU9EWXVNVFE1SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
                     }
                   ]
                 }
@@ -942,8 +942,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-28T17:52:56.203Z",
-    "duration": 84084.38500000001,
+    "startTime": "2026-07-28T18:18:10.440Z",
+    "duration": 60200.297,
     "expected": 16,
     "skipped": 0,
     "unexpected": 0,
