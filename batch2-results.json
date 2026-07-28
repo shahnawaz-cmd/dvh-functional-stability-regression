@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/39e4ed07262fb0f8916c3af6a01480245aee06f8",
         "commitHash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267896278"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30323577390"
       },
       "gitCommit": {
         "shortHash": "39e4ed0",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/39e4ed07262fb0f8916c3af6a01480245aee06f8",
             "commitHash": "39e4ed07262fb0f8916c3af6a01480245aee06f8",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30267896278"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30323577390"
           },
           "gitCommit": {
             "shortHash": "39e4ed0",
@@ -131,12 +131,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37354,
+                  "duration": 38133,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:10.301Z",
+                  "startTime": "2026-07-28T02:38:23.759Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -165,12 +165,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5388,
+                  "duration": 5537,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:10.283Z",
+                  "startTime": "2026-07-28T02:38:23.760Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -199,12 +199,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4189,
+                  "duration": 5149,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:15.841Z",
+                  "startTime": "2026-07-28T02:38:29.456Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -233,12 +233,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 51354,
+                  "duration": 50509,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:20.046Z",
+                  "startTime": "2026-07-28T02:38:34.624Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -267,28 +267,28 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5382,
+                  "duration": 13375,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "✅ Selected plan: 1 Report, Total Price: $19.99\n"
+                      "text": "✅ Selected plan: Unlimited VIN Check, Total Price: $29.99\n"
                     },
                     {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
+                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
                     },
                     {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package1 Report$19.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package1 Report$19.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$29.98'\u001b[39m,\n  \u001b[32m'$29.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
                     },
                     {
-                      "text": "✅ Total price $29.98 verified in Order summary.\n"
+                      "text": "✅ Total price $29.99 verified in Order summary.\n"
                     },
                     {
-                      "text": "✅ Add-on verified in Order summary.\n"
+                      "text": "✅ No Add-on as expected for UVC.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:47.805Z",
+                  "startTime": "2026-07-28T02:39:02.047Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -317,7 +317,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26131,
+                  "duration": 8744,
                   "errors": [],
                   "stdout": [
                     {
@@ -330,22 +330,22 @@
                       "text": "✅ Navigated back to Preview page\n"
                     },
                     {
-                      "text": "✅ Selected plan: 2 Reports, Total Price: $39.98\n"
+                      "text": "✅ Selected plan: Unlimited VIN Check, Total Price: $29.99\n"
                     },
                     {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
+                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
                     },
                     {
                       "text": "✅ Email popup did NOT appear, directly navigated\n"
                     },
                     {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package2 Reports$29.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$39.98'\u001b[39m,\n  \u001b[32m'$39.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
+                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
                     },
                     {
-                      "text": "✅ Total price $39.98 verified in Order summary.\n"
+                      "text": "✅ Total price $29.99 verified in Order summary.\n"
                     },
                     {
-                      "text": "✅ Add-on verified in Order summary.\n"
+                      "text": "✅ No Add-on as expected for UVC.\n"
                     },
                     {
                       "text": "✅ Order summary updated correctly\n"
@@ -353,7 +353,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T12:59:53.211Z",
+                  "startTime": "2026-07-28T02:39:15.459Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -379,10 +379,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8534,
+                  "duration": 4740,
                   "errors": [],
                   "stdout": [
                     {
@@ -394,7 +394,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T13:00:11.425Z",
+                  "startTime": "2026-07-28T02:39:24.230Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -420,10 +420,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 10224,
+                  "duration": 5319,
                   "errors": [],
                   "stdout": [
                     {
@@ -435,7 +435,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T13:00:19.373Z",
+                  "startTime": "2026-07-28T02:39:25.148Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -453,8 +453,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-27T12:59:09.736Z",
-    "duration": 79944.908,
+    "startTime": "2026-07-28T02:38:23.211Z",
+    "duration": 67331.484,
     "expected": 8,
     "skipped": 0,
     "unexpected": 0,
