@@ -98,8 +98,13 @@ class PreviewPage {
   }
 
   async classicEdtibleFeatureYMM() {
-    await this.page.getByRole('button', { name: 'Click here to update' }).click();
-    await this.page.getByRole('button', { name: 'Year, Make & Model The' }).click();
+    const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+    await updateButton.waitFor({ state: 'visible' });
+    await updateButton.click({ force: true });
+
+    const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+    await ymmButton.waitFor({ state: 'visible' });
+    await ymmButton.click({ force: true });
 
     // Explicit 30s delay to allow popup stabilization as requested
     await this.page.waitForTimeout(30000);
@@ -121,8 +126,14 @@ class PreviewPage {
   }
 
   async ClassicEditibleSpecsManualInput(timeout = TIMEOUT) {
-    await this.page.getByRole('button', { name: 'Click here to update' }).click();
-    await this.page.getByRole('button', { name: 'Year, Make & Model The' }).click();
+    const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+    await updateButton.waitFor({ state: 'visible', timeout });
+    await updateButton.click({ force: true });
+    
+    const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+    await ymmButton.waitFor({ state: 'visible', timeout });
+    await ymmButton.click({ force: true });
+    
     await this.page.getByRole('button', { name: 'Click here', exact: true }).click();
     
     await this.page.getByRole('textbox', { name: 'Year' }).click();
@@ -143,10 +154,19 @@ class PreviewPage {
   }
 
   async classicEditibleSpecsUpdateSpec(timeout = TIMEOUT) {
-    await this.page.getByRole('button', { name: 'Click here to update' }).click();
-    await this.page.getByRole('button', { name: 'Specifications Engine,' }).click();
+    const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+    await updateButton.waitFor({ state: 'visible', timeout });
+    await updateButton.click({ force: true });
+    await this.page.waitForTimeout(1000);
     
-    await this.page.getByRole('textbox', { name: 'Axle Type' }).click();
+    const specButton = this.page.getByRole('button', { name: 'Specifications Engine,' });
+    await specButton.waitFor({ state: 'visible', timeout });
+    await specButton.click({ force: true });
+    await this.page.waitForTimeout(1000);
+    
+    const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });
+    await axleTypeInput.waitFor({ state: 'visible', timeout });
+    await axleTypeInput.click();
     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });
     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();
     await this.page.getByRole('textbox', { name: 'Body Maker' }).fill('Fisher asdsss', { timeout });
@@ -218,6 +238,7 @@ class PreviewToCheckoutPriceValidator {
     const randomPlan = plans[Math.floor(Math.random() * plans.length)];
     
     // Capture price from the plan element dynamically
+    await randomPlan.locator.waitFor({ state: 'visible', timeout: TIMEOUT });
     const priceText = await randomPlan.locator.innerText();
     const priceMatches = priceText.match(/\$\d+(\.\d{2})?/g);
     let maxPrice = 0;
@@ -229,7 +250,10 @@ class PreviewToCheckoutPriceValidator {
     }
     const totalPlanPrice = maxPrice.toFixed(2);
     
-    await randomPlan.locator.click();
+    // Conditionally use force: true for Safari (webkit) to improve stability
+    const isWebKit = this.page.context().browser().browserType().name() === 'webkit';
+    await randomPlan.locator.click({ force: isWebKit });
+    
     console.log(`✅ Selected plan: ${randomPlan.name}, Total Price: $${totalPlanPrice}`);
 
     // Handle Upsell

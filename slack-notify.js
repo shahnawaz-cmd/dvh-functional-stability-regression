@@ -58,7 +58,7 @@ const payload = {
             type: "header",
             text: {
                 type: "plain_text",
-                text: "🚀 dvh-functional-flow-ci – Playwright CI",
+                text: "🚀 dvh-functional-flow-ci – Cross Browser Test Perform",
                 emoji: true
             }
         },

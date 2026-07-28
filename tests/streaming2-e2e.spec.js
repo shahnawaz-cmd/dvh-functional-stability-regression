@@ -18,72 +18,111 @@ test.afterEach(async ({ page }) => {
 test('TC_01_VIN_Decode_17_Character_Validation', async ({ page }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  await preview.verifyAccessRecordButton();
-  await preview.clickAccessRecordButton();
-  await preview.closeAccessRecordPopup();
+  await test.step('Navigate to Home', async () => {
+    await home.navigate();
+  });
+  await test.step('Decode 17-Character VIN', async () => {
+    await home.decodeVin('4JGED6EB0JA121898', 3);
+  });
+  await test.step('Verify Specs and Access Record Button', async () => {
+    await preview.verifySpecsVisible();
+    await preview.verifyAccessRecordButton();
+  });
+  await test.step('Interact with Access Record Popup', async () => {
+    await preview.clickAccessRecordButton();
+    await preview.closeAccessRecordPopup();
+  });
   await page.close();
 });
 
 test('TC_02_VIN_Decode_Classic_Validation', async ({ page }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await home.navigate();
-  await home.decodeVin('223870L108421');
-  await preview.verifySpecsVisible('Records found for', 60000);
-  await preview.verifyAccessRecordButton();
-  await preview.clickAccessRecordButton();
-  await preview.closeAccessRecordPopup();
+  await test.step('Navigate to Home', async () => {
+    await home.navigate();
+  });
+  await test.step('Decode Classic VIN', async () => {
+    await home.decodeVin('223870L108421');
+  });
+  await test.step('Verify Specs and Access Record Button', async () => {
+    await preview.verifySpecsVisible('Records found for', 60000);
+    await preview.verifyAccessRecordButton();
+  });
+  await test.step('Interact with Access Record Popup', async () => {
+    await preview.clickAccessRecordButton();
+    await preview.closeAccessRecordPopup();
+  });
   await page.close();
 });
 
 test('TC_04_Revisit_Banner_Interaction_Validation', async ({ page }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  await page.goBack();
-  await page.waitForLoadState('load');
-  const banner = await home.verifyRevisitBannerVisible();
-  await home.clickGrabItNow(banner);
-  await page.waitForURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
-  await expect(page).toHaveURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
+  await test.step('Navigate to Home & Decode VIN', async () => {
+    await home.navigate();
+    await home.decodeVin('4JGED6EB0JA121898', 3);
+  });
+  await test.step('Verify Specs Visible', async () => {
+    await preview.verifySpecsVisible();
+  });
+  await test.step('Go Back & Verify Revisit Banner', async () => {
+    await page.goBack();
+    await page.waitForLoadState('load');
+    const banner = await home.verifyRevisitBannerVisible();
+    await home.clickGrabItNow(banner);
+  });
+  await test.step('Verify Revisit Redirection URL', async () => {
+    await page.waitForURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
+    await expect(page).toHaveURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
+  });
   await page.close();
 });
 
 test('TC_05_Window_Sticker_Revisit_Banner_Validation', async ({ page }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await page.goto('/window-sticker');
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible('Window sticker found for');
-  await page.goBack();
-  await page.waitForLoadState('load');
-  const banner = await home.verifyRevisitBannerVisible('Your window sticker for');
-  await home.clickGrabItNow(banner);
-  await page.waitForURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
-  await expect(page).toHaveURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
+  await test.step('Navigate to Window Sticker & Decode VIN', async () => {
+    await page.goto('/window-sticker');
+    await home.decodeVin('4JGED6EB0JA121898', 3);
+  });
+  await test.step('Verify Window Sticker Specs', async () => {
+    await preview.verifySpecsVisible('Window sticker found for');
+  });
+  await test.step('Go Back & Verify Revisit Banner', async () => {
+    await page.goBack();
+    await page.waitForLoadState('load');
+    const banner = await home.verifyRevisitBannerVisible('Your window sticker for');
+    await home.clickGrabItNow(banner);
+  });
+  await test.step('Verify Revisit Redirection URL', async () => {
+    await page.waitForURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
+    await expect(page).toHaveURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
+  });
   await page.close();
 });
 
 test('TC_06_Preview_Page_Plan_Selection_Validation', async ({ page }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  const plans = ['1 Report', '2 Reports', '5 Reports', 'Unlimited VIN Check']; 
-  for (const planName of plans) {
-    const plan = await preview.selectPlan(planName);
-    await expect(plan).toHaveAttribute('aria-pressed', 'true');
-  }
+  await test.step('Navigate to Home & Decode VIN', async () => {
+    await home.navigate();
+    await home.decodeVin('4JGED6EB0JA121898', 3);
+  });
+  await test.step('Verify Specs Visible', async () => {
+    await preview.verifySpecsVisible();
+  });
+  await test.step('Select each report plan and verify selection', async () => {
+    const plans = ['1 Report', '2 Reports', '5 Reports', 'Unlimited VIN Check']; 
+    for (const planName of plans) {
+      const plan = await preview.selectPlan(planName);
+      await expect(plan).toHaveAttribute('aria-pressed', 'true');
+    }
+  });
   await page.close();
 });
 
-test('TC_07_Exit_Intent_Popup_Trigger_Validation', async ({ page }) => {
+test('TC_07_Exit_Intent_Popup_Trigger_Validation', async ({ page }, testInfo) => {
+  test.skip(!!testInfo.project.use.isMobile, 'Skipping exit intent validation on mobile browsers');
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
   await home.navigate();
@@ -194,6 +233,8 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page }) => {
   try {
     await home.navigate();
     await home.decodeVin('242370B111346');
+    await page.waitForURL(/.*\/preview.*/);
+    await preview.verifySpecsVisible('Records found for', 60000);
     await preview.classicEdtibleFeatureYMM();
   } finally {
     await page.close();
@@ -206,6 +247,8 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page }) => {
   try {
     await home.navigate();
     await home.decodeVin('242370B111346');
+    await page.waitForURL(/.*\/preview.*/);
+    await preview.verifySpecsVisible('Records found for', 60000);
     await preview.ClassicEditibleSpecsManualInput();
   } finally {
     await page.close();
@@ -218,6 +261,8 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page }) => {
   try {
     await home.navigate();
     await home.decodeVin('242370B111346');
+    await page.waitForURL(/.*\/preview.*/);
+    await preview.verifySpecsVisible('Records found for', 60000);
     await preview.classicEditibleSpecsUpdateSpec();
   } finally {
     await page.close();

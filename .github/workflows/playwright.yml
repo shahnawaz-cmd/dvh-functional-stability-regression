@@ -52,7 +52,7 @@ jobs:
     - name: Run Playwright tests - Batch 3
       id: batch3
       continue-on-error: true
-      run: npx playwright test --workers=1 --output=playwright-report/batch3 --grep "TC_(22|23|24|25)_" --reporter=html,json
+      run: npx playwright test --workers=2 --output=playwright-report/batch3 --grep "TC_(22|23|24|25)_" --reporter=html,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
