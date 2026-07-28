@@ -227,20 +227,41 @@ class PreviewToCheckoutPriceValidator {
   }
 
   async selectRandomPlanAndHandleUpsell() {
-    // Select plan by name only, ignoring dynamic price/currency
-    const plans = [
-      { name: '1 Report', reports: 1, locator: this.page.locator('div[role="button"]').filter({ hasText: /^1 Report/ }) },
-      { name: '2 Reports', reports: 2, locator: this.page.locator('div[role="button"]').filter({ hasText: /^2 Reports/ }) },
-      { name: '5 Reports', reports: 5, locator: this.page.locator('div[role="button"]').filter({ hasText: /^5 Reports/ }) },
-      { name: 'Unlimited VIN Check', reports: 0, locator: this.page.locator('div[role="button"]').filter({ hasText: /^Unlimited VIN Check/ }) }
-    ];
-
-    const randomPlan = plans[Math.floor(Math.random() * plans.length)];
+    // Locate all plan buttons dynamically by their role on the page
+    const planButtons = this.page.locator('div[role="button"]').filter({
+      hasText: /Report|Check|UVC/i
+    });
     
-    // Capture price from the plan element dynamically
-    await randomPlan.locator.waitFor({ state: 'visible', timeout: TIMEOUT });
-    const priceText = await randomPlan.locator.innerText();
-    const priceMatches = priceText.match(/\$\d+(\.\d{2})?/g);
+    // Wait for the first plan button to load and render on the DOM before counting
+    await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+    
+    const count = await planButtons.count();
+    if (count === 0) {
+      throw new Error("No plan buttons found on the page.");
+    }
+    
+    // Select a random plan index
+    const randomIndex = Math.floor(Math.random() * count);
+    const planLocator = planButtons.nth(randomIndex);
+    
+    // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
+    await planLocator.scrollIntoViewIfNeeded();
+    await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
+    
+    // Dynamically extract the text and price at runtime
+    const innerText = await planLocator.innerText();
+    
+    // Parse the name dynamically (handles Unlimited/UVC vs numbered reports)
+    let planName = '1 Report';
+    if (innerText.toLowerCase().includes('unlimited') || innerText.toLowerCase().includes('uvc')) {
+      planName = 'Unlimited VIN Check';
+    } else {
+      const match = innerText.match(/\d+\s+\w+/);
+      if (match) planName = match[0];
+    }
+    
+    // Parse the price dynamically (e.g. matches "$29.99")
+    const priceMatches = innerText.match(/\$\d+(\.\d{2})?/g);
     let maxPrice = 0;
     if (priceMatches) {
       for (const match of priceMatches) {
@@ -250,18 +271,16 @@ class PreviewToCheckoutPriceValidator {
     }
     const totalPlanPrice = maxPrice.toFixed(2);
     
-    // Conditionally use force: true for Safari (webkit) to improve stability
-    const isWebKit = this.page.context().browser().browserType().name() === 'webkit';
-    await randomPlan.locator.click({ force: isWebKit });
+    await planLocator.click({ force: true });
     
-    console.log(`✅ Selected plan: ${randomPlan.name}, Total Price: $${totalPlanPrice}`);
+    console.log(`✅ Dynamically selected plan at index ${randomIndex}: "${planName}", Price: $${totalPlanPrice}`);
 
     // Handle Upsell
     let upsellPrice = null;
     // Use a broader locator for the checkbox since the exact text might change
     const upsellCheckbox = this.page.getByRole('checkbox').first();
     
-    if (randomPlan.name !== 'Unlimited VIN Check') {
+    if (planName !== 'Unlimited VIN Check') {
       const isVisible = await upsellCheckbox.isVisible().catch(() => false);
       if (isVisible) {
         const upsellContainer = upsellCheckbox.locator('xpath=..'); // Adjust if needed
@@ -278,7 +297,7 @@ class PreviewToCheckoutPriceValidator {
       console.log('ℹ️ UVC plan selected: Upsell hidden.');
     }
 
-    return { planName: randomPlan.name, totalPlanPrice, upsellPrice };
+    return { planName, totalPlanPrice, upsellPrice };
   }
 
   async validateOrderSummary(selectedData) {

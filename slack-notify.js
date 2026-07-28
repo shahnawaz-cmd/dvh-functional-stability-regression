@@ -15,6 +15,15 @@ let totalFlaky = 0;
 
 let hasFailedBatches = false;
 
+// Read outcomes from Environment Variables passed from GitHub Actions
+const batch1Outcome = process.env.BATCH1_OUTCOME;
+const batch2Outcome = process.env.BATCH2_OUTCOME;
+const batch3Outcome = process.env.BATCH3_OUTCOME;
+
+if (batch1Outcome === 'failure' || batch2Outcome === 'failure' || batch3Outcome === 'failure') {
+    hasFailedBatches = true;
+}
+
 for (const file of files) {
     try {
         if (fs.existsSync(file)) {
@@ -28,7 +37,8 @@ for (const file of files) {
             }
         } else {
             console.warn(`Report file not found: ${file}`);
-            hasFailedBatches = true; // Assuming if report is missing, batch failed to even run properly
+            // If the report file is missing but the outcome is recorded, we know it failed
+            hasFailedBatches = true;
         }
     } catch (e) {
         console.error(`Error reading ${file}:`, e);
@@ -45,12 +55,19 @@ if (!slackWebhookUrl) {
 }
 
 const githubServer = process.env.GITHUB_SERVER || 'https://github.com';
-const githubRepo = process.env.GITHUB_REPO;
-const githubRun = process.env.GITHUB_RUN;
-const githubActor = process.env.GITHUB_ACTOR;
-const githubRef = process.env.GITHUB_REF;
-const githubEvent = process.env.GITHUB_EVENT;
-const githubSha = process.env.GITHUB_SHA_VAL;
+const githubRepo = process.env.GITHUB_REPO || 'shahnawaz-cmd/dvh-functional-stability-regression';
+const githubRun = process.env.GITHUB_RUN || '0';
+const githubActor = process.env.GITHUB_ACTOR || 'local';
+const githubRef = process.env.GITHUB_REF || 'local';
+const githubEvent = process.env.GITHUB_EVENT || 'push';
+const githubSha = process.env.GITHUB_SHA_VAL || 'local';
+
+let failedBatchesList = [];
+if (batch1Outcome === 'failure') failedBatchesList.push('Batch 1');
+if (batch2Outcome === 'failure') failedBatchesList.push('Batch 2');
+if (batch3Outcome === 'failure') failedBatchesList.push('Batch 3');
+
+const failedBatchesText = failedBatchesList.length > 0 ? `\n⚠️ *Failed Batches:* ${failedBatchesList.join(', ')}` : '';
 
 const payload = {
     blocks: [

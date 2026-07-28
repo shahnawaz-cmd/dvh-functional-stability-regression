@@ -105,6 +105,9 @@ jobs:
         GITHUB_REF: ${{ github.ref_name }}
         GITHUB_SHA_VAL: ${{ github.sha }}
         GITHUB_EVENT: ${{ github.event_name }}
+        BATCH1_OUTCOME: ${{ steps.batch1.outcome }}
+        BATCH2_OUTCOME: ${{ steps.batch2.outcome }}
+        BATCH3_OUTCOME: ${{ steps.batch3.outcome }}
       run: |
         node slack-notify.js
         
