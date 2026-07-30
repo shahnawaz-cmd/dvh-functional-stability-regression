@@ -48,6 +48,7 @@ for (const file of files) {
 
 const totalTests = totalPassed + totalFailed + totalSkipped + totalFlaky;
 const overallStatus = (totalFailed === 0 && !hasFailedBatches) ? '✅ PASS' : '❌ FAIL';
+const tagText = (totalFailed > 0 || hasFailedBatches) ? ' (Attention: <@U09UE83AWGP>)' : '';
 
 const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
 if (!slackWebhookUrl) {
@@ -83,7 +84,7 @@ const payload = {
             type: "section",
             text: {
                 type: "mrkdwn",
-                text: `*QA Test Suite for Streaming Flow Validation Completed (${githubEvent === 'schedule' ? 'Scheduled Run' : 'Push/Manual Run'}).*\n\n*Overall Status:* ${overallStatus}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}\n\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>\n🌐 <https://${githubRepo.split('/')[0]}.github.io/${githubRepo.split('/')[1]}/|View Public HTML Report>`
+                text: `*QA Test Suite for Streaming Flow Validation Completed (${githubEvent === 'schedule' ? 'Scheduled Run' : 'Push/Manual Run'}).*\n\n*Overall Status:* ${overallStatus}${tagText}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}\n\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>\n🌐 <https://${githubRepo.split('/')[0]}.github.io/${githubRepo.split('/')[1]}/|View Public HTML Report>`
             }
         }
     ]
