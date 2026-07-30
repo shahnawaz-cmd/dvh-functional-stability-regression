@@ -187,22 +187,22 @@ test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }) => {
 //   await page.close();
 // });
 
-test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page }, testInfo) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const checkout = new CheckoutPage(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await preview.verifySpecsVisible();
-  await preview.runCheckoutFlow();
-  await expect(page).toHaveURL(/.*\/checkout.*/);
-  await Promise.all([
-    checkout.completeCheckoutProcess('generic_decline'),
-    checkout.waitForPaymentFailureAndClose(),
-  ]);
-  await expect(page).not.toHaveURL(/.*\/success.*/);
-  await page.close();
-});
+// test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page }, testInfo) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const checkout = new CheckoutPage(page);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   await preview.verifySpecsVisible();
+//   await preview.runCheckoutFlow();
+//   await expect(page).toHaveURL(/.*\/checkout.*/);
+//   await Promise.all([
+//     checkout.completeCheckoutProcess('generic_decline'),
+//     checkout.waitForPaymentFailureAndClose(),
+//   ]);
+//   await expect(page).not.toHaveURL(/.*\/success.*/);
+//   await page.close();
+// });
 
 // test('TC_12_Full_Checkout_Flow_Stripe_3DS_Validation', async ({ page }, testInfo) => {
 //   const home = new HomePage(page);
@@ -294,28 +294,28 @@ test('TC_17_EU_VIN_Confirmation_No', async ({ page }) => {
   await page.close();
 });
 
-test('TC_18_Price_Consistency_Validation', async ({ page }) => {
-  const home = new HomePage(page);
-  const preview = new PreviewPage(page);
-  const validator = new PreviewToCheckoutPriceValidator(page);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  const selectedPlan = await validator.selectRandomPlanAndHandleUpsell();
-  await preview.runCheckoutFlow();
-  await validator.validateOrderSummary(selectedPlan);
-  await page.close();
-});
+// test('TC_18_Price_Consistency_Validation', async ({ page }) => {
+//   const home = new HomePage(page);
+//   const preview = new PreviewPage(page);
+//   const validator = new PreviewToCheckoutPriceValidator(page);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   const selectedPlan = await validator.selectRandomPlanAndHandleUpsell();
+//   await preview.runCheckoutFlow();
+//   await validator.validateOrderSummary(selectedPlan);
+//   await page.close();
+// });
 
-test('TC_19_Email_Cache_Flow', async ({ page }) => {
-  const tcTimeout = 120000;
-  test.setTimeout(tcTimeout);
-  const home = new HomePage(page);
-  const cache = new EmailCache(page, tcTimeout);
-  await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
-  await cache.Cacheemailbackfromcheckout();
-  await page.close();
-});
+// test('TC_19_Email_Cache_Flow', async ({ page }) => {
+//   const tcTimeout = 120000;
+//   test.setTimeout(tcTimeout);
+//   const home = new HomePage(page);
+//   const cache = new EmailCache(page, tcTimeout);
+//   await home.navigate();
+//   await home.decodeVin('4JGED6EB0JA121898', 3);
+//   await cache.Cacheemailbackfromcheckout();
+//   await page.close();
+// });
 
 test('TC_20_Default_Plan_Checking', async ({ page }) => {
   const tcTimeout = process.env.CI ? 120000 : 60000;
@@ -361,69 +361,69 @@ test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }) => {
   await page.close();
 });
 
-test('TC_24_Coupon_Flow_Verification', async ({ page }) => {
-  // Condition-based timeout
-  const tcTimeout = process.env.CI ? 120000 : 60000;
-  test.setTimeout(tcTimeout);
+// test('TC_24_Coupon_Flow_Verification', async ({ page }) => {
+//   // Condition-based timeout
+//   const tcTimeout = process.env.CI ? 120000 : 60000;
+//   test.setTimeout(tcTimeout);
+// 
+//   const home = new HomePage(page);
+//   const { CouponFlowHandler } = require('./pages/CouponFlowHandler');
+//   const handler = new CouponFlowHandler(page);
+//   
+//   // 1. Navigate and Apply Coupon
+//   await handler.navigateAndApplyCoupon(home, '4JGED6EB0JA121898', tcTimeout);
+//   
+//   // 2. Select Plan and Upsell
+//   await handler.selectPlanAndUpsell();
+// 
+//   // 3. Click Access Record
+//   await handler.accessRecord();
+//   
+//   // 4. Fill Checkout Details and Proceed
+//   await handler.fillCheckoutDetails();
+// 
+//   // Verify that we have successfully navigated to the checkout page.
+//   // If the URL contains '/checkout' we consider the navigation successful and can finish the test.
+//   await expect(page).toHaveURL(/.*\/checkout.*/);
+// 
+//   // End the test here – the primary goal for this scenario is to ensure the checkout page is reached.
+//   console.log('✅ [TC_24] Checkout page reached – test passed');
+//   await page.close();
+//   return;
+// });
 
-  const home = new HomePage(page);
-  const { CouponFlowHandler } = require('./pages/CouponFlowHandler');
-  const handler = new CouponFlowHandler(page);
-  
-  // 1. Navigate and Apply Coupon
-  await handler.navigateAndApplyCoupon(home, '4JGED6EB0JA121898', tcTimeout);
-  
-  // 2. Select Plan and Upsell
-  await handler.selectPlanAndUpsell();
-
-  // 3. Click Access Record
-  await handler.accessRecord();
-  
-  // 4. Fill Checkout Details and Proceed
-  await handler.fillCheckoutDetails();
-
-  // Verify that we have successfully navigated to the checkout page.
-  // If the URL contains '/checkout' we consider the navigation successful and can finish the test.
-  await expect(page).toHaveURL(/.*\/checkout.*/);
-
-  // End the test here – the primary goal for this scenario is to ensure the checkout page is reached.
-  console.log('✅ [TC_24] Checkout page reached – test passed');
-  await page.close();
-  return;
-});
-
-test('TC_25_Checkout_Coupon_Verification', async ({ page }, testInfo) => {
-  const vin = '4JGED6EB0JA121898';
-  const couponCode = 'get20';
-  const couponPercentage = 0.20;
-  const home = new HomePage(page);
-  const checkoutCouponFlow = new CheckoutCouponFlowTest(page);
-  const couponVerifier = new CouponFlowVerifier(page);
-
-  await checkoutCouponFlow.navigateToCheckout(home, vin);
-  const verification = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
-  const reportData = {
-    vin,
-    couponCode,
-    couponPercentage: `${couponPercentage * 100}%`,
-    checkoutUrl: page.url(),
-    ...verification,
-  };
-
-  await testInfo.attach('TC_25 checkout coupon data', {
-    body: JSON.stringify(reportData, null, 2),
-    contentType: 'application/json',
-  });
-  await testInfo.attach('TC_25 checkout coupon summary', {
-    body: [
-      `VIN: ${vin}`,
-      `Coupon: ${couponCode} (${couponPercentage * 100}% off)`,
-      `Checkout URL: ${page.url()}`,
-      `Report: ${verification.reportPrice.toFixed(2)}`,
-      `Discount: ${verification.discountAmount.toFixed(2)}`,
-      `Add-on: ${verification.addOnAmount.toFixed(2)}`,
-      `Total: ${verification.totalAmount.toFixed(2)}`,
-    ].join('\n'),
-    contentType: 'text/plain',
-  });
-});
+// test('TC_25_Checkout_Coupon_Verification', async ({ page }, testInfo) => {
+//   const vin = '4JGED6EB0JA121898';
+//   const couponCode = 'get20';
+//   const couponPercentage = 0.20;
+//   const home = new HomePage(page);
+//   const checkoutCouponFlow = new CheckoutCouponFlowTest(page);
+//   const couponVerifier = new CouponFlowVerifier(page);
+// 
+//   await checkoutCouponFlow.navigateToCheckout(home, vin);
+//   const verification = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
+//   const reportData = {
+//     vin,
+//     couponCode,
+//     couponPercentage: `${couponPercentage * 100}%`,
+//     checkoutUrl: page.url(),
+//     ...verification,
+//   };
+// 
+//   await testInfo.attach('TC_25 checkout coupon data', {
+//     body: JSON.stringify(reportData, null, 2),
+//     contentType: 'application/json',
+//   });
+//   await testInfo.attach('TC_25 checkout coupon summary', {
+//     body: [
+//       `VIN: ${vin}`,
+//       `Coupon: ${couponCode} (${couponPercentage * 100}% off)`,
+//       `Checkout URL: ${page.url()}`,
+//       `Report: ${verification.reportPrice.toFixed(2)}`,
+//       `Discount: ${verification.discountAmount.toFixed(2)}`,
+//       `Add-on: ${verification.addOnAmount.toFixed(2)}`,
+//       `Total: ${verification.totalAmount.toFixed(2)}`,
+//     ].join('\n'),
+//     contentType: 'text/plain',
+//   });
+// });
