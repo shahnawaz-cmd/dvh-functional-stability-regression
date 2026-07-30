@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+        "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
       },
       "gitCommit": {
-        "shortHash": "7bde2e5",
-        "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-        "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+        "shortHash": "d546416",
+        "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+        "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+        "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785262157000
+          "time": 1785424367000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785262157000
+          "time": 1785424367000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -92,24 +92,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -130,24 +130,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -168,24 +168,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -245,12 +245,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38407,
+                  "duration": 37502,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:36:08.104Z",
+                  "startTime": "2026-07-30T15:31:20.502Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -279,12 +279,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6248,
+                  "duration": 4896,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:36:08.073Z",
+                  "startTime": "2026-07-30T15:31:20.510Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -313,12 +313,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6230,
+                  "duration": 6177,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:36:14.501Z",
+                  "startTime": "2026-07-30T15:31:25.540Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -347,12 +347,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 56087,
+                  "duration": 62416,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:36:20.749Z",
+                  "startTime": "2026-07-30T15:31:31.731Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -363,121 +363,6 @@
           "id": "51124a558cf768cdf755-190134573b552eee22f0",
           "file": "streaming2-e2e.spec.js",
           "line": 288,
-          "column": 1
-        },
-        {
-          "title": "TC_18_Price_Consistency_Validation",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Desktop Chrome",
-              "projectName": "Desktop Chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5964,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
-                    },
-                    {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $29.99 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ No Add-on as expected for UVC.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:36:46.698Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-7163e3d11bb767042d20",
-          "file": "streaming2-e2e.spec.js",
-          "line": 297,
-          "column": 1
-        },
-        {
-          "title": "TC_19_Email_Cache_Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Desktop Chrome",
-              "projectName": "Desktop Chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7962,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "--- Starting TC_19 Email Cache Flow ---\n"
-                    },
-                    {
-                      "text": "✅ Landed on checkout page (1st time)\n"
-                    },
-                    {
-                      "text": "✅ Navigated back to Preview page\n"
-                    },
-                    {
-                      "text": "✅ Dynamically selected plan at index 0: \"1 Report\", Price: $19.99\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ Email popup did NOT appear, directly navigated\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package1 Report$19.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package1 Report$19.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'1 Report$19.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$29.98'\u001b[39m,\n  \u001b[32m'$29.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $29.98 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Add-on verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Order summary updated correctly\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:36:52.691Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-6636cdc6d54080bd2534",
-          "file": "streaming2-e2e.spec.js",
-          "line": 309,
           "column": 1
         },
         {
@@ -496,7 +381,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5291,
+                  "duration": 2879,
                   "errors": [],
                   "stdout": [
                     {
@@ -508,7 +393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:00.687Z",
+                  "startTime": "2026-07-30T15:31:58.177Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -537,7 +422,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4778,
+                  "duration": 3871,
                   "errors": [],
                   "stdout": [
                     {
@@ -549,7 +434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:05.999Z",
+                  "startTime": "2026-07-30T15:32:01.070Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -578,12 +463,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37553,
+                  "duration": 36158,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:11.726Z",
+                  "startTime": "2026-07-30T15:32:05.450Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -612,12 +497,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4216,
+                  "duration": 3821,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:17.362Z",
+                  "startTime": "2026-07-30T15:32:34.663Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -646,12 +531,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6119,
+                  "duration": 5810,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:21.698Z",
+                  "startTime": "2026-07-30T15:32:38.600Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -677,15 +562,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 1,
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 65580,
+                  "duration": 53835,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:37:27.836Z",
+                  "startTime": "2026-07-30T15:32:41.721Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -696,223 +581,6 @@
           "id": "51124a558cf768cdf755-dc0452ae73c33c5eb83f",
           "file": "streaming2-e2e.spec.js",
           "line": 288,
-          "column": 1
-        },
-        {
-          "title": "TC_18_Price_Consistency_Validation",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Chrome",
-              "projectName": "Mobile Chrome",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 6257,
-                  "error": {
-                    "message": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                    "stack": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at PreviewToCheckoutPriceValidator.validateOrderSummary (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:349:124)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:305:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 124,
-                      "line": 349
-                    },
-                    "snippet": "   at pages/PreviewPage.js:349\n\n\u001b[0m \u001b[90m 347 |\u001b[39m     \u001b[36mconst\u001b[39m isMatch \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(foundTotal \u001b[33m-\u001b[39m expectedTotal) \u001b[33m<\u001b[39m \u001b[35m0.05\u001b[39m \u001b[33m||\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(foundTotal \u001b[33m-\u001b[39m expectedTotalNoUpsell) \u001b[33m<\u001b[39m \u001b[35m0.05\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 348 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 349 |\u001b[39m     expect(isMatch\u001b[33m,\u001b[39m \u001b[32m`Total price mismatch. Expected $${expectedTotal} or $${expectedTotalNoUpsell}, found $${foundTotal}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 350 |\u001b[39m     \n \u001b[90m 351 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Total price $${foundTotal} verified in Order summary.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 352 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 124,
-                        "line": 349
-                      },
-                      "message": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n   at pages/PreviewPage.js:349\n\n  347 |     const isMatch = Math.abs(foundTotal - expectedTotal) < 0.05 || Math.abs(foundTotal - expectedTotalNoUpsell) < 0.05;\n  348 |     \n> 349 |     expect(isMatch, `Total price mismatch. Expected $${expectedTotal} or $${expectedTotalNoUpsell}, found $${foundTotal}`).toBe(true);\n      |                                                                                                                            ^\n  350 |     \n  351 |     console.log(`✅ Total price $${foundTotal} verified in Order summary.`);\n  352 |\n    at PreviewToCheckoutPriceValidator.validateOrderSummary (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:349:124)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:305:3"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 2: \"5 Reports\", Price: $99.95\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package5 Reports$59.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package5 Reports$59.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'5 Reports$59.99'\u001b[39m,\n  \u001b[32m'5 Reports$59.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$69.98'\u001b[39m,\n  \u001b[32m'$69.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:37:49.464Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 124,
-                    "line": 349
-                  }
-                },
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 13047,
-                  "error": {
-                    "message": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                    "stack": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at PreviewToCheckoutPriceValidator.validateOrderSummary (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:349:124)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:305:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 124,
-                      "line": 349
-                    },
-                    "snippet": "   at pages/PreviewPage.js:349\n\n\u001b[0m \u001b[90m 347 |\u001b[39m     \u001b[36mconst\u001b[39m isMatch \u001b[33m=\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(foundTotal \u001b[33m-\u001b[39m expectedTotal) \u001b[33m<\u001b[39m \u001b[35m0.05\u001b[39m \u001b[33m||\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(foundTotal \u001b[33m-\u001b[39m expectedTotalNoUpsell) \u001b[33m<\u001b[39m \u001b[35m0.05\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 348 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 349 |\u001b[39m     expect(isMatch\u001b[33m,\u001b[39m \u001b[32m`Total price mismatch. Expected $${expectedTotal} or $${expectedTotalNoUpsell}, found $${foundTotal}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 350 |\u001b[39m     \n \u001b[90m 351 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Total price $${foundTotal} verified in Order summary.`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 352 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 124,
-                        "line": 349
-                      },
-                      "message": "Error: Total price mismatch. Expected $109.94 or $99.95, found $69.98\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n   at pages/PreviewPage.js:349\n\n  347 |     const isMatch = Math.abs(foundTotal - expectedTotal) < 0.05 || Math.abs(foundTotal - expectedTotalNoUpsell) < 0.05;\n  348 |     \n> 349 |     expect(isMatch, `Total price mismatch. Expected $${expectedTotal} or $${expectedTotalNoUpsell}, found $${foundTotal}`).toBe(true);\n      |                                                                                                                            ^\n  350 |     \n  351 |     console.log(`✅ Total price $${foundTotal} verified in Order summary.`);\n  352 |\n    at PreviewToCheckoutPriceValidator.validateOrderSummary (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:349:124)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:305:3"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 2: \"5 Reports\", Price: $99.95\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package5 Reports$59.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package5 Reports$59.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'5 Reports$59.99'\u001b[39m,\n  \u001b[32m'5 Reports$59.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$69.98'\u001b[39m,\n  \u001b[32m'$69.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-07-30T02:37:56.305Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-18-Price-Consistency-Validation-Mobile-Chrome-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 124,
-                    "line": 349
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-33d750e82eb63811dd45",
-          "file": "streaming2-e2e.spec.js",
-          "line": 297,
-          "column": 1
-        },
-        {
-          "title": "TC_19_Email_Cache_Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Chrome",
-              "projectName": "Mobile Chrome",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 9996,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "--- Starting TC_19 Email Cache Flow ---\n"
-                    },
-                    {
-                      "text": "✅ Landed on checkout page (1st time)\n"
-                    },
-                    {
-                      "text": "✅ Navigated back to Preview page\n"
-                    },
-                    {
-                      "text": "✅ Dynamically selected plan at index 1: \"2 Reports\", Price: $39.98\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ Email popup did NOT appear, directly navigated\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package2 Reports$29.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$39.98'\u001b[39m,\n  \u001b[32m'$39.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $39.98 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Add-on verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Order summary updated correctly\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:38:10.759Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-21d6fd4040ee42a22c44",
-          "file": "streaming2-e2e.spec.js",
-          "line": 309,
           "column": 1
         },
         {
@@ -928,10 +596,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3917,
+                  "duration": 3295,
                   "errors": [],
                   "stdout": [
                     {
@@ -943,7 +611,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:20.892Z",
+                  "startTime": "2026-07-30T15:32:44.433Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -969,10 +637,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3578,
+                  "duration": 3745,
                   "errors": [],
                   "stdout": [
                     {
@@ -984,7 +652,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:24.839Z",
+                  "startTime": "2026-07-30T15:32:47.745Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1010,15 +678,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 38079,
+                  "duration": 36132,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:28.924Z",
+                  "startTime": "2026-07-30T15:32:52.028Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1044,15 +712,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 4,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4239,
+                  "duration": 3928,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:33.977Z",
+                  "startTime": "2026-07-30T15:33:28.302Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1078,15 +746,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 4,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6175,
+                  "duration": 5288,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:38.328Z",
+                  "startTime": "2026-07-30T15:33:32.245Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1112,15 +780,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 1,
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 100710,
+                  "duration": 51928,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:38:44.516Z",
+                  "startTime": "2026-07-30T15:33:36.084Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1131,121 +799,6 @@
           "id": "51124a558cf768cdf755-3b801c1d4fb8a3486c82",
           "file": "streaming2-e2e.spec.js",
           "line": 288,
-          "column": 1
-        },
-        {
-          "title": "TC_18_Price_Consistency_Validation",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Edge",
-              "projectName": "Mobile Edge",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 16749,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
-                    },
-                    {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $29.99 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ No Add-on as expected for UVC.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:39:07.119Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-1c3f2a74bdd081638e34",
-          "file": "streaming2-e2e.spec.js",
-          "line": 297,
-          "column": 1
-        },
-        {
-          "title": "TC_19_Email_Cache_Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Edge",
-              "projectName": "Mobile Edge",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 8440,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "--- Starting TC_19 Email Cache Flow ---\n"
-                    },
-                    {
-                      "text": "✅ Landed on checkout page (1st time)\n"
-                    },
-                    {
-                      "text": "✅ Navigated back to Preview page\n"
-                    },
-                    {
-                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
-                    },
-                    {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
-                    },
-                    {
-                      "text": "✅ Email popup did NOT appear, directly navigated\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $29.99 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ No Add-on as expected for UVC.\n"
-                    },
-                    {
-                      "text": "✅ Order summary updated correctly\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:39:23.893Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-29e9b40aa9258240f78b",
-          "file": "streaming2-e2e.spec.js",
-          "line": 309,
           "column": 1
         },
         {
@@ -1261,10 +814,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4200,
+                  "duration": 3422,
                   "errors": [],
                   "stdout": [
                     {
@@ -1276,7 +829,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:39:32.358Z",
+                  "startTime": "2026-07-30T15:33:37.551Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1302,10 +855,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3903,
+                  "duration": 4139,
                   "errors": [],
                   "stdout": [
                     {
@@ -1317,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:39:36.578Z",
+                  "startTime": "2026-07-30T15:33:40.988Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1343,15 +896,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 37864,
+                  "duration": 36687,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:39:41.092Z",
+                  "startTime": "2026-07-30T15:33:45.690Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1377,15 +930,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5092,
+                  "duration": 4067,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:40:19.098Z",
+                  "startTime": "2026-07-30T15:34:22.504Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1411,15 +964,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 7664,
+                  "duration": 6101,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:40:24.209Z",
+                  "startTime": "2026-07-30T15:34:26.588Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1445,15 +998,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 74101,
+                  "duration": 61418,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:40:25.752Z",
+                  "startTime": "2026-07-30T15:34:28.829Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1464,121 +1017,6 @@
           "id": "51124a558cf768cdf755-3175bbe66c783e70c8c0",
           "file": "streaming2-e2e.spec.js",
           "line": 288,
-          "column": 1
-        },
-        {
-          "title": "TC_18_Price_Consistency_Validation",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Samsung Internet",
-              "projectName": "Samsung Internet",
-              "results": [
-                {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6434,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
-                    },
-                    {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'PackageUnlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Unlimited VIN Check$29.99'\u001b[39m,\n  \u001b[32m'Total$29.99'\u001b[39m,\n  \u001b[32m'$29.99'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $29.99 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ No Add-on as expected for UVC.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:40:31.901Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-faca905bf825a6248399",
-          "file": "streaming2-e2e.spec.js",
-          "line": 297,
-          "column": 1
-        },
-        {
-          "title": "TC_19_Email_Cache_Flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Samsung Internet",
-              "projectName": "Samsung Internet",
-              "results": [
-                {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10615,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "--- Starting TC_19 Email Cache Flow ---\n"
-                    },
-                    {
-                      "text": "✅ Landed on checkout page (1st time)\n"
-                    },
-                    {
-                      "text": "✅ Navigated back to Preview page\n"
-                    },
-                    {
-                      "text": "✅ Dynamically selected plan at index 1: \"2 Reports\", Price: $39.98\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ Email popup did NOT appear, directly navigated\n"
-                    },
-                    {
-                      "text": "DEBUG: Order summary items: [\n  \u001b[32m'Package2 Reports$29.99Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Package2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Package'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'2 Reports$29.99'\u001b[39m,\n  \u001b[32m'Add-onWindow Sticker$9.99'\u001b[39m,\n  \u001b[32m'Add-on'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Window Sticker$9.99'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m'Apply'\u001b[39m,\n  \u001b[32m''\u001b[39m,\n  \u001b[32m'Total$39.98'\u001b[39m,\n  \u001b[32m'$39.98'\u001b[39m,\n  \u001b[32m' Secure checkout Instant access'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": "✅ Total price $39.98 verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Add-on verified in Order summary.\n"
-                    },
-                    {
-                      "text": "✅ Order summary updated correctly\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:40:38.360Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-90565181349806d0fa15",
-          "file": "streaming2-e2e.spec.js",
-          "line": 309,
           "column": 1
         },
         {
@@ -1594,10 +1032,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3997,
+                  "duration": 3039,
                   "errors": [],
                   "stdout": [
                     {
@@ -1609,7 +1047,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:40:48.992Z",
+                  "startTime": "2026-07-30T15:34:32.729Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1635,10 +1073,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3734,
+                  "duration": 3681,
                   "errors": [],
                   "stdout": [
                     {
@@ -1650,7 +1088,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:40:53.006Z",
+                  "startTime": "2026-07-30T15:34:35.788Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1668,11 +1106,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-30T02:36:07.514Z",
-    "duration": 332507.071,
-    "expected": 31,
+    "startTime": "2026-07-30T15:31:19.939Z",
+    "duration": 250501.532,
+    "expected": 24,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

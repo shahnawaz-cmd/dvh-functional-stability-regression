@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+        "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
       },
       "gitCommit": {
-        "shortHash": "7bde2e5",
-        "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-        "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-        "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+        "shortHash": "d546416",
+        "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+        "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+        "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785262157000
+          "time": 1785424367000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785262157000
+          "time": 1785424367000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -92,24 +92,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -130,24 +130,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -168,24 +168,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30508574705"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
+            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30556619458"
           },
           "gitCommit": {
-            "shortHash": "7bde2e5",
-            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
-            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
-            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "shortHash": "d546416",
+            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
+            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
+            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785262157000
+              "time": 1785424367000
             },
             "branch": "main"
           },
@@ -245,7 +245,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 32221,
+                  "duration": 3793,
                   "errors": [],
                   "stdout": [
                     {
@@ -260,7 +260,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:41:41.600Z",
+                  "startTime": "2026-07-30T15:35:31.847Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -289,7 +289,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5714,
+                  "duration": 4720,
                   "errors": [],
                   "stdout": [
                     {
@@ -304,7 +304,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:41:41.593Z",
+                  "startTime": "2026-07-30T15:35:31.880Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -315,95 +315,6 @@
           "id": "51124a558cf768cdf755-dc0b49b4695e6f1b4ced",
           "file": "streaming2-e2e.spec.js",
           "line": 352,
-          "column": 1
-        },
-        {
-          "title": "TC_24_Coupon_Flow_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Desktop Chrome",
-              "projectName": "Desktop Chrome",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 7868,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 2: \"5 Reports\", Price: $99.95\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ [TC_24] Checkout page reached – test passed\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:41:47.449Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-d22fda1875b004093da2",
-          "file": "streaming2-e2e.spec.js",
-          "line": 364,
-          "column": 1
-        },
-        {
-          "title": "TC_25_Checkout_Coupon_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Desktop Chrome",
-              "projectName": "Desktop Chrome",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 12283,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:41:55.349Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "TC_25 checkout coupon data",
-                      "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVEF3TWlJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU16YzVNekU1TkRjMFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUkyTVRRM05qQTROemcwSWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTnk0eE5URXVNVEk1TGpNeUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
-                    },
-                    {
-                      "name": "TC_25 checkout coupon summary",
-                      "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UQXdNaUlzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTXpjNU16RTVORGMwUUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTJNVFEzTmpBNE56ZzBJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFOeTR4TlRFdU1USTVMak15SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-878709a5b120ac23bc46",
-          "file": "streaming2-e2e.spec.js",
-          "line": 395,
           "column": 1
         },
         {
@@ -420,9 +331,9 @@
               "results": [
                 {
                   "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4303,
+                  "duration": 45987,
                   "errors": [],
                   "stdout": [
                     {
@@ -437,7 +348,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:08.298Z",
+                  "startTime": "2026-07-30T15:35:36.407Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,10 +374,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4315,
+                  "duration": 4306,
                   "errors": [],
                   "stdout": [
                     {
@@ -481,7 +392,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:12.770Z",
+                  "startTime": "2026-07-30T15:35:37.492Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -492,95 +403,6 @@
           "id": "51124a558cf768cdf755-57136bf4abea5998c524",
           "file": "streaming2-e2e.spec.js",
           "line": 352,
-          "column": 1
-        },
-        {
-          "title": "TC_24_Coupon_Flow_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Chrome",
-              "projectName": "Mobile Chrome",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7796,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 0: \"1 Report\", Price: $19.99\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ [TC_24] Checkout page reached – test passed\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:14.669Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-ff6a6105f6277937f463",
-          "file": "streaming2-e2e.spec.js",
-          "line": 364,
-          "column": 1
-        },
-        {
-          "title": "TC_25_Checkout_Coupon_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Chrome",
-              "projectName": "Mobile Chrome",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 11897,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:17.103Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "TC_25 checkout coupon data",
-                      "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVE0zT1NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU16YzVNelF4TWpZNFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUk0T0RReU5EUTJORFU1SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTnk0eE5URXVNVEk1TGpNeUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
-                    },
-                    {
-                      "name": "TC_25 checkout coupon summary",
-                      "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UTTNPU0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTXpjNU16UXhNalk0UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTRPRFF5TkRRMk5EVTVJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFOeTR4TlRFdU1USTVMak15SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-85886bd20978fa511fbb",
-          "file": "streaming2-e2e.spec.js",
-          "line": 395,
           "column": 1
         },
         {
@@ -597,9 +419,9 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4268,
+                  "duration": 3028,
                   "errors": [],
                   "stdout": [
                     {
@@ -614,7 +436,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:23.475Z",
+                  "startTime": "2026-07-30T15:35:42.453Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -641,9 +463,9 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4559,
+                  "duration": 3668,
                   "errors": [],
                   "stdout": [
                     {
@@ -658,7 +480,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:27.928Z",
+                  "startTime": "2026-07-30T15:35:45.617Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -669,95 +491,6 @@
           "id": "51124a558cf768cdf755-e3278342d9dab5eed7f2",
           "file": "streaming2-e2e.spec.js",
           "line": 352,
-          "column": 1
-        },
-        {
-          "title": "TC_24_Coupon_Flow_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Edge",
-              "projectName": "Mobile Edge",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 7287,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 2: \"5 Reports\", Price: $99.95\n"
-                    },
-                    {
-                      "text": "✅ Upsell selected. Price: $9.99\n"
-                    },
-                    {
-                      "text": "✅ [TC_24] Checkout page reached – test passed\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:29.723Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-b4f201f98afa937433f1",
-          "file": "streaming2-e2e.spec.js",
-          "line": 364,
-          "column": 1
-        },
-        {
-          "title": "TC_25_Checkout_Coupon_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Edge",
-              "projectName": "Mobile Edge",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11632,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:32.507Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "TC_25 checkout coupon data",
-                      "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVE0yTXlJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU16YzVNelUzTmpZNFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUkxT1RFM05UTTJOakF4SWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTnk0eE5URXVNVEk1TGpNeUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
-                    },
-                    {
-                      "name": "TC_25 checkout coupon summary",
-                      "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1UTTJNeUlzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTXpjNU16VTNOalk0UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTFPVEUzTlRNMk5qQXhJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFOeTR4TlRFdU1USTVMak15SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-c0c4816054ab96411f2c",
-          "file": "streaming2-e2e.spec.js",
-          "line": 395,
           "column": 1
         },
         {
@@ -773,10 +506,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5193,
+                  "duration": 3030,
                   "errors": [],
                   "stdout": [
                     {
@@ -791,7 +524,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:37.832Z",
+                  "startTime": "2026-07-30T15:35:49.833Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -817,10 +550,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4365,
+                  "duration": 3876,
                   "errors": [],
                   "stdout": [
                     {
@@ -835,7 +568,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T02:42:43.173Z",
+                  "startTime": "2026-07-30T15:35:52.997Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -847,104 +580,15 @@
           "file": "streaming2-e2e.spec.js",
           "line": 352,
           "column": 1
-        },
-        {
-          "title": "TC_24_Coupon_Flow_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Samsung Internet",
-              "projectName": "Samsung Internet",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 8477,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Dynamically selected plan at index 3: \"Unlimited VIN Check\", Price: $29.99\n"
-                    },
-                    {
-                      "text": "ℹ️ UVC plan selected: Upsell hidden.\n"
-                    },
-                    {
-                      "text": "✅ [TC_24] Checkout page reached – test passed\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:44.785Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-f15fee46c525c00d1cc5",
-          "file": "streaming2-e2e.spec.js",
-          "line": 364,
-          "column": 1
-        },
-        {
-          "title": "TC_25_Checkout_Coupon_Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Samsung Internet",
-              "projectName": "Samsung Internet",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 10823,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-30T02:42:47.557Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "TC_25 checkout coupon data",
-                      "contentType": "application/json",
-                      "body": "ewogICJ2aW4iOiAiNEpHRUQ2RUIwSkExMjE4OTgiLAogICJjb3Vwb25Db2RlIjogImdldDIwIiwKICAiY291cG9uUGVyY2VudGFnZSI6ICIyMCUiLAogICJjaGVja291dFVybCI6ICJodHRwczovL2RldGFpbGVkdmVoaWNsZWhpc3RvcnkuY29tL2NoZWNrb3V0P2RhdGE9ZXlKamIyUmxJam9pUkZaSU1TSXNJblI1Y0dVaU9pSnlaWEJ2Y25RaUxDSjJhVzRpT2lJMFNrZEZSRFpGUWpCS1FURXlNVEkzT1NJc0ltVnRZV2xzSWpvaWRHVnpkRjh4TnpnMU16YzVNemN5TURJNFFHVjRZVzF3YkdVdVkyOXRJaXdpY0dodmJtVWlPaUkzTnpRNU56UTVNamMzSWl3aVpYaDBjbUVpT25SeWRXVXNJbUZrWkU5dVVISnBZMlVpT2prdU9Ua3NJbUZrWkU5dVRHRmlaV3dpT2lKVFlYWmxJRFV3SlNFZ1IyVjBJR0VnVjJsdVpHOTNJRk4wYVdOclpYSWlMQ0p1YjNNaU9qRXNJbWwwWlcxTVlXSmxiQ0k2SWxKbGNHOXlkQ0lzSW5CeWFXTmxJam94T1M0NU9Td2lZM1Z5Y21WdVkzbFRhV2R1SWpvaUpDSXNJbU4xY25KbGJtTjVJam9pVlZORUlpd2lZMjkxYm5SeWVTSTZJbFZUSWl3aWFYQWlPaUkxTnk0eE5URXVNVEk1TGpNeUluMD0iLAogICJyZXBvcnRQcmljZSI6IDE5Ljk5LAogICJkaXNjb3VudEFtb3VudCI6IDQsCiAgImFkZE9uQW1vdW50IjogOS45OSwKICAidG90YWxBbW91bnQiOiAyNS45OCwKICAiZXhwZWN0ZWREaXNjb3VudCI6IDMuOTk3OTk5OTk5OTk5OTk5OCwKICAiZXhwZWN0ZWRUb3RhbCI6IDI1Ljk3OTk5OTk5OTk5OTk5NywKICAib3JkZXJTdW1tYXJ5IjogIk9yZGVyIHN1bW1hcnlcblBBQ0tBR0VcbjEgUmVwb3J0XG4kMTkuOTlcbkRpc2NvdW50XG4tJDQuMDBcbkFERC1PTlxuV2luZG93IFN0aWNrZXJcbiQ5Ljk5XG5Db3Vwb25cbkdFVDIwXG5hcHBsaWVkIOKAlCAyMCUgb2ZmXG5BcHBseVxuVG90YWxcbiQyOS45OFxuJDI1Ljk4XG5TZWN1cmUgY2hlY2tvdXRcbkluc3RhbnQgYWNjZXNzIgp9"
-                    },
-                    {
-                      "name": "TC_25 checkout coupon summary",
-                      "contentType": "text/plain",
-                      "body": "VklOOiA0SkdFRDZFQjBKQTEyMTg5OApDb3Vwb246IGdldDIwICgyMCUgb2ZmKQpDaGVja291dCBVUkw6IGh0dHBzOi8vZGV0YWlsZWR2ZWhpY2xlaGlzdG9yeS5jb20vY2hlY2tvdXQ/ZGF0YT1leUpqYjJSbElqb2lSRlpJTVNJc0luUjVjR1VpT2lKeVpYQnZjblFpTENKMmFXNGlPaUkwU2tkRlJEWkZRakJLUVRFeU1USTNPU0lzSW1WdFlXbHNJam9pZEdWemRGOHhOemcxTXpjNU16Y3lNREk0UUdWNFlXMXdiR1V1WTI5dElpd2ljR2h2Ym1VaU9pSTNOelE1TnpRNU1qYzNJaXdpWlhoMGNtRWlPblJ5ZFdVc0ltRmtaRTl1VUhKcFkyVWlPamt1T1Rrc0ltRmtaRTl1VEdGaVpXd2lPaUpUWVhabElEVXdKU0VnUjJWMElHRWdWMmx1Wkc5M0lGTjBhV05yWlhJaUxDSnViM01pT2pFc0ltbDBaVzFNWVdKbGJDSTZJbEpsY0c5eWRDSXNJbkJ5YVdObElqb3hPUzQ1T1N3aVkzVnljbVZ1WTNsVGFXZHVJam9pSkNJc0ltTjFjbkpsYm1ONUlqb2lWVk5FSWl3aVkyOTFiblJ5ZVNJNklsVlRJaXdpYVhBaU9pSTFOeTR4TlRFdU1USTVMak15SW4wPQpSZXBvcnQ6IDE5Ljk5CkRpc2NvdW50OiA0LjAwCkFkZC1vbjogOS45OQpUb3RhbDogMjUuOTg="
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-6ed1c2b0fc8f31d8fd11",
-          "file": "streaming2-e2e.spec.js",
-          "line": 395,
-          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-30T02:41:41.023Z",
-    "duration": 77465.213,
-    "expected": 16,
+    "startTime": "2026-07-30T15:35:31.310Z",
+    "duration": 51282.16,
+    "expected": 8,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
