@@ -184,43 +184,43 @@ Call log:
   227 |   }
   228 | 
   229 |   async selectRandomPlanAndHandleUpsell() {
-  230 |     // Select plan by name only, ignoring dynamic price/currency
-  231 |     const plans = [
-  232 |       { name: '1 Report', reports: 1, locator: this.page.locator('div[role="button"]').filter({ hasText: /^1 Report/ }) },
-  233 |       { name: '2 Reports', reports: 2, locator: this.page.locator('div[role="button"]').filter({ hasText: /^2 Reports/ }) },
-  234 |       { name: '5 Reports', reports: 5, locator: this.page.locator('div[role="button"]').filter({ hasText: /^5 Reports/ }) },
-  235 |       { name: 'Unlimited VIN Check', reports: 0, locator: this.page.locator('div[role="button"]').filter({ hasText: /^Unlimited VIN Check/ }) }
-  236 |     ];
-  237 | 
-  238 |     const randomPlan = plans[Math.floor(Math.random() * plans.length)];
-  239 |     
-  240 |     // Capture price from the plan element dynamically
-  241 |     await randomPlan.locator.waitFor({ state: 'visible', timeout: TIMEOUT });
-  242 |     const priceText = await randomPlan.locator.innerText();
-  243 |     const priceMatches = priceText.match(/\$\d+(\.\d{2})?/g);
-  244 |     let maxPrice = 0;
-  245 |     if (priceMatches) {
-  246 |       for (const match of priceMatches) {
-  247 |         const p = parseFloat(match.replace('$', ''));
-  248 |         if (p > maxPrice) maxPrice = p;
-  249 |       }
-  250 |     }
-  251 |     const totalPlanPrice = maxPrice.toFixed(2);
-  252 |     
-  253 |     // Conditionally use force: true for Safari (webkit) to improve stability
-  254 |     const isWebKit = this.page.context().browser().browserType().name() === 'webkit';
-  255 |     await randomPlan.locator.click({ force: isWebKit });
-  256 |     
-  257 |     console.log(`✅ Selected plan: ${randomPlan.name}, Total Price: $${totalPlanPrice}`);
-  258 | 
-  259 |     // Handle Upsell
-  260 |     let upsellPrice = null;
-  261 |     // Use a broader locator for the checkbox since the exact text might change
-  262 |     const upsellCheckbox = this.page.getByRole('checkbox').first();
-  263 |     
-  264 |     if (randomPlan.name !== 'Unlimited VIN Check') {
-  265 |       const isVisible = await upsellCheckbox.isVisible().catch(() => false);
-  266 |       if (isVisible) {
-  267 |         const upsellContainer = upsellCheckbox.locator('xpath=..'); // Adjust if needed
-  268 |         const upsellText = await upsellContainer.innerText();
+  230 |     // Locate all plan buttons dynamically by their role on the page
+  231 |     const planButtons = this.page.locator('div[role="button"]').filter({
+  232 |       hasText: /Report|Check|UVC/i
+  233 |     });
+  234 |     
+  235 |     // Wait for the first plan button to load and render on the DOM before counting
+  236 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+  237 |     
+  238 |     const count = await planButtons.count();
+  239 |     if (count === 0) {
+  240 |       throw new Error("No plan buttons found on the page.");
+  241 |     }
+  242 |     
+  243 |     // Select a random plan index
+  244 |     const randomIndex = Math.floor(Math.random() * count);
+  245 |     const planLocator = planButtons.nth(randomIndex);
+  246 |     
+  247 |     // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
+  248 |     await planLocator.scrollIntoViewIfNeeded();
+  249 |     await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
+  250 |     
+  251 |     // Dynamically extract the text and price at runtime
+  252 |     const innerText = await planLocator.innerText();
+  253 |     
+  254 |     // Parse the name dynamically (handles Unlimited/UVC vs numbered reports)
+  255 |     let planName = '1 Report';
+  256 |     if (innerText.toLowerCase().includes('unlimited') || innerText.toLowerCase().includes('uvc')) {
+  257 |       planName = 'Unlimited VIN Check';
+  258 |     } else {
+  259 |       const match = innerText.match(/\d+\s+\w+/);
+  260 |       if (match) planName = match[0];
+  261 |     }
+  262 |     
+  263 |     // Parse the price dynamically (e.g. matches "$29.99")
+  264 |     const priceMatches = innerText.match(/\$\d+(\.\d{2})?/g);
+  265 |     let maxPrice = 0;
+  266 |     if (priceMatches) {
+  267 |       for (const match of priceMatches) {
+  268 |         const p = parseFloat(match.replace('$', ''));
 ```
