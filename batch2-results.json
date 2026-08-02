@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
         "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30680884193"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
       },
       "gitCommit": {
         "shortHash": "d546416",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30680884193"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30680884193"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30680884193"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30680884193"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -245,12 +245,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37118,
+                  "duration": 37870,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:56:47.763Z",
+                  "startTime": "2026-08-02T02:54:57.487Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -279,12 +279,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4672,
+                  "duration": 4535,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:56:47.737Z",
+                  "startTime": "2026-08-02T02:54:57.479Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -313,12 +313,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5366,
+                  "duration": 5287,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:56:52.574Z",
+                  "startTime": "2026-08-02T02:55:02.179Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -347,12 +347,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 69149,
+                  "duration": 45873,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:56:57.952Z",
+                  "startTime": "2026-08-02T02:55:07.482Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -381,7 +381,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3177,
+                  "duration": 2928,
                   "errors": [],
                   "stdout": [
                     {
@@ -393,7 +393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:57:25.029Z",
+                  "startTime": "2026-08-02T02:55:35.512Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -422,7 +422,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3558,
+                  "duration": 4460,
                   "errors": [],
                   "stdout": [
                     {
@@ -434,7 +434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:57:28.223Z",
+                  "startTime": "2026-08-02T02:55:38.459Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -462,69 +462,18 @@
                 {
                   "workerIndex": 2,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 120114,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 68,
-                        "line": 118
-                      },
-                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Select model' })\u001b[22m\n\n\n   at pages/PreviewPage.js:118\n\n  116 |     await this.page.getByRole('button', { name: 'Ambassador' }).click();\n  117 |\n> 118 |     await this.page.getByRole('textbox', { name: 'Select model' }).click();\n      |                                                                    ^\n  119 |     await this.page.getByRole('button', { name: 'R', exact: true }).click();\n  120 |\n  121 |     await this.page.getByRole('textbox', { name: 'Select trim' }).click();\n    at PreviewPage.classicEdtibleFeatureYMM (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:118:68)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:238:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-01T02:57:32.218Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-13-Classic-VIN-YMM-Edit-Validation-Mobile-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-13-Classic-VIN-YMM-Edit-Validation-Mobile-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-13-Classic-VIN-YMM-Edit-Validation-Mobile-Chrome/error-context.md"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38649,
+                  "duration": 37609,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-01T02:59:32.884Z",
+                  "retry": 0,
+                  "startTime": "2026-08-02T02:55:43.667Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-13-Classic-VIN-YMM-Edit-Validation-Mobile-Chrome-retry1/trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-f17e1bcfaf9bb5719505",
@@ -548,12 +497,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3554,
+                  "duration": 3275,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:58:07.562Z",
+                  "startTime": "2026-08-02T02:55:53.840Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -582,12 +531,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5219,
+                  "duration": 5084,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:58:11.243Z",
+                  "startTime": "2026-08-02T02:55:57.229Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -616,12 +565,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 53520,
+                  "duration": 55311,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:58:16.476Z",
+                  "startTime": "2026-08-02T02:56:02.327Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -647,10 +596,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 1,
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2808,
+                  "duration": 2842,
                   "errors": [],
                   "stdout": [
                     {
@@ -662,7 +611,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:59:10.008Z",
+                  "startTime": "2026-08-02T02:56:21.481Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -688,10 +637,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 1,
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3960,
+                  "duration": 3321,
                   "errors": [],
                   "stdout": [
                     {
@@ -703,7 +652,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:59:12.829Z",
+                  "startTime": "2026-08-02T02:56:24.341Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -730,14 +679,14 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 35828,
+                  "duration": 36350,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:59:17.252Z",
+                  "startTime": "2026-08-02T02:56:28.152Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -763,15 +712,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3070,
+                  "duration": 3592,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:59:53.188Z",
+                  "startTime": "2026-08-02T02:56:58.145Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -797,15 +746,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5310,
+                  "duration": 5723,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T02:59:56.273Z",
+                  "startTime": "2026-08-02T02:57:01.850Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -832,14 +781,14 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 101016,
+                  "duration": 55514,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:00:01.598Z",
+                  "startTime": "2026-08-02T02:57:04.622Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -865,10 +814,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5685,
+                  "duration": 2920,
                   "errors": [],
                   "stdout": [
                     {
@@ -880,7 +829,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:00:12.583Z",
+                  "startTime": "2026-08-02T02:57:07.593Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -906,10 +855,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 7565,
+                  "duration": 4310,
                   "errors": [],
                   "stdout": [
                     {
@@ -921,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:00:18.400Z",
+                  "startTime": "2026-08-02T02:57:10.532Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -947,15 +896,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 39837,
+                  "duration": 36181,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:00:26.476Z",
+                  "startTime": "2026-08-02T02:57:15.399Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -981,15 +930,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3774,
+                  "duration": 4162,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:01:06.437Z",
+                  "startTime": "2026-08-02T02:57:51.714Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1004,7 +953,7 @@
         },
         {
           "title": "TC_15_Classic_Editible_Specs_Update",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1015,108 +964,20 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 100776,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 25,
-                      "line": 168
-                    },
-                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 25,
-                        "line": 168
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5"
-                    }
-                  ],
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5428,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:01:10.224Z",
+                  "startTime": "2026-08-02T02:57:55.909Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 25,
-                    "line": 168
-                  }
-                },
-                {
-                  "workerIndex": 9,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 98709,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 25,
-                      "line": 168
-                    },
-                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 25,
-                        "line": 168
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-01T03:02:51.460Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 25,
-                    "line": 168
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-e595f042469ecfb6070b",
@@ -1137,15 +998,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 60218,
+                  "duration": 80676,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:01:43.069Z",
+                  "startTime": "2026-08-02T02:58:00.713Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1171,10 +1032,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2766,
+                  "duration": 3221,
                   "errors": [],
                   "stdout": [
                     {
@@ -1186,7 +1047,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:02:43.408Z",
+                  "startTime": "2026-08-02T02:58:01.369Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1212,10 +1073,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4668,
+                  "duration": 3508,
                   "errors": [],
                   "stdout": [
                     {
@@ -1227,7 +1088,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-01T03:02:46.199Z",
+                  "startTime": "2026-08-02T02:58:04.603Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1245,11 +1106,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-01T02:56:47.221Z",
-    "duration": 463510.46400000004,
-    "expected": 22,
+    "startTime": "2026-08-02T02:54:56.939Z",
+    "duration": 264651.53,
+    "expected": 24,
     "skipped": 0,
-    "unexpected": 1,
-    "flaky": 1
+    "unexpected": 0,
+    "flaky": 0
   }
 }
