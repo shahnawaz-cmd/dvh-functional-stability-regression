@@ -209,7 +209,21 @@ class PreviewPage {
 
   // Helper: Generate a unique email
   static generateUniqueEmail() {
-    return `test_${Date.now()}@example.com`;
+    const primaryEmails = [
+      'indus.shahnawaz1460@gmail.com',
+      'techworms134@gmail.com',
+      'h.m.shahnawaz123@gmail.com',
+      'hommy.stress123@gmail.com',
+      'working.with56@gmail.com'
+    ];
+    
+    // Pick a random primary email from the list
+    const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
+    const [localPart, domainPart] = chosenEmail.split('@');
+    
+    // Gmail supports plus-addressing (e.g. user+timestamp@gmail.com)
+    // This routes emails directly to the main inbox to prevent bounces
+    return `${localPart}+${Date.now()}@${domainPart}`;
   }
 
   // Helper: Generate a valid US phone number (XXX) XXX-XXXX

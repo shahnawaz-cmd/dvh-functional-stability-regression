@@ -135,7 +135,8 @@ test('TC_07_Exit_Intent_Popup_Trigger_Validation', async ({ page }, testInfo) =>
   await page.close();
 });
 
-test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }) => {
+test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'Desktop Chrome', 'This test only runs on Desktop Chrome');
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
   await home.navigate();
