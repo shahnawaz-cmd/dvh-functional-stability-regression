@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
         "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
       },
       "gitCommit": {
         "shortHash": "d546416",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
             "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30729605388"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
           },
           "gitCommit": {
             "shortHash": "d546416",
@@ -245,12 +245,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37870,
+                  "duration": 36783,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:54:57.487Z",
+                  "startTime": "2026-08-03T02:56:37.987Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -279,12 +279,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4535,
+                  "duration": 4464,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:54:57.479Z",
+                  "startTime": "2026-08-03T02:56:38.021Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -313,12 +313,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5287,
+                  "duration": 5202,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:02.179Z",
+                  "startTime": "2026-08-03T02:56:42.665Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -347,12 +347,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 45873,
+                  "duration": 55165,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:07.482Z",
+                  "startTime": "2026-08-03T02:56:47.880Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -381,7 +381,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2928,
+                  "duration": 2893,
                   "errors": [],
                   "stdout": [
                     {
@@ -393,7 +393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:35.512Z",
+                  "startTime": "2026-08-03T02:57:14.905Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -422,7 +422,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4460,
+                  "duration": 4138,
                   "errors": [],
                   "stdout": [
                     {
@@ -434,7 +434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:38.459Z",
+                  "startTime": "2026-08-03T02:57:17.816Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,12 +463,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37609,
+                  "duration": 36069,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:43.667Z",
+                  "startTime": "2026-08-03T02:57:22.452Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -497,12 +497,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3275,
+                  "duration": 3394,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:53.840Z",
+                  "startTime": "2026-08-03T02:57:43.513Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -531,12 +531,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5084,
+                  "duration": 5194,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:55:57.229Z",
+                  "startTime": "2026-08-03T02:57:47.009Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -565,12 +565,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 55311,
+                  "duration": 56456,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:56:02.327Z",
+                  "startTime": "2026-08-03T02:57:52.216Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -599,7 +599,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2842,
+                  "duration": 5213,
                   "errors": [],
                   "stdout": [
                     {
@@ -611,7 +611,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:56:21.481Z",
+                  "startTime": "2026-08-03T02:57:58.621Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -640,7 +640,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3321,
+                  "duration": 5042,
                   "errors": [],
                   "stdout": [
                     {
@@ -652,7 +652,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:56:24.341Z",
+                  "startTime": "2026-08-03T02:58:03.855Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -681,12 +681,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36350,
+                  "duration": 36364,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:56:28.152Z",
+                  "startTime": "2026-08-03T02:58:09.435Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -712,15 +712,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3592,
+                  "duration": 3171,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:56:58.145Z",
+                  "startTime": "2026-08-03T02:58:45.920Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -749,12 +749,12 @@
                   "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5723,
+                  "duration": 6115,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:01.850Z",
+                  "startTime": "2026-08-03T02:58:49.335Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -783,12 +783,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 55514,
+                  "duration": 54518,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:04.622Z",
+                  "startTime": "2026-08-03T02:58:49.106Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -817,7 +817,7 @@
                   "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2920,
+                  "duration": 3198,
                   "errors": [],
                   "stdout": [
                     {
@@ -829,7 +829,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:07.593Z",
+                  "startTime": "2026-08-03T02:58:55.638Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -858,7 +858,7 @@
                   "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4310,
+                  "duration": 3640,
                   "errors": [],
                   "stdout": [
                     {
@@ -870,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:10.532Z",
+                  "startTime": "2026-08-03T02:58:58.855Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -899,12 +899,12 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 36181,
+                  "duration": 36890,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:15.399Z",
+                  "startTime": "2026-08-03T02:59:02.968Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -933,12 +933,12 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4162,
+                  "duration": 3763,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:51.714Z",
+                  "startTime": "2026-08-03T02:59:39.987Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -964,20 +964,74 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 5428,
-                  "errors": [],
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 99817,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 25,
+                      "line": 168
+                    },
+                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 25,
+                        "line": 168
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:57:55.909Z",
+                  "startTime": "2026-08-03T02:59:44.338Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 25,
+                    "line": 168
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-08-03T03:01:24.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-e595f042469ecfb6070b",
@@ -998,15 +1052,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 80676,
+                  "duration": 92519,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:58:00.713Z",
+                  "startTime": "2026-08-03T02:59:43.770Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1035,7 +1089,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3221,
+                  "duration": 3146,
                   "errors": [],
                   "stdout": [
                     {
@@ -1047,7 +1101,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:58:01.369Z",
+                  "startTime": "2026-08-03T03:01:16.304Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1076,7 +1130,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3508,
+                  "duration": 5032,
                   "errors": [],
                   "stdout": [
                     {
@@ -1088,7 +1142,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-02T02:58:04.603Z",
+                  "startTime": "2026-08-03T03:01:19.463Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1106,11 +1160,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-02T02:54:56.939Z",
-    "duration": 264651.53,
-    "expected": 24,
+    "startTime": "2026-08-03T02:56:37.447Z",
+    "duration": 294573.181,
+    "expected": 23,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 1
   }
 }
