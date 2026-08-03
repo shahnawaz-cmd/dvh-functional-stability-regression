@@ -23,24 +23,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
-        "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
+        "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
+        "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
       },
       "gitCommit": {
-        "shortHash": "d546416",
-        "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-        "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
-        "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
+        "shortHash": "09b76de",
+        "hash": "09b76de042c74814577dde57d225c728c1c9e02f",
+        "subject": "feat: restrict TC_08 to Desktop Chrome and update email generation",
+        "body": "feat: restrict TC_08 to Desktop Chrome and update email generation\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785424367000
+          "time": 1785777701000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785424367000
+          "time": 1785777701000
         },
         "branch": "main"
       },
@@ -54,24 +54,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
-            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
+            "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
           },
           "gitCommit": {
-            "shortHash": "d546416",
-            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
-            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
+            "shortHash": "09b76de",
+            "hash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "subject": "feat: restrict TC_08 to Desktop Chrome and update email generation",
+            "body": "feat: restrict TC_08 to Desktop Chrome and update email generation\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "branch": "main"
           },
@@ -92,24 +92,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
-            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
+            "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
           },
           "gitCommit": {
-            "shortHash": "d546416",
-            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
-            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
+            "shortHash": "09b76de",
+            "hash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "subject": "feat: restrict TC_08 to Desktop Chrome and update email generation",
+            "body": "feat: restrict TC_08 to Desktop Chrome and update email generation\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "branch": "main"
           },
@@ -130,24 +130,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
-            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
+            "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
           },
           "gitCommit": {
-            "shortHash": "d546416",
-            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
-            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
+            "shortHash": "09b76de",
+            "hash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "subject": "feat: restrict TC_08 to Desktop Chrome and update email generation",
+            "body": "feat: restrict TC_08 to Desktop Chrome and update email generation\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "branch": "main"
           },
@@ -168,24 +168,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/d5464165b32d3693b3d85c7d7425996e599160c6",
-            "commitHash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30780364692"
+            "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
+            "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
           },
           "gitCommit": {
-            "shortHash": "d546416",
-            "hash": "d5464165b32d3693b3d85c7d7425996e599160c6",
-            "subject": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP",
-            "body": "Add workflow_dispatch trigger and Slack failure tagging for member U09UE83AWGP\n",
+            "shortHash": "09b76de",
+            "hash": "09b76de042c74814577dde57d225c728c1c9e02f",
+            "subject": "feat: restrict TC_08 to Desktop Chrome and update email generation",
+            "body": "feat: restrict TC_08 to Desktop Chrome and update email generation\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785424367000
+              "time": 1785777701000
             },
             "branch": "main"
           },
@@ -245,12 +245,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36783,
+                  "duration": 36023,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:56:37.987Z",
+                  "startTime": "2026-08-03T17:26:24.723Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -260,7 +260,7 @@
           ],
           "id": "51124a558cf768cdf755-9383c97285da56997c80",
           "file": "streaming2-e2e.spec.js",
-          "line": 230,
+          "line": 231,
           "column": 1
         },
         {
@@ -279,12 +279,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4464,
+                  "duration": 3761,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:56:38.021Z",
+                  "startTime": "2026-08-03T17:26:24.753Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -294,7 +294,7 @@
           ],
           "id": "51124a558cf768cdf755-c8601739133f5455e13e",
           "file": "streaming2-e2e.spec.js",
-          "line": 244,
+          "line": 245,
           "column": 1
         },
         {
@@ -313,12 +313,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5202,
+                  "duration": 4384,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:56:42.665Z",
+                  "startTime": "2026-08-03T17:26:28.663Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -328,7 +328,7 @@
           ],
           "id": "51124a558cf768cdf755-978499e7c1d9e56814bc",
           "file": "streaming2-e2e.spec.js",
-          "line": 258,
+          "line": 259,
           "column": 1
         },
         {
@@ -347,12 +347,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 55165,
+                  "duration": 56142,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:56:47.880Z",
+                  "startTime": "2026-08-03T17:26:33.055Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -362,7 +362,7 @@
           ],
           "id": "51124a558cf768cdf755-190134573b552eee22f0",
           "file": "streaming2-e2e.spec.js",
-          "line": 288,
+          "line": 289,
           "column": 1
         },
         {
@@ -381,7 +381,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2893,
+                  "duration": 2382,
                   "errors": [],
                   "stdout": [
                     {
@@ -393,7 +393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:57:14.905Z",
+                  "startTime": "2026-08-03T17:27:00.882Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -403,7 +403,7 @@
           ],
           "id": "51124a558cf768cdf755-976e223591469f57dffb",
           "file": "streaming2-e2e.spec.js",
-          "line": 320,
+          "line": 321,
           "column": 1
         },
         {
@@ -421,8 +421,61 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2055,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 42,
+                      "line": 436
+                    },
+                    "snippet": "   at pages/PreviewPage.js:436\n\n\u001b[0m \u001b[90m 434 |\u001b[39m\n \u001b[90m 435 |\u001b[39m     \u001b[90m// Wait for localStorage to be populated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 436 |\u001b[39m     \u001b[36mconst\u001b[39m siteSettings \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 437 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m \u001b[35m40\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 438 |\u001b[39m             \u001b[36mconst\u001b[39m val \u001b[33m=\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'site_settings'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 439 |\u001b[39m             \u001b[36mif\u001b[39m (val) \u001b[36mreturn\u001b[39m val\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 42,
+                        "line": 436
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   at pages/PreviewPage.js:436\n\n  434 |\n  435 |     // Wait for localStorage to be populated\n> 436 |     const siteSettings = await this.page.evaluate(async () => {\n      |                                          ^\n  437 |         for (let i = 0; i < 40; i++) {\n  438 |             const val = localStorage.getItem('site_settings');\n  439 |             if (val) return val;\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-03T17:27:03.297Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 42,
+                    "line": 436
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4138,
+                  "duration": 3090,
                   "errors": [],
                   "stdout": [
                     {
@@ -433,18 +486,24 @@
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-03T02:57:17.816Z",
+                  "retry": 1,
+                  "startTime": "2026-08-03T17:27:05.723Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome-retry1/trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-0a08e2a6cb59db7bbfbd",
           "file": "streaming2-e2e.spec.js",
-          "line": 329,
+          "line": 330,
           "column": 1
         },
         {
@@ -460,15 +519,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36069,
+                  "duration": 35361,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:57:22.452Z",
+                  "startTime": "2026-08-03T17:27:09.514Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -478,7 +537,7 @@
           ],
           "id": "51124a558cf768cdf755-f17e1bcfaf9bb5719505",
           "file": "streaming2-e2e.spec.js",
-          "line": 230,
+          "line": 231,
           "column": 1
         },
         {
@@ -494,15 +553,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3394,
+                  "duration": 3157,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:57:43.513Z",
+                  "startTime": "2026-08-03T17:27:29.562Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -512,7 +571,7 @@
           ],
           "id": "51124a558cf768cdf755-65a9ba8f3394daf44939",
           "file": "streaming2-e2e.spec.js",
-          "line": 244,
+          "line": 245,
           "column": 1
         },
         {
@@ -528,15 +587,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5194,
+                  "duration": 4791,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:57:47.009Z",
+                  "startTime": "2026-08-03T17:27:32.814Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -546,11 +605,45 @@
           ],
           "id": "51124a558cf768cdf755-8856c4eecf815dde95ed",
           "file": "streaming2-e2e.spec.js",
-          "line": 258,
+          "line": 259,
           "column": 1
         },
         {
           "title": "TC_17_EU_VIN_Confirmation_No",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 57128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-03T17:27:37.618Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-dc0452ae73c33c5eb83f",
+          "file": "streaming2-e2e.spec.js",
+          "line": 289,
+          "column": 1
+        },
+        {
+          "title": "TC_20_Default_Plan_Checking",
           "ok": true,
           "tags": [],
           "tests": [
@@ -563,43 +656,9 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 56456,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-03T02:57:52.216Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "51124a558cf768cdf755-dc0452ae73c33c5eb83f",
-          "file": "streaming2-e2e.spec.js",
-          "line": 288,
-          "column": 1
-        },
-        {
-          "title": "TC_20_Default_Plan_Checking",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Chrome",
-              "projectName": "Mobile Chrome",
-              "results": [
-                {
-                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5213,
+                  "duration": 2533,
                   "errors": [],
                   "stdout": [
                     {
@@ -611,7 +670,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:57:58.621Z",
+                  "startTime": "2026-08-03T17:27:44.996Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -621,7 +680,7 @@
           ],
           "id": "51124a558cf768cdf755-e9b554384c67c84880d9",
           "file": "streaming2-e2e.spec.js",
-          "line": 320,
+          "line": 321,
           "column": 1
         },
         {
@@ -637,10 +696,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5042,
+                  "duration": 2326,
                   "errors": [],
                   "stdout": [
                     {
@@ -652,7 +711,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:03.855Z",
+                  "startTime": "2026-08-03T17:27:47.552Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -662,7 +721,7 @@
           ],
           "id": "51124a558cf768cdf755-d211333a5bd029317bc4",
           "file": "streaming2-e2e.spec.js",
-          "line": 329,
+          "line": 330,
           "column": 1
         },
         {
@@ -678,15 +737,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36364,
+                  "duration": 35211,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:09.435Z",
+                  "startTime": "2026-08-03T17:27:50.283Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -696,7 +755,7 @@
           ],
           "id": "51124a558cf768cdf755-360bd30d099cbb3cf9a4",
           "file": "streaming2-e2e.spec.js",
-          "line": 230,
+          "line": 231,
           "column": 1
         },
         {
@@ -712,15 +771,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3171,
+                  "duration": 3439,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:45.920Z",
+                  "startTime": "2026-08-03T17:28:25.602Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -730,7 +789,7 @@
           ],
           "id": "51124a558cf768cdf755-203f4edc6ba64319caa7",
           "file": "streaming2-e2e.spec.js",
-          "line": 244,
+          "line": 245,
           "column": 1
         },
         {
@@ -747,14 +806,14 @@
               "results": [
                 {
                   "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6115,
+                  "duration": 4496,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:49.335Z",
+                  "startTime": "2026-08-03T17:28:29.059Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -764,7 +823,7 @@
           ],
           "id": "51124a558cf768cdf755-bc3edfda426905b8c423",
           "file": "streaming2-e2e.spec.js",
-          "line": 258,
+          "line": 259,
           "column": 1
         },
         {
@@ -780,15 +839,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 54518,
+                  "duration": 55630,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:49.106Z",
+                  "startTime": "2026-08-03T17:28:33.581Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -798,7 +857,7 @@
           ],
           "id": "51124a558cf768cdf755-3b801c1d4fb8a3486c82",
           "file": "streaming2-e2e.spec.js",
-          "line": 288,
+          "line": 289,
           "column": 1
         },
         {
@@ -814,10 +873,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3198,
+                  "duration": 2820,
                   "errors": [],
                   "stdout": [
                     {
@@ -829,7 +888,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:58:55.638Z",
+                  "startTime": "2026-08-03T17:28:35.168Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -839,7 +898,7 @@
           ],
           "id": "51124a558cf768cdf755-e0f28d9a2be9624adf2f",
           "file": "streaming2-e2e.spec.js",
-          "line": 320,
+          "line": 321,
           "column": 1
         },
         {
@@ -855,10 +914,63 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1794,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 42,
+                      "line": 436
+                    },
+                    "snippet": "   at pages/PreviewPage.js:436\n\n\u001b[0m \u001b[90m 434 |\u001b[39m\n \u001b[90m 435 |\u001b[39m     \u001b[90m// Wait for localStorage to be populated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 436 |\u001b[39m     \u001b[36mconst\u001b[39m siteSettings \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 437 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m \u001b[35m40\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 438 |\u001b[39m             \u001b[36mconst\u001b[39m val \u001b[33m=\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'site_settings'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 439 |\u001b[39m             \u001b[36mif\u001b[39m (val) \u001b[36mreturn\u001b[39m val\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 42,
+                        "line": 436
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   at pages/PreviewPage.js:436\n\n  434 |\n  435 |     // Wait for localStorage to be populated\n> 436 |     const siteSettings = await this.page.evaluate(async () => {\n      |                                          ^\n  437 |         for (let i = 0; i < 40; i++) {\n  438 |             const val = localStorage.getItem('site_settings');\n  439 |             if (val) return val;\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-03T17:28:38.086Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Edge/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Edge/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Edge/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 42,
+                    "line": 436
+                  }
+                },
+                {
+                  "workerIndex": 7,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3640,
+                  "duration": 3213,
                   "errors": [],
                   "stdout": [
                     {
@@ -869,18 +981,24 @@
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-03T02:58:58.855Z",
+                  "retry": 1,
+                  "startTime": "2026-08-03T17:28:40.291Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Edge-retry1/trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-e129af179f46dafce601",
           "file": "streaming2-e2e.spec.js",
-          "line": 329,
+          "line": 330,
           "column": 1
         },
         {
@@ -896,15 +1014,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 8,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 36890,
+                  "duration": 34784,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:59:02.968Z",
+                  "startTime": "2026-08-03T17:28:44.219Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -914,7 +1032,7 @@
           ],
           "id": "51124a558cf768cdf755-241eff088b00d9738557",
           "file": "streaming2-e2e.spec.js",
-          "line": 230,
+          "line": 231,
           "column": 1
         },
         {
@@ -930,15 +1048,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 8,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3763,
+                  "duration": 3331,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:59:39.987Z",
+                  "startTime": "2026-08-03T17:29:19.126Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -948,7 +1066,7 @@
           ],
           "id": "51124a558cf768cdf755-74e1e7c80d80bd1e5349",
           "file": "streaming2-e2e.spec.js",
-          "line": 244,
+          "line": 245,
           "column": 1
         },
         {
@@ -964,79 +1082,25 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 99817,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 25,
-                      "line": 168
-                    },
-                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 25,
-                        "line": 168
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:266:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-03T02:59:44.338Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 25,
-                    "line": 168
-                  }
-                },
-                {
                   "workerIndex": 8,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6660,
+                  "duration": 4514,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-03T03:01:24.831Z",
+                  "retry": 0,
+                  "startTime": "2026-08-03T17:29:22.480Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-e595f042469ecfb6070b",
           "file": "streaming2-e2e.spec.js",
-          "line": 258,
+          "line": 259,
           "column": 1
         },
         {
@@ -1052,15 +1116,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 8,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 92519,
+                  "duration": 62621,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T02:59:43.770Z",
+                  "startTime": "2026-08-03T17:29:27.008Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1070,7 +1134,7 @@
           ],
           "id": "51124a558cf768cdf755-3175bbe66c783e70c8c0",
           "file": "streaming2-e2e.spec.js",
-          "line": 288,
+          "line": 289,
           "column": 1
         },
         {
@@ -1086,10 +1150,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3146,
+                  "duration": 2450,
                   "errors": [],
                   "stdout": [
                     {
@@ -1101,7 +1165,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T03:01:16.304Z",
+                  "startTime": "2026-08-03T17:29:29.628Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1111,7 +1175,7 @@
           ],
           "id": "51124a558cf768cdf755-dceb43ac8e6f79ba46b4",
           "file": "streaming2-e2e.spec.js",
-          "line": 320,
+          "line": 321,
           "column": 1
         },
         {
@@ -1127,10 +1191,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5032,
+                  "duration": 1950,
                   "errors": [],
                   "stdout": [
                     {
@@ -1142,7 +1206,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T03:01:19.463Z",
+                  "startTime": "2026-08-03T17:29:32.186Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1152,7 +1216,7 @@
           ],
           "id": "51124a558cf768cdf755-b2842fca6555ef4e2896",
           "file": "streaming2-e2e.spec.js",
-          "line": 329,
+          "line": 330,
           "column": 1
         }
       ]
@@ -1160,11 +1224,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-03T02:56:37.447Z",
-    "duration": 294573.181,
-    "expected": 23,
+    "startTime": "2026-08-03T17:26:24.328Z",
+    "duration": 245364.29400000002,
+    "expected": 22,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 1
+    "flaky": 2
   }
 }
