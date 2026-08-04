@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
         "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30872324027"
       },
       "gitCommit": {
         "shortHash": "09b76de",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30872324027"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30872324027"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30872324027"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30836470923"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30872324027"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -245,7 +245,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 40410,
+                  "duration": 5018,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -253,22 +253,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 588
+                      "duration": 741
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1185
+                      "duration": 1170
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 38346
+                      "duration": 2417
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 128
+                      "duration": 301
                     }
                   ],
-                  "startTime": "2026-08-03T17:24:31.110Z",
+                  "startTime": "2026-08-04T02:38:15.978Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -297,7 +297,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4218,
+                  "duration": 5127,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -305,22 +305,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 515
+                      "duration": 851
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1111
+                      "duration": 1250
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 2225
+                      "duration": 2318
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 186
+                      "duration": 397
                     }
                   ],
-                  "startTime": "2026-08-03T17:24:31.159Z",
+                  "startTime": "2026-08-04T02:38:15.989Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -346,10 +346,10 @@
               "projectName": "Desktop Chrome",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4856,
+                  "duration": 54189,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -357,22 +357,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1589
+                      "duration": 2000
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 904
+                      "duration": 45452
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 1971
+                      "duration": 6343
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 163
+                      "duration": 136
                     }
                   ],
-                  "startTime": "2026-08-03T17:24:35.835Z",
+                  "startTime": "2026-08-04T02:38:21.404Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -401,7 +401,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11013,
+                  "duration": 11022,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -409,22 +409,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 2850
+                      "duration": 2285
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 1115
+                      "duration": 697
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 6328
+                      "duration": 7640
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 223
+                      "duration": 153
                     }
                   ],
-                  "startTime": "2026-08-03T17:24:40.705Z",
+                  "startTime": "2026-08-04T02:38:21.515Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -453,7 +453,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3716,
+                  "duration": 3808,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -461,18 +461,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1719
+                      "duration": 1533
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1372
+                      "duration": 1464
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 430
+                      "duration": 560
                     }
                   ],
-                  "startTime": "2026-08-03T17:24:51.740Z",
+                  "startTime": "2026-08-04T02:38:32.564Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -501,12 +501,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 10808,
+                  "duration": 11120,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:24:55.475Z",
+                  "startTime": "2026-08-04T02:38:36.394Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -535,12 +535,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5341,
+                  "duration": 5489,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:25:06.303Z",
+                  "startTime": "2026-08-04T02:38:47.537Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -569,7 +569,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3705,
+                  "duration": 3639,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -577,22 +577,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 736
+                      "duration": 475
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1145
+                      "duration": 1330
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1385
+                      "duration": 1343
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 124
+                      "duration": 272
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:12.176Z",
+                  "startTime": "2026-08-04T02:38:53.655Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -618,10 +618,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3203,
+                  "duration": 3090,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -629,22 +629,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 539
+                      "duration": 389
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1238
+                      "duration": 1204
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1188
+                      "duration": 504
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 107
+                      "duration": 791
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:12.435Z",
+                  "startTime": "2026-08-04T02:38:57.435Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -670,10 +670,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 45629,
+                  "duration": 12952,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -681,22 +681,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1390
+                      "duration": 1563
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 37857
+                      "duration": 1704
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 6079
+                      "duration": 9274
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 86
+                      "duration": 269
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:15.780Z",
+                  "startTime": "2026-08-04T02:39:00.549Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -725,7 +725,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 13551,
+                  "duration": 11369,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -733,22 +733,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1483
+                      "duration": 1545
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 1603
+                      "duration": 1784
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 10192
+                      "duration": 7658
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 101
+                      "duration": 201
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:16.061Z",
+                  "startTime": "2026-08-04T02:39:13.518Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -774,10 +774,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3235,
+                  "duration": 3069,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -785,18 +785,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1496
+                      "duration": 1607
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1436
+                      "duration": 972
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 191
+                      "duration": 266
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:29.626Z",
+                  "startTime": "2026-08-04T02:39:16.289Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -832,15 +832,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 143,
+                  "duration": 173,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:25:32.873Z",
+                  "startTime": "2026-08-04T02:39:19.573Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -886,15 +886,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 136,
+                  "duration": 149,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:25:33.026Z",
+                  "startTime": "2026-08-04T02:39:19.758Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -931,9 +931,9 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2564,
+                  "duration": 38971,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -941,22 +941,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 309
+                      "duration": 313
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1308
+                      "duration": 1286
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 666
+                      "duration": 37090
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 149
+                      "duration": 117
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:33.569Z",
+                  "startTime": "2026-08-04T02:39:20.382Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -982,10 +982,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2154,
+                  "duration": 3122,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -993,22 +993,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 242
+                      "duration": 411
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1231
+                      "duration": 1298
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 135
+                      "duration": 1095
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 361
+                      "duration": 146
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:36.228Z",
+                  "startTime": "2026-08-04T02:39:25.465Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1034,10 +1034,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 8612,
+                  "duration": 10192,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1045,22 +1045,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1562
+                      "duration": 1616
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 912
+                      "duration": 1127
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 5917
+                      "duration": 7131
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 89
+                      "duration": 141
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:38.394Z",
+                  "startTime": "2026-08-04T02:39:28.725Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1086,10 +1086,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 9980,
+                  "duration": 24975,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1097,22 +1097,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1644
+                      "duration": 1607
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 928
+                      "duration": 14232
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 7177
+                      "duration": 8628
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 100
+                      "duration": 193
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:47.019Z",
+                  "startTime": "2026-08-04T02:39:38.934Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1139,9 +1139,9 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3259,
+                  "duration": 21501,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1149,18 +1149,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1506
+                      "duration": 1588
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1380
+                      "duration": 19448
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 252
+                      "duration": 313
                     }
                   ],
-                  "startTime": "2026-08-03T17:25:57.010Z",
+                  "startTime": "2026-08-04T02:39:59.462Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1196,15 +1196,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 146,
+                  "duration": 206,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:26:00.279Z",
+                  "startTime": "2026-08-04T02:40:03.926Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1250,15 +1250,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 5,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 182,
+                  "duration": 178,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:26:00.436Z",
+                  "startTime": "2026-08-04T02:40:04.155Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1294,10 +1294,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3482,
+                  "duration": 3215,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1305,22 +1305,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 343
+                      "duration": 382
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1124
+                      "duration": 1268
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1617
+                      "duration": 1290
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 147
+                      "duration": 96
                     }
                   ],
-                  "startTime": "2026-08-03T17:26:01.188Z",
+                  "startTime": "2026-08-04T02:40:04.904Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1347,9 +1347,9 @@
               "results": [
                 {
                   "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2490,
+                  "duration": 2892,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1357,22 +1357,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 247
+                      "duration": 310
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1402
+                      "duration": 1236
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 228
+                      "duration": 786
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 292
+                      "duration": 408
                     }
                   ],
-                  "startTime": "2026-08-03T17:26:02.036Z",
+                  "startTime": "2026-08-04T02:40:08.256Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1399,9 +1399,9 @@
               "results": [
                 {
                   "workerIndex": 6,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 18986,
+                  "duration": 22566,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1409,22 +1409,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1545
+                      "duration": 1478
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 9547
+                      "duration": 12196
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 7633
+                      "duration": 8271
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 108
+                      "duration": 175
                     }
                   ],
-                  "startTime": "2026-08-03T17:26:04.631Z",
+                  "startTime": "2026-08-04T02:40:11.167Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1450,10 +1450,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7848,
+                  "duration": 9951,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1461,22 +1461,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1498
+                      "duration": 1582
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 3618
+                      "duration": 1292
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 2468
+                      "duration": 6618
                     },
                     {
                       "title": "Verify Revisit Redirection URL",
-                      "duration": 93
+                      "duration": 223
                     }
                   ],
-                  "startTime": "2026-08-03T17:26:04.825Z",
+                  "startTime": "2026-08-04T02:40:21.515Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1502,10 +1502,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3428,
+                  "duration": 11507,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1513,18 +1513,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1468
+                      "duration": 1843
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1502
+                      "duration": 9277
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 282
+                      "duration": 250
                     }
                   ],
-                  "startTime": "2026-08-03T17:26:12.689Z",
+                  "startTime": "2026-08-04T02:40:31.593Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1560,15 +1560,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 198,
+                  "duration": 251,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:26:16.128Z",
+                  "startTime": "2026-08-04T02:40:33.762Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1614,15 +1614,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 160,
+                  "duration": 255,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-03T17:26:16.339Z",
+                  "startTime": "2026-08-04T02:40:34.035Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1650,8 +1650,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-03T17:24:30.601Z",
-    "duration": 113081.061,
+    "startTime": "2026-08-04T02:38:15.258Z",
+    "duration": 147910.988,
     "expected": 22,
     "skipped": 6,
     "unexpected": 0,
