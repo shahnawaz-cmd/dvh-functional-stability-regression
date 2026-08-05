@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
         "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
       },
       "gitCommit": {
         "shortHash": "09b76de",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -245,11 +245,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 39333,
+                  "duration": 3525,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"_uetsid\",\"_uetsid_exp\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -260,7 +260,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:33:12.673Z",
+                  "startTime": "2026-08-05T02:45:06.501Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -289,11 +289,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3446,
+                  "duration": 3880,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"site_settings\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -304,7 +304,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:33:12.647Z",
+                  "startTime": "2026-08-05T02:45:06.489Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -331,13 +331,13 @@
               "results": [
                 {
                   "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 46274,
+                  "duration": 3041,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"lastExternalReferrerTime\",\"_uetvid_exp\",\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"_uetsid_exp\",\"_uetvid\",\"lastExternalReferrer\",\"site_settings\",\"_gcl_ls\",\"_uetsid\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -348,7 +348,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:33:17.051Z",
+                  "startTime": "2026-08-05T02:45:10.738Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -375,13 +375,13 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2236,
+                  "duration": 2365,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"site_settings\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -392,7 +392,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:33:52.780Z",
+                  "startTime": "2026-08-05T02:45:11.148Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -419,13 +419,13 @@
               "results": [
                 {
                   "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 45296,
+                  "duration": 3322,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"_uetsid\",\"_uetsid_exp\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -436,7 +436,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:33:55.710Z",
+                  "startTime": "2026-08-05T02:45:14.225Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,13 +463,13 @@
               "results": [
                 {
                   "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2504,
+                  "duration": 3351,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"site_settings\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -480,7 +480,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:34:04.033Z",
+                  "startTime": "2026-08-05T02:45:14.521Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -509,11 +509,11 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2864,
+                  "duration": 3144,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"_uetsid\",\"_uetsid_exp\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Price='9.99'\n"
@@ -524,7 +524,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:34:07.242Z",
+                  "startTime": "2026-08-05T02:45:18.260Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -550,14 +550,14 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2866,
+                  "duration": 3206,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"_gcl_ls\",\"_uetvid_exp\",\"exitPopupNotPreviewShown_Tue Aug 04 2026\",\"_uetsid\",\"_uetsid_exp\"]\n"
+                      "text": "DEBUG: Initial localStorage keys (upsell): [\"_uetvid\",\"site_settings\",\"exitPopupNotPreviewShown_Wed Aug 05 2026\",\"_gcl_ls\",\"_uetvid_exp\",\"_uetsid\",\"_uetsid_exp\"]\n"
                     },
                     {
                       "text": "✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'\n"
@@ -568,7 +568,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:34:10.255Z",
+                  "startTime": "2026-08-05T02:45:18.634Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -586,8 +586,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-04T11:33:12.113Z",
-    "duration": 89081.369,
+    "startTime": "2026-08-05T02:45:05.949Z",
+    "duration": 16088.774000000001,
     "expected": 8,
     "skipped": 0,
     "unexpected": 0,

@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
         "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
       },
       "gitCommit": {
         "shortHash": "09b76de",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30903928213"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/30969810233"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -245,7 +245,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4795,
+                  "duration": 4287,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -253,22 +253,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 697
+                      "duration": 595
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1324
+                      "duration": 1222
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1877
+                      "duration": 1998
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 576
+                      "duration": 238
                     }
                   ],
-                  "startTime": "2026-08-04T11:14:46.713Z",
+                  "startTime": "2026-08-05T02:36:46.861Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -297,7 +297,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4698,
+                  "duration": 4256,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -305,22 +305,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 697
+                      "duration": 547
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1218
+                      "duration": 1197
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1964
+                      "duration": 2049
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 478
+                      "duration": 184
                     }
                   ],
-                  "startTime": "2026-08-04T11:14:46.734Z",
+                  "startTime": "2026-08-05T02:36:46.856Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -335,7 +335,7 @@
         },
         {
           "title": "TC_04_Revisit_Banner_Interaction_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -348,164 +348,36 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 68208,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 10743,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1863
+                      "duration": 1749
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1608
+                      "duration": 1978
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60331,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 6342
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 301
                     }
                   ],
-                  "startTime": "2026-08-04T11:14:52.969Z",
+                  "startTime": "2026-08-05T02:36:52.294Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 79879,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Home & Decode VIN",
-                      "duration": 2167
-                    },
-                    {
-                      "title": "Verify Specs Visible",
-                      "duration": 1443
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60782,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:16:01.850Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Desktop-Chrome-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-0a16f0fd84d1d5915075",
@@ -515,7 +387,7 @@
         },
         {
           "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -528,164 +400,36 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 68608,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 33039,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 2186
+                      "duration": 1875
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 1724
+                      "duration": 21803
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60436,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 8941
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 223
                     }
                   ],
-                  "startTime": "2026-08-04T11:14:53.076Z",
+                  "startTime": "2026-08-05T02:36:52.324Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 83849,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 2362
-                    },
-                    {
-                      "title": "Verify Window Sticker Specs",
-                      "duration": 1561
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60687,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:16:02.454Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Desktop-Chrome-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-7ce87d6a7bb6dadc3fab",
@@ -706,113 +450,34 @@
               "projectName": "Desktop Chrome",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 93739,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\"\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\"\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:112:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:111:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 21,
-                      "line": 46
-                    },
-                    "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 21,
-                        "line": 46
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\"\u001b[22m\n\n\n   at pages/PreviewPage.js:46\n\n  44 |   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {\n  45 |     // Wait for the specific text to appear\n> 46 |     await this.page.waitForSelector(`text=${expectedText}`, { timeout: timeout });\n     |                     ^\n  47 |   }\n  48 |\n  49 |   async verifyAccessRecordButton() {\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:112:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:111:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 10875,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1669
+                      "duration": 1834
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 90012,
-                      "error": {
-                        "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\"\u001b[22m\n",
-                        "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121347&wpPage=homepage&type=vhr\"\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:112:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:111:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                          "column": 21,
-                          "line": 46
-                        },
-                        "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:17:32.973Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-06-Preview-Page-Plan-Selection-Validation-Desktop-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-06-Preview-Page-Plan-Selection-Validation-Desktop-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-06-Preview-Page-Plan-Selection-Validation-Desktop-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 21,
-                    "line": 46
-                  }
-                },
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 4155,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Home & Decode VIN",
-                      "duration": 1827
-                    },
-                    {
-                      "title": "Verify Specs Visible",
-                      "duration": 1650
+                      "duration": 8376
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 282
+                      "duration": 436
                     }
                   ],
-                  "startTime": "2026-08-04T11:19:07.304Z",
+                  "startTime": "2026-08-05T02:37:03.066Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-06-Preview-Page-Plan-Selection-Validation-Desktop-Chrome-retry1/trace.zip"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-ccf7d568e9a88a26da1a",
@@ -833,15 +498,15 @@
               "projectName": "Desktop Chrome",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11441,
+                  "duration": 46796,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:17:42.981Z",
+                  "startTime": "2026-08-05T02:37:13.961Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -867,15 +532,15 @@
               "projectName": "Desktop Chrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5582,
+                  "duration": 6061,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:17:54.612Z",
+                  "startTime": "2026-08-05T02:37:25.388Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -901,10 +566,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10871,
+                  "duration": 3813,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -912,22 +577,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 385
+                      "duration": 387
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1169
+                      "duration": 1217
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 8814
+                      "duration": 1813
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 256
+                      "duration": 127
                     }
                   ],
-                  "startTime": "2026-08-04T11:18:00.803Z",
+                  "startTime": "2026-08-05T02:37:32.059Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -953,10 +618,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3347,
+                  "duration": 3094,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -964,22 +629,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 424
+                      "duration": 376
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1152
+                      "duration": 1267
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1292
+                      "duration": 1167
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 339
+                      "duration": 117
                     }
                   ],
-                  "startTime": "2026-08-04T11:18:11.846Z",
+                  "startTime": "2026-08-05T02:37:36.022Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -994,7 +659,7 @@
         },
         {
           "title": "TC_04_Revisit_Banner_Interaction_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1005,166 +670,38 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 65163,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 10452,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1474
+                      "duration": 1680
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1079
+                      "duration": 1171
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60133,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 7255
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 117
                     }
                   ],
-                  "startTime": "2026-08-04T11:18:15.210Z",
+                  "startTime": "2026-08-05T02:37:39.135Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 9,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 85927,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Home & Decode VIN",
-                      "duration": 1689
-                    },
-                    {
-                      "title": "Verify Specs Visible",
-                      "duration": 9568
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60500,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:19:20.866Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Chrome-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-8162597d31d4d637ff72",
@@ -1174,7 +711,7 @@
         },
         {
           "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1185,166 +722,38 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 66450,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23670,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1891
+                      "duration": 1667
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 1545
+                      "duration": 14829
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60156,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 6619
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 296
                     }
                   ],
-                  "startTime": "2026-08-04T11:19:12.232Z",
+                  "startTime": "2026-08-05T02:37:49.602Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 80030,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1812
-                    },
-                    {
-                      "title": "Verify Window Sticker Specs",
-                      "duration": 2128
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60476,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:20:19.277Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Chrome-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-2a1191202293608580d4",
@@ -1365,10 +774,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4933,
+                  "duration": 5305,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1376,18 +785,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1625
+                      "duration": 1512
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 2709
+                      "duration": 3123
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 348
+                      "duration": 435
                     }
                   ],
-                  "startTime": "2026-08-04T11:21:00.347Z",
+                  "startTime": "2026-08-05T02:38:01.318Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1423,15 +832,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 223,
+                  "duration": 213,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:21:05.435Z",
+                  "startTime": "2026-08-05T02:38:06.761Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1477,15 +886,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 11,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "skipped",
                   "duration": 195,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:21:05.676Z",
+                  "startTime": "2026-08-05T02:38:06.991Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1521,10 +930,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 12,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3485,
+                  "duration": 2858,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1532,22 +941,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 464
+                      "duration": 319
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1181
+                      "duration": 1260
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1318
+                      "duration": 1006
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 281
+                      "duration": 124
                     }
                   ],
-                  "startTime": "2026-08-04T11:21:06.537Z",
+                  "startTime": "2026-08-05T02:38:07.667Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1573,10 +982,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 12,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2967,
+                  "duration": 5924,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1584,22 +993,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 418
+                      "duration": 258
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1154
+                      "duration": 1117
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 486
+                      "duration": 2011
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 757
+                      "duration": 2348
                     }
                   ],
-                  "startTime": "2026-08-04T11:21:10.174Z",
+                  "startTime": "2026-08-05T02:38:10.632Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1614,7 +1023,7 @@
         },
         {
           "title": "TC_04_Revisit_Banner_Interaction_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1625,166 +1034,38 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 65686,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 10901,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1548
+                      "duration": 1775
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1174
+                      "duration": 1437
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60180,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 6641
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 758
                     }
                   ],
-                  "startTime": "2026-08-04T11:21:13.159Z",
+                  "startTime": "2026-08-05T02:38:13.934Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 14,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 76903,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Home & Decode VIN",
-                      "duration": 2093
-                    },
-                    {
-                      "title": "Verify Specs Visible",
-                      "duration": 1286
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60387,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:22:19.490Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Mobile-Edge-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-9ac1bd88017a1b615779",
@@ -1794,7 +1075,7 @@
         },
         {
           "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1805,166 +1086,38 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 4,
                   "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 76216,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 11125,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1734
+                      "duration": 1584
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 11260
+                      "duration": 2046
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60199,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 6863
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 365
                     }
                   ],
-                  "startTime": "2026-08-04T11:21:53.837Z",
+                  "startTime": "2026-08-05T02:38:16.577Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 15,
-                  "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 115505,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1960
-                    },
-                    {
-                      "title": "Verify Window Sticker Specs",
-                      "duration": 37425
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60730,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:23:10.836Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Mobile-Edge-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-d1883153adfeb2f12f95",
@@ -1985,10 +1138,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 16,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3532,
+                  "duration": 3819,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -1996,18 +1149,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1543
+                      "duration": 1759
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1296
+                      "duration": 1566
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 462
+                      "duration": 298
                     }
                   ],
-                  "startTime": "2026-08-04T11:23:46.772Z",
+                  "startTime": "2026-08-05T02:38:24.995Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2043,15 +1196,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 16,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 211,
+                  "duration": 235,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:23:50.487Z",
+                  "startTime": "2026-08-05T02:38:27.719Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2097,15 +1250,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 16,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 343,
+                  "duration": 182,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:23:50.723Z",
+                  "startTime": "2026-08-05T02:38:27.984Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2141,10 +1294,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 17,
-                  "parallelIndex": 0,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2827,
+                  "duration": 3308,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -2152,22 +1305,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 345
+                      "duration": 375
                     },
                     {
                       "title": "Decode 17-Character VIN",
-                      "duration": 1113
+                      "duration": 1326
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1125
+                      "duration": 1254
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 86
+                      "duration": 169
                     }
                   ],
-                  "startTime": "2026-08-04T11:23:51.726Z",
+                  "startTime": "2026-08-05T02:38:28.764Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2193,10 +1346,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2701,
+                  "duration": 2994,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -2204,22 +1357,22 @@
                   "steps": [
                     {
                       "title": "Navigate to Home",
-                      "duration": 320
+                      "duration": 350
                     },
                     {
                       "title": "Decode Classic VIN",
-                      "duration": 1094
+                      "duration": 1424
                     },
                     {
                       "title": "Verify Specs and Access Record Button",
-                      "duration": 1058
+                      "duration": 225
                     },
                     {
                       "title": "Interact with Access Record Popup",
-                      "duration": 90
+                      "duration": 698
                     }
                   ],
-                  "startTime": "2026-08-04T11:23:54.666Z",
+                  "startTime": "2026-08-05T02:38:29.522Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2234,7 +1387,7 @@
         },
         {
           "title": "TC_04_Revisit_Banner_Interaction_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -2245,166 +1398,38 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 17,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 65819,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 20294,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1379
+                      "duration": 1656
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 1030
+                      "duration": 10211
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60141,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 8165
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 77
                     }
                   ],
-                  "startTime": "2026-08-04T11:23:57.382Z",
+                  "startTime": "2026-08-05T02:38:32.225Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 18,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 71166,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Home & Decode VIN",
-                      "duration": 2039
-                    },
-                    {
-                      "title": "Verify Specs Visible",
-                      "duration": 1506
-                    },
-                    {
-                      "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60474,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your report for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:71:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:68:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:25:03.864Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-04-Revisit-Banner-Interaction-Validation-Samsung-Internet-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-aea64bcd57dd18c33dae",
@@ -2414,7 +1439,7 @@
         },
         {
           "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -2425,162 +1450,38 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 19,
-                  "parallelIndex": 1,
-                  "status": "failed",
-                  "duration": 75408,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                      "column": 18,
-                      "line": 43
-                    },
-                    "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                        "column": 18,
-                        "line": 43
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n\n   at pages/HomePage.js:43\n\n  41 |     await this.page.waitForLoadState('load');\n  42 |     const banner = this.page.locator(`text=${bannerText}`);\n> 43 |     await banner.waitFor({ state: 'visible', timeout: TIMEOUT });\n     |                  ^\n  44 |     return banner;\n  45 |   }\n  46 |\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3"
-                    }
-                  ],
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9317,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1716
+                      "duration": 1762
                     },
                     {
                       "title": "Verify Window Sticker Specs",
-                      "duration": 10970
+                      "duration": 1290
                     },
                     {
                       "title": "Go Back & Verify Revisit Banner",
-                      "duration": 60291,
-                      "error": {
-                        "message": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n",
-                        "stack": "TimeoutError: locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Your window sticker for') to be visible\u001b[22m\n\n    at HomePage.verifyRevisitBannerVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js:43:18)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:94:20\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:91:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                          "column": 18,
-                          "line": 43
-                        },
-                        "snippet": "   at pages/HomePage.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m banner \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m`text=${bannerText}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m banner\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUT\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mreturn\u001b[39m banner\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
-                      }
+                      "duration": 5933
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 147
                     }
                   ],
-                  "startTime": "2026-08-04T11:25:19.658Z",
+                  "startTime": "2026-08-05T02:38:32.666Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/HomePage.js",
-                    "column": 18,
-                    "line": 43
-                  }
-                },
-                {
-                  "workerIndex": 21,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 94579,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\"\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\"\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:89:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:88:3",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 21,
-                      "line": 46
-                    },
-                    "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 21,
-                        "line": 46
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\"\u001b[22m\n\n\n   at pages/PreviewPage.js:46\n\n  44 |   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {\n  45 |     // Wait for the specific text to appear\n> 46 |     await this.page.waitForSelector(`text=${expectedText}`, { timeout: timeout });\n     |                     ^\n  47 |   }\n  48 |\n  49 |   async verifyAccessRecordButton() {\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:89:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:88:3"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "steps": [
-                    {
-                      "title": "Navigate to Window Sticker & Decode VIN",
-                      "duration": 1842
-                    },
-                    {
-                      "title": "Verify Window Sticker Specs",
-                      "duration": 90166,
-                      "error": {
-                        "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\"\u001b[22m\n",
-                        "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Window sticker found for') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://detailedvehiclehistory.com/vin-check/preview?vin=4JGED6EB0JA121882&wpPage=window-sticker&type=sticker\"\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:89:19\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:88:3",
-                        "location": {
-                          "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                          "column": 21,
-                          "line": 46
-                        },
-                        "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
-                      }
-                    }
-                  ],
-                  "startTime": "2026-08-04T11:26:35.667Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet-retry1/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch1/streaming2-e2e-TC-05-Windo-c0591-r-Revisit-Banner-Validation-Samsung-Internet-retry1/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 21,
-                    "line": 46
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "51124a558cf768cdf755-8313a2f83a6d3abca389",
@@ -2601,10 +1502,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10732,
+                  "duration": 3091,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -2612,18 +1513,18 @@
                   "steps": [
                     {
                       "title": "Navigate to Home & Decode VIN",
-                      "duration": 1634
+                      "duration": 1561
                     },
                     {
                       "title": "Verify Specs Visible",
-                      "duration": 8714
+                      "duration": 1096
                     },
                     {
                       "title": "Select each report plan and verify selection",
-                      "duration": 226
+                      "duration": 291
                     }
                   ],
-                  "startTime": "2026-08-04T11:26:20.174Z",
+                  "startTime": "2026-08-05T02:38:41.998Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2659,15 +1560,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 169,
+                  "duration": 163,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:26:31.037Z",
+                  "startTime": "2026-08-05T02:38:45.104Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2713,15 +1614,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 223,
+                  "duration": 153,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-04T11:26:31.225Z",
+                  "startTime": "2026-08-05T02:38:45.282Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2749,11 +1650,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-04T11:14:45.995Z",
-    "duration": 805201.986,
-    "expected": 13,
+    "startTime": "2026-08-05T02:36:46.190Z",
+    "duration": 126410.562,
+    "expected": 22,
     "skipped": 6,
-    "unexpected": 8,
-    "flaky": 1
+    "unexpected": 0,
+    "flaky": 0
   }
 }

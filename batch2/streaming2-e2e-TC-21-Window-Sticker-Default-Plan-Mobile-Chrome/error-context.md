@@ -12,7 +12,7 @@
 # Error details
 
 ```
-Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.
 ```
 
 # Test source
@@ -119,7 +119,7 @@ Error: page.evaluate: Execution context was destroyed, most likely because of a 
   434 | 
   435 |     // Wait for localStorage to be populated
 > 436 |     const siteSettings = await this.page.evaluate(async () => {
-      |                                          ^ Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+      |                                          ^ Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.
   437 |         for (let i = 0; i < 40; i++) {
   438 |             const val = localStorage.getItem('site_settings');
   439 |             if (val) return val;
