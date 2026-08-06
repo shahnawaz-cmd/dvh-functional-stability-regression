@@ -25,7 +25,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
         "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31066195940"
+        "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31095034963"
       },
       "gitCommit": {
         "shortHash": "09b76de",
@@ -56,7 +56,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31066195940"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31095034963"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -94,7 +94,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31066195940"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31095034963"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -132,7 +132,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31066195940"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31095034963"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -170,7 +170,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/commit/09b76de042c74814577dde57d225c728c1c9e02f",
             "commitHash": "09b76de042c74814577dde57d225c728c1c9e02f",
-            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31066195940"
+            "buildHref": "https://github.com/shahnawaz-cmd/dvh-functional-stability-regression/actions/runs/31095034963"
           },
           "gitCommit": {
             "shortHash": "09b76de",
@@ -245,12 +245,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36579,
+                  "duration": 36605,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:09.614Z",
+                  "startTime": "2026-08-06T10:57:07.767Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -279,12 +279,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4255,
+                  "duration": 4302,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:09.643Z",
+                  "startTime": "2026-08-06T10:57:07.753Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -299,7 +299,7 @@
         },
         {
           "title": "TC_15_Classic_Editible_Specs_Update",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -312,18 +312,106 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 5565,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 100052,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 25,
+                      "line": 168
+                    },
+                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 25,
+                        "line": 168
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:14.063Z",
+                  "startTime": "2026-08-06T10:57:12.186Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Desktop-Chrome/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Desktop-Chrome/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 25,
+                    "line": 168
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 100765,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 25,
+                      "line": 168
+                    },
+                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 25,
+                        "line": 168
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-08-06T10:58:52.946Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Desktop-Chrome-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Desktop-Chrome-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Desktop-Chrome-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 25,
+                    "line": 168
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "51124a558cf768cdf755-978499e7c1d9e56814bc",
@@ -344,15 +432,15 @@
               "projectName": "Desktop Chrome",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 72748,
+                  "duration": 72755,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:19.645Z",
+                  "startTime": "2026-08-06T10:57:44.554Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -381,7 +469,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2792,
+                  "duration": 2031,
                   "errors": [],
                   "stdout": [
                     {
@@ -393,7 +481,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:46.356Z",
+                  "startTime": "2026-08-06T10:58:57.322Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -421,8 +509,61 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1958,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 42,
+                      "line": 436
+                    },
+                    "snippet": "   at pages/PreviewPage.js:436\n\n\u001b[0m \u001b[90m 434 |\u001b[39m\n \u001b[90m 435 |\u001b[39m     \u001b[90m// Wait for localStorage to be populated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 436 |\u001b[39m     \u001b[36mconst\u001b[39m siteSettings \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 437 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m \u001b[35m40\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 438 |\u001b[39m             \u001b[36mconst\u001b[39m val \u001b[33m=\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'site_settings'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 439 |\u001b[39m             \u001b[36mif\u001b[39m (val) \u001b[36mreturn\u001b[39m val\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 42,
+                        "line": 436
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   at pages/PreviewPage.js:436\n\n  434 |\n  435 |     // Wait for localStorage to be populated\n> 436 |     const siteSettings = await this.page.evaluate(async () => {\n      |                                          ^\n  437 |         for (let i = 0; i < 40; i++) {\n  438 |             const val = localStorage.getItem('site_settings');\n  439 |             if (val) return val;\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-06T10:58:59.365Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 42,
+                    "line": 436
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3216,
+                  "duration": 3270,
                   "errors": [],
                   "stdout": [
                     {
@@ -433,13 +574,19 @@
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-06T02:43:49.165Z",
+                  "retry": 1,
+                  "startTime": "2026-08-06T10:59:01.800Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Desktop-Chrome-retry1/trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-0a08e2a6cb59db7bbfbd",
@@ -460,15 +607,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 35412,
+                  "duration": 35248,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:43:52.878Z",
+                  "startTime": "2026-08-06T10:59:05.856Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -494,15 +641,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2988,
+                  "duration": 2974,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:28.410Z",
+                  "startTime": "2026-08-06T10:59:41.212Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -528,15 +675,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4953,
+                  "duration": 4364,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:31.412Z",
+                  "startTime": "2026-08-06T10:59:44.200Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -562,15 +709,15 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 56295,
+                  "duration": 99265,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:32.964Z",
+                  "startTime": "2026-08-06T10:59:48.579Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -596,10 +743,10 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2232,
+                  "duration": 2171,
                   "errors": [],
                   "stdout": [
                     {
@@ -611,7 +758,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:36.397Z",
+                  "startTime": "2026-08-06T11:00:34.976Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -626,7 +773,7 @@
         },
         {
           "title": "TC_21_Window_Sticker_Default_Plan",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -637,27 +784,118 @@
               "projectName": "Mobile Chrome",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2074,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "✅ Verified site_settings (default_ws_plan): {\n  id: \u001b[32m'548'\u001b[39m,\n  name: \u001b[32m'Full Price'\u001b[39m,\n  code: \u001b[32m'DVHST1'\u001b[39m,\n  price: \u001b[32m'19.99'\u001b[39m,\n  nos: \u001b[32m'1'\u001b[39m,\n  gumroad: \u001b[32m'DVHST1'\u001b[39m,\n  total: \u001b[32m'19.989999771118164'\u001b[39m,\n  type: \u001b[32m'sticker'\u001b[39m,\n  currency_sign: \u001b[32m'$'\u001b[39m,\n  currency_code: \u001b[32m'USD'\u001b[39m,\n  c_id: \u001b[32m'16'\u001b[39m\n}\n"
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2264,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 42,
+                      "line": 436
                     },
+                    "snippet": "   at pages/PreviewPage.js:436\n\n\u001b[0m \u001b[90m 434 |\u001b[39m\n \u001b[90m 435 |\u001b[39m     \u001b[90m// Wait for localStorage to be populated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 436 |\u001b[39m     \u001b[36mconst\u001b[39m siteSettings \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 437 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m \u001b[35m40\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 438 |\u001b[39m             \u001b[36mconst\u001b[39m val \u001b[33m=\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'site_settings'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 439 |\u001b[39m             \u001b[36mif\u001b[39m (val) \u001b[36mreturn\u001b[39m val\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "✅ Matched and clicked plan: 19.99 $\n"
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 42,
+                        "line": 436
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   at pages/PreviewPage.js:436\n\n  434 |\n  435 |     // Wait for localStorage to be populated\n> 436 |     const siteSettings = await this.page.evaluate(async () => {\n      |                                          ^\n  437 |         for (let i = 0; i < 40; i++) {\n  438 |             const val = localStorage.getItem('site_settings');\n  439 |             if (val) return val;\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:38.644Z",
+                  "startTime": "2026-08-06T11:00:37.288Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 42,
+                    "line": 436
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2920,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 42,
+                      "line": 436
+                    },
+                    "snippet": "   at pages/PreviewPage.js:436\n\n\u001b[0m \u001b[90m 434 |\u001b[39m\n \u001b[90m 435 |\u001b[39m     \u001b[90m// Wait for localStorage to be populated\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 436 |\u001b[39m     \u001b[36mconst\u001b[39m siteSettings \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 437 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m \u001b[35m40\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 438 |\u001b[39m             \u001b[36mconst\u001b[39m val \u001b[33m=\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'site_settings'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 439 |\u001b[39m             \u001b[36mif\u001b[39m (val) \u001b[36mreturn\u001b[39m val\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 42,
+                        "line": 436
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n\n   at pages/PreviewPage.js:436\n\n  434 |\n  435 |     // Wait for localStorage to be populated\n> 436 |     const siteSettings = await this.page.evaluate(async () => {\n      |                                          ^\n  437 |         for (let i = 0; i < 40; i++) {\n  438 |             const val = localStorage.getItem('site_settings');\n  439 |             if (val) return val;\n    at DefaultPlanCheckingHandler.sitesettingDefaultPlansVerifies (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:436:42)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:337:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-08-06T11:00:40.092Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome-retry1/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-21-Window-Sticker-Default-Plan-Mobile-Chrome-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 42,
+                    "line": 436
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "51124a558cf768cdf755-d211333a5bd029317bc4",
@@ -678,15 +916,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 35542,
+                  "duration": 36439,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:44:41.299Z",
+                  "startTime": "2026-08-06T11:00:43.936Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -712,15 +950,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4132,
+                  "duration": 2925,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:45:16.972Z",
+                  "startTime": "2026-08-06T11:01:20.514Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -735,7 +973,7 @@
         },
         {
           "title": "TC_15_Classic_Editible_Specs_Update",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -746,10 +984,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 0,
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
                   "status": "failed",
-                  "duration": 98017,
+                  "duration": 97262,
                   "error": {
                     "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
                     "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5",
@@ -773,7 +1011,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:45:21.122Z",
+                  "startTime": "2026-08-06T11:01:23.454Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -794,60 +1032,26 @@
                   }
                 },
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 98085,
-                  "error": {
-                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5",
-                    "location": {
-                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                      "column": 25,
-                      "line": 168
-                    },
-                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                        "column": 25,
-                        "line": 168
-                      },
-                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5"
-                    }
-                  ],
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6187,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-06T02:46:59.632Z",
+                  "startTime": "2026-08-06T11:03:01.190Z",
                   "annotations": [],
                   "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Mobile-Edge-retry1/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Mobile-Edge-retry1/error-context.md"
-                    },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
                       "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Mobile-Edge-retry1/trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
-                    "column": 25,
-                    "line": 168
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-bc3edfda426905b8c423",
@@ -868,15 +1072,15 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 73101,
+                  "duration": 56789,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:45:29.865Z",
+                  "startTime": "2026-08-06T11:01:28.348Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -902,10 +1106,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2525,
+                  "duration": 1885,
                   "errors": [],
                   "stdout": [
                     {
@@ -917,7 +1121,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:46:43.078Z",
+                  "startTime": "2026-08-06T11:02:25.257Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -943,10 +1147,10 @@
               "projectName": "Mobile Edge",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 1,
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2573,
+                  "duration": 1900,
                   "errors": [],
                   "stdout": [
                     {
@@ -958,7 +1162,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:46:45.617Z",
+                  "startTime": "2026-08-06T11:02:27.155Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -984,15 +1188,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 36514,
+                  "duration": 36161,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:46:48.670Z",
+                  "startTime": "2026-08-06T11:02:29.523Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1018,15 +1222,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3406,
+                  "duration": 3503,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:47:25.292Z",
+                  "startTime": "2026-08-06T11:03:05.800Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1052,20 +1256,74 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 11,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 5039,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 99100,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5",
+                    "location": {
+                      "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                      "column": 25,
+                      "line": 168
+                    },
+                    "snippet": "   at pages/PreviewPage.js:168\n\n\u001b[0m \u001b[90m 166 |\u001b[39m     \n \u001b[90m 167 |\u001b[39m     \u001b[36mconst\u001b[39m axleTypeInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m axleTypeInput\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Axle Type'\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'Semifloating asdfsss'\u001b[39m\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'textbox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Body Maker'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                        "column": 25,
+                        "line": 168
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Axle Type' }) to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:168\n\n  166 |     \n  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });\n> 168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });\n      |                         ^\n  169 |     await axleTypeInput.click();\n  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });\n  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();\n    at PreviewPage.classicEditibleSpecsUpdateSpec (/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js:168:25)\n    at /home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/streaming2-e2e.spec.js:267:5"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:47:28.711Z",
+                  "startTime": "2026-08-06T11:03:08.716Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/tests/pages/PreviewPage.js",
+                    "column": 25,
+                    "line": 168
+                  }
+                },
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5383,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-08-06T11:04:48.388Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/dvh-functional-stability-regression/dvh-functional-stability-regression/playwright-report/batch2/streaming2-e2e-TC-15-Classic-Editible-Specs-Update-Samsung-Internet-retry1/trace.zip"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "51124a558cf768cdf755-e595f042469ecfb6070b",
@@ -1086,15 +1344,15 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 43695,
+                  "duration": 76179,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:47:33.767Z",
+                  "startTime": "2026-08-06T11:03:09.316Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1120,10 +1378,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2760,
+                  "duration": 2706,
                   "errors": [],
                   "stdout": [
                     {
@@ -1135,7 +1393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:48:17.478Z",
+                  "startTime": "2026-08-06T11:04:25.511Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1161,10 +1419,10 @@
               "projectName": "Samsung Internet",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1923,
+                  "duration": 1833,
                   "errors": [],
                   "stdout": [
                     {
@@ -1176,7 +1434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-06T02:48:20.253Z",
+                  "startTime": "2026-08-06T11:04:28.227Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1194,11 +1452,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-06T02:43:09.081Z",
-    "duration": 329153.486,
-    "expected": 23,
+    "startTime": "2026-08-06T10:57:07.220Z",
+    "duration": 466965.05799999996,
+    "expected": 19,
     "skipped": 0,
-    "unexpected": 1,
-    "flaky": 0
+    "unexpected": 2,
+    "flaky": 3
   }
 }
