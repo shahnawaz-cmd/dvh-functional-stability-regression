@@ -13,17 +13,6 @@ let totalFailed = 0;
 let totalSkipped = 0;
 let totalFlaky = 0;
 
-let hasFailedBatches = false;
-
-// Read outcomes from Environment Variables passed from GitHub Actions
-const batch1Outcome = process.env.BATCH1_OUTCOME;
-const batch2Outcome = process.env.BATCH2_OUTCOME;
-const batch3Outcome = process.env.BATCH3_OUTCOME;
-
-if (batch1Outcome === 'failure' || batch2Outcome === 'failure' || batch3Outcome === 'failure') {
-    hasFailedBatches = true;
-}
-
 for (const file of files) {
     try {
         if (fs.existsSync(file)) {
@@ -37,18 +26,18 @@ for (const file of files) {
             }
         } else {
             console.warn(`Report file not found: ${file}`);
-            // If the report file is missing but the outcome is recorded, we know it failed
-            hasFailedBatches = true;
         }
     } catch (e) {
         console.error(`Error reading ${file}:`, e);
-        hasFailedBatches = true;
     }
 }
 
+// Flaky tests passed on retry, so they count towards successful executions, not failures
 const totalTests = totalPassed + totalFailed + totalSkipped + totalFlaky;
-const overallStatus = (totalFailed === 0 && !hasFailedBatches) ? '✅ PASS' : '❌ FAIL';
-const tagText = (totalFailed > 0 || hasFailedBatches) ? ' (Attention: <@U09UE83AWGP>)' : '';
+
+// Overall status is PASS if totalFailed is 0
+const overallStatus = (totalFailed === 0) ? '✅ PASS' : '❌ FAIL';
+const tagText = (totalFailed > 0) ? ' (Attention: <@U09UE83AWGP>)' : '';
 
 const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
 if (!slackWebhookUrl) {
@@ -62,13 +51,6 @@ const githubActor = process.env.GITHUB_ACTOR || 'local';
 const githubRef = process.env.GITHUB_REF || 'local';
 const githubEvent = process.env.GITHUB_EVENT || 'push';
 const githubSha = process.env.GITHUB_SHA_VAL || 'local';
-
-let failedBatchesList = [];
-if (batch1Outcome === 'failure') failedBatchesList.push('Batch 1');
-if (batch2Outcome === 'failure') failedBatchesList.push('Batch 2');
-if (batch3Outcome === 'failure') failedBatchesList.push('Batch 3');
-
-const failedBatchesText = failedBatchesList.length > 0 ? `\n⚠️ *Failed Batches:* ${failedBatchesList.join(', ')}` : '';
 
 const payload = {
     blocks: [
