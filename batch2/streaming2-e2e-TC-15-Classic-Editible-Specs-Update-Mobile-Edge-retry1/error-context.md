@@ -7,7 +7,7 @@
 # Test info
 
 - Name: streaming2-e2e.spec.js >> TC_15_Classic_Editible_Specs_Update
-- Location: tests/streaming2-e2e.spec.js:258:1
+- Location: tests/streaming2-e2e.spec.js:259:1
 
 # Error details
 
@@ -166,61 +166,61 @@ Call log:
   209 | 
   210 |   // Helper: Generate a unique email
   211 |   static generateUniqueEmail() {
-  212 |     return `test_${Date.now()}@example.com`;
-  213 |   }
-  214 | 
-  215 |   // Helper: Generate a valid US phone number (XXX) XXX-XXXX
-  216 |   static generateUsPhoneNumber() {
-  217 |     const areaCode = Math.floor(Math.random() * 800) + 200; // 200-999
-  218 |     const prefix = Math.floor(Math.random() * 800) + 200;   // 200-999
-  219 |     const lineNumber = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
-  220 |     return `(${areaCode}) ${prefix}-${lineNumber}`;
-  221 |   }
-  222 | }
-  223 | 
-  224 | class PreviewToCheckoutPriceValidator {
-  225 |   constructor(page) {
-  226 |     this.page = page;
+  212 |     const primaryEmails = [
+  213 |       'indus.shahnawaz1460@gmail.com',
+  214 |       'techworms134@gmail.com',
+  215 |       'h.m.shahnawaz123@gmail.com',
+  216 |       'hommy.stress123@gmail.com',
+  217 |       'working.with56@gmail.com'
+  218 |     ];
+  219 |     
+  220 |     // Pick a random primary email from the list
+  221 |     const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
+  222 |     const [localPart, domainPart] = chosenEmail.split('@');
+  223 |     
+  224 |     // Gmail supports plus-addressing (e.g. user+timestamp@gmail.com)
+  225 |     // This routes emails directly to the main inbox to prevent bounces
+  226 |     return `${localPart}+${Date.now()}@${domainPart}`;
   227 |   }
   228 | 
-  229 |   async selectRandomPlanAndHandleUpsell() {
-  230 |     // Locate all plan buttons dynamically by their role on the page
-  231 |     const planButtons = this.page.locator('div[role="button"]').filter({
-  232 |       hasText: /Report|Check|UVC/i
-  233 |     });
-  234 |     
-  235 |     // Wait for the first plan button to load and render on the DOM before counting
-  236 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
-  237 |     
-  238 |     const count = await planButtons.count();
-  239 |     if (count === 0) {
-  240 |       throw new Error("No plan buttons found on the page.");
-  241 |     }
-  242 |     
-  243 |     // Select a random plan index
-  244 |     const randomIndex = Math.floor(Math.random() * count);
-  245 |     const planLocator = planButtons.nth(randomIndex);
-  246 |     
-  247 |     // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
-  248 |     await planLocator.scrollIntoViewIfNeeded();
-  249 |     await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
-  250 |     
-  251 |     // Dynamically extract the text and price at runtime
-  252 |     const innerText = await planLocator.innerText();
-  253 |     
-  254 |     // Parse the name dynamically (handles Unlimited/UVC vs numbered reports)
-  255 |     let planName = '1 Report';
-  256 |     if (innerText.toLowerCase().includes('unlimited') || innerText.toLowerCase().includes('uvc')) {
-  257 |       planName = 'Unlimited VIN Check';
-  258 |     } else {
-  259 |       const match = innerText.match(/\d+\s+\w+/);
-  260 |       if (match) planName = match[0];
-  261 |     }
-  262 |     
-  263 |     // Parse the price dynamically (e.g. matches "$29.99")
-  264 |     const priceMatches = innerText.match(/\$\d+(\.\d{2})?/g);
-  265 |     let maxPrice = 0;
-  266 |     if (priceMatches) {
-  267 |       for (const match of priceMatches) {
-  268 |         const p = parseFloat(match.replace('$', ''));
+  229 |   // Helper: Generate a valid US phone number (XXX) XXX-XXXX
+  230 |   static generateUsPhoneNumber() {
+  231 |     const areaCode = Math.floor(Math.random() * 800) + 200; // 200-999
+  232 |     const prefix = Math.floor(Math.random() * 800) + 200;   // 200-999
+  233 |     const lineNumber = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
+  234 |     return `(${areaCode}) ${prefix}-${lineNumber}`;
+  235 |   }
+  236 | }
+  237 | 
+  238 | class PreviewToCheckoutPriceValidator {
+  239 |   constructor(page) {
+  240 |     this.page = page;
+  241 |   }
+  242 | 
+  243 |   async selectRandomPlanAndHandleUpsell() {
+  244 |     // Locate all plan buttons dynamically by their role on the page
+  245 |     const planButtons = this.page.locator('div[role="button"]').filter({
+  246 |       hasText: /Report|Check|UVC/i
+  247 |     });
+  248 |     
+  249 |     // Wait for the first plan button to load and render on the DOM before counting
+  250 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+  251 |     
+  252 |     const count = await planButtons.count();
+  253 |     if (count === 0) {
+  254 |       throw new Error("No plan buttons found on the page.");
+  255 |     }
+  256 |     
+  257 |     // Select a random plan index
+  258 |     const randomIndex = Math.floor(Math.random() * count);
+  259 |     const planLocator = planButtons.nth(randomIndex);
+  260 |     
+  261 |     // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
+  262 |     await planLocator.scrollIntoViewIfNeeded();
+  263 |     await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
+  264 |     
+  265 |     // Dynamically extract the text and price at runtime
+  266 |     const innerText = await planLocator.innerText();
+  267 |     
+  268 |     // Parse the name dynamically (handles Unlimited/UVC vs numbered reports)
 ```
