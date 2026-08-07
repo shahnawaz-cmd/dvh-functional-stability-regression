@@ -16,216 +16,215 @@ Test timeout of 120000ms exceeded.
 ```
 
 ```
-Error: page.waitForURL: Target page, context or browser has been closed
-=========================== logs ===========================
-waiting for navigation until "load"
-  navigated to "https://detailedvehiclehistory.com/?vin=242370B111343"
-============================================================
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for getByRole('button', { name: 'Continue' })
+
 ```
 
 # Test source
 
 ```ts
-  151 | //   const home = new HomePage(page);
-  152 | //   const preview = new PreviewPage(page);
-  153 | //   const checkout = new CheckoutPage(page);
-  154 | //   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  155 | //   await home.navigate();
-  156 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  157 | //   await preview.verifySpecsVisible();
-  158 | //   await preview.runCheckoutFlow();
-  159 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
-  160 | //   await Promise.all([
-  161 | //     checkout.completeCheckoutProcess('visa_us'),
-  162 | //     page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
-  163 | //     apiCapture.waitForStripePaymentIntent(),
-  164 | //     apiCapture.waitForPaymentUpdate(),
-  165 | //   ]);
-  166 | //   await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#vehicle-history-report/, { timeout: TIMEOUT });
-  167 | //   await page.close();
-  168 | // });
-  169 | 
-  170 | // test('TC_10_Full_Window_Sticker_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
-  171 | //   const home = new HomePage(page);
-  172 | //   const preview = new PreviewPage(page);
-  173 | //   const checkout = new CheckoutPage(page);
-  174 | //   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  175 | //   const vin = process.env.TC_10_VIN || '4JGED6EB0JA121264';
-  176 | //   await page.goto('/window-sticker');
-  177 | //   await home.decodeVin(vin, 3);
-  178 | //   await preview.verifySpecsVisible('Window sticker found for');
-  179 | //   await preview.runCheckoutFlow();
-  180 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
-  181 | //   await Promise.all([
-  182 | //     checkout.completeCheckoutProcess('visa_us'),
-  183 | //     page.waitForURL(/.*\/success.*/, { timeout: TIMEOUT }),
-  184 | //     apiCapture.waitForStripePaymentIntent(),
-  185 | //     apiCapture.waitForPaymentUpdate(),
-  186 | //   ]);
-  187 | //   await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#window-sticker/, { timeout: TIMEOUT });
-  188 | //   await page.close();
-  189 | // });
-  190 | 
-  191 | // test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page }, testInfo) => {
-  192 | //   const home = new HomePage(page);
-  193 | //   const preview = new PreviewPage(page);
-  194 | //   const checkout = new CheckoutPage(page);
-  195 | //   await home.navigate();
-  196 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  197 | //   await preview.verifySpecsVisible();
-  198 | //   await preview.runCheckoutFlow();
-  199 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
-  200 | //   await Promise.all([
-  201 | //     checkout.completeCheckoutProcess('generic_decline'),
-  202 | //     checkout.waitForPaymentFailureAndClose(),
-  203 | //   ]);
-  204 | //   await expect(page).not.toHaveURL(/.*\/success.*/);
-  205 | //   await page.close();
-  206 | // });
-  207 | 
-  208 | // test('TC_12_Full_Checkout_Flow_Stripe_3DS_Validation', async ({ page }, testInfo) => {
-  209 | //   const home = new HomePage(page);
-  210 | //   const preview = new PreviewPage(page);
-  211 | //   const checkout = new CheckoutPage(page);
-  212 | //   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
-  213 | //   await home.navigate();
-  214 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  215 | //   await preview.verifySpecsVisible();
-  216 | //   await preview.runCheckoutFlow();
-  217 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
-  218 | //   await Promise.all([
-  219 | //     checkout.completeCheckoutProcess('stripe_3ds'),
-  220 | //     apiCapture.waitForStripePaymentIntent(),
-  221 | //     apiCapture.waitForThreeDSAuthenticate(),
-  222 | //   ]);
-  223 | //   await Promise.all([
-  224 | //     checkout.complete3DSChallenge(),
-  225 | //     page.waitForURL(/.*\/(success|success-page).*/, { timeout: TIMEOUT }),
-  226 | //   ]);
-  227 | //   await expect(page).toHaveURL(/.*\/(success|success-page).*/);
-  228 | //   await page.close();
-  229 | // });
-  230 | 
-  231 | test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page }) => {
-  232 |   const home = new HomePage(page);
-  233 |   const preview = new PreviewPage(page);
-  234 |   try {
-  235 |     await home.navigate();
-  236 |     await home.decodeVin('242370B111346');
-  237 |     await page.waitForURL(/.*\/preview.*/);
-  238 |     await preview.verifySpecsVisible('Records found for', 60000);
-  239 |     await preview.classicEdtibleFeatureYMM();
-  240 |   } finally {
-  241 |     await page.close();
-  242 |   }
-  243 | });
-  244 | 
-  245 | test('TC_14_Classic_Manual_Input_Validation', async ({ page }) => {
-  246 |   const home = new HomePage(page);
-  247 |   const preview = new PreviewPage(page);
-  248 |   try {
-  249 |     await home.navigate();
-  250 |     await home.decodeVin('242370B111346');
-> 251 |     await page.waitForURL(/.*\/preview.*/);
-      |                ^ Error: page.waitForURL: Target page, context or browser has been closed
-  252 |     await preview.verifySpecsVisible('Records found for', 60000);
-  253 |     await preview.ClassicEditibleSpecsManualInput();
-  254 |   } finally {
-  255 |     await page.close();
-  256 |   }
-  257 | });
-  258 | 
-  259 | test('TC_15_Classic_Editible_Specs_Update', async ({ page }) => {
-  260 |   const home = new HomePage(page);
-  261 |   const preview = new PreviewPage(page);
-  262 |   try {
-  263 |     await home.navigate();
-  264 |     await home.decodeVin('242370B111346');
-  265 |     await page.waitForURL(/.*\/preview.*/);
-  266 |     await preview.verifySpecsVisible('Records found for', 60000);
-  267 |     await preview.classicEditibleSpecsUpdateSpec();
-  268 |   } finally {
-  269 |     await page.close();
-  270 |   }
-  271 | });
-  272 | 
-  273 | // test('TC_16_PayPal_Successful_Payment', async ({ page, context }) => {
-  274 | //   const home = new HomePage(page);
-  275 | //   const preview = new PreviewPage(page);
-  276 | //   const checkout = new CheckoutPage(page);
-  277 | //   await home.navigate();
-  278 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  279 | //   await preview.runCheckoutFlow();
-  280 | //   await checkout.paypal.selectPayPalOption();
-  281 | //   await page.waitForTimeout(4000);
-  282 | //   const popup = await checkout.paypal.clickPayPalButton(context, TIMEOUT);
-  283 | //   await checkout.paypal.loginPayPal(popup, {email: process.env.PAYPAL_EMAIL, password: process.env.PAYPAL_PASSWORD}, TIMEOUT);
-  284 | //   await checkout.paypal.approvePayPalPayment(popup, TIMEOUT);
-  285 | //   await page.waitForURL(url => url.toString().includes('paid=true'), { timeout: 60000 });
-  286 | //   await page.close();
-  287 | // });
-  288 | 
-  289 | test('TC_17_EU_VIN_Confirmation_No', async ({ page }) => {
-  290 |   const home = new HomePage(page);
-  291 |   const modifier = new EUVinModifier(page);
-  292 |   await home.navigate();
-  293 |   await home.decodeVin('SHHEU88701U002018', 3);
-  294 |   await modifier.modifyEUVinByYMMUsingNo();
-  295 |   await page.close();
-  296 | });
-  297 | 
-  298 | // test('TC_18_Price_Consistency_Validation', async ({ page }) => {
-  299 | //   const home = new HomePage(page);
-  300 | //   const preview = new PreviewPage(page);
-  301 | //   const validator = new PreviewToCheckoutPriceValidator(page);
-  302 | //   await home.navigate();
-  303 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  304 | //   const selectedPlan = await validator.selectRandomPlanAndHandleUpsell();
-  305 | //   await preview.runCheckoutFlow();
-  306 | //   await validator.validateOrderSummary(selectedPlan);
-  307 | //   await page.close();
-  308 | // });
-  309 | 
-  310 | // test('TC_19_Email_Cache_Flow', async ({ page }) => {
-  311 | //   const tcTimeout = 120000;
-  312 | //   test.setTimeout(tcTimeout);
-  313 | //   const home = new HomePage(page);
-  314 | //   const cache = new EmailCache(page, tcTimeout);
-  315 | //   await home.navigate();
-  316 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
-  317 | //   await cache.Cacheemailbackfromcheckout();
-  318 | //   await page.close();
-  319 | // });
-  320 | 
-  321 | test('TC_20_Default_Plan_Checking', async ({ page }) => {
-  322 |   const tcTimeout = process.env.CI ? 120000 : 60000;
-  323 |   test.setTimeout(tcTimeout);
-  324 |   const home = new HomePage(page);
-  325 |   const handler = new DefaultPlanCheckingHandler(page);
-  326 |   await handler.sitesettingDefaultPlansVerifies(home);
-  327 |   await page.close();
-  328 | });
-  329 | 
-  330 | test('TC_21_Window_Sticker_Default_Plan', async ({ page }) => {
-  331 |   const tcTimeout = process.env.CI ? 120000 : 60000;
-  332 |   test.setTimeout(tcTimeout);
-  333 |   const home = new HomePage(page);
-  334 |   const handler = new DefaultPlanCheckingHandler(page);
-  335 |   await page.goto('/window-sticker');
-  336 |   await home.decodeVin('4JGED6EB0JA121264');
-  337 |   await handler.sitesettingDefaultPlansVerifies(home, '4JGED6EB0JA121264', true, 'ws');
-  338 |   await page.close();
-  339 | });
-  340 | 
-  341 | test('TC_22_VHR_Upsell_Text_Validation', async ({ page }) => {
-  342 |   const tcTimeout = process.env.CI ? 120000 : 60000;
-  343 |   test.setTimeout(tcTimeout);
-  344 |   const home = new HomePage(page);
-  345 |   const upsellHandler = new UpsellTextMatched(page);
-  346 |   await home.navigate();
-  347 |   await home.decodeVin('4JGED6EB0JA121898', 3);
-  348 |   await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout });
-  349 |   await upsellHandler.upsellTextVerify('vhr', tcTimeout);
-  350 |   await page.close();
-  351 | });
+  53  | 
+  54  |   async clickAccessRecordButton() {
+  55  |     await this.accessRecordButton.click();
+  56  |   }
+  57  | 
+  58  |   async closeAccessRecordPopup() {
+  59  |     const closeButton = this.page.getByRole('button', { name: /^Close$/ }).first();
+  60  |     await closeButton.waitFor({ state: 'visible', timeout: TIMEOUT });
+  61  |     await closeButton.click();
+  62  |     await closeButton.waitFor({ state: 'hidden', timeout: TIMEOUT });
+  63  |   }
+  64  | 
+  65  |   async triggerExitIntent() {
+  66  |     await this.page.mouse.move(640, 400, { steps: 10 });
+  67  |     await this.page.waitForTimeout(1000);
+  68  |     await this.page.mouse.wheel(0, 500);
+  69  |     await this.page.waitForTimeout(500);
+  70  |     await this.page.mouse.wheel(0, -500);
+  71  |     await this.page.waitForTimeout(500);
+  72  | 
+  73  |     await this.page.mouse.move(400, 600, { steps: 10 });
+  74  |     await this.page.waitForTimeout(300);
+  75  |     await this.page.mouse.move(400, 400, { steps: 10 });
+  76  |     await this.page.waitForTimeout(300);
+  77  |     await this.page.mouse.move(400, 200, { steps: 15 });
+  78  |     await this.page.waitForTimeout(300);
+  79  |     await this.page.mouse.move(400, 100, { steps: 15 });
+  80  |     await this.page.waitForTimeout(300);
+  81  |     await this.page.mouse.move(400, 10,  { steps: 10 });
+  82  |     await this.page.waitForTimeout(300);
+  83  | 
+  84  |     await this.page.evaluate(() => {
+  85  |       const opts = { bubbles: true, cancelable: true, clientX: 400, clientY: -1 };
+  86  |       document.dispatchEvent(new MouseEvent('mouseleave', opts));
+  87  |       document.dispatchEvent(new MouseEvent('mouseout',   opts));
+  88  |       window.dispatchEvent(new MouseEvent('mouseleave',   opts));
+  89  |       document.documentElement.dispatchEvent(new MouseEvent('mouseleave', opts));
+  90  |     });
+  91  | 
+  92  |     await this.page.waitForTimeout(3000);
+  93  |   }
+  94  | 
+  95  |   async verifyAndRedeemExitOffer() {
+  96  |     // Redeem 15% off
+  97  |     await this.page.getByRole('button', { name: 'Redeem 15% off' }).click();
+  98  |   }
+  99  | 
+  100 |   async classicEdtibleFeatureYMM() {
+  101 |     const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+  102 |     await updateButton.waitFor({ state: 'visible' });
+  103 |     await updateButton.click({ force: true });
+  104 | 
+  105 |     const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+  106 |     await ymmButton.waitFor({ state: 'visible' });
+  107 |     await ymmButton.click({ force: true });
+  108 | 
+  109 |     // Explicit 30s delay to allow popup stabilization as requested
+  110 |     await this.page.waitForTimeout(30000);
+  111 | 
+  112 |     await this.page.getByRole('textbox', { name: 'Select year' }).click();
+  113 |     await this.page.getByRole('button', { name: '1923' }).click();
+  114 | 
+  115 |     await this.page.getByRole('textbox', { name: 'Select make' }).click();
+  116 |     await this.page.getByRole('button', { name: 'Ambassador' }).click();
+  117 | 
+  118 |     await this.page.getByRole('textbox', { name: 'Select model' }).click();
+  119 |     await this.page.getByRole('button', { name: 'R', exact: true }).click();
+  120 | 
+  121 |     await this.page.getByRole('textbox', { name: 'Select trim' }).click();
+  122 |     await this.page.getByRole('button', { name: 'Touring' }).click();
+  123 | 
+  124 |     await this.page.getByRole('button', { name: 'Continue' }).click();
+  125 |     await this.page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+  126 |   }
+  127 | 
+  128 |   async ClassicEditibleSpecsManualInput(timeout = TIMEOUT) {
+  129 |     const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+  130 |     await updateButton.waitFor({ state: 'visible', timeout });
+  131 |     await updateButton.click({ force: true });
+  132 |     
+  133 |     const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+  134 |     await ymmButton.waitFor({ state: 'visible', timeout });
+  135 |     await ymmButton.click({ force: true });
+  136 |     
+  137 |     await this.page.getByRole('button', { name: 'Click here', exact: true }).click();
+  138 |     
+  139 |     await this.page.getByRole('textbox', { name: 'Year' }).click();
+  140 |     await this.page.getByRole('textbox', { name: 'Year' }).fill('1950', { timeout });
+  141 |     await this.page.getByRole('textbox', { name: 'Make' }).click();
+  142 |     await this.page.getByRole('textbox', { name: 'Make' }).fill('Ford', { timeout });
+  143 |     await this.page.getByRole('textbox', { name: 'Model' }).click();
+  144 |     await this.page.getByRole('textbox', { name: 'Model' }).fill('F-150', { timeout });
+  145 |     await this.page.getByRole('textbox', { name: 'Engine' }).click();
+  146 |     await this.page.getByRole('textbox', { name: 'Engine' }).fill('V9', { timeout });
+  147 |     await this.page.getByRole('textbox', { name: 'Transmission' }).click();
+  148 |     await this.page.getByRole('textbox', { name: 'Transmission' }).fill('Auto', { timeout });
+  149 |     await this.page.getByRole('textbox', { name: 'Number of Doors' }).click();
+  150 |     await this.page.getByRole('textbox', { name: 'Number of Doors' }).fill('4', { timeout });
+  151 |     await this.page.getByRole('textbox', { name: 'Drive Type' }).click();
+  152 |     await this.page.getByRole('textbox', { name: 'Drive Type' }).fill('AWD', { timeout });
+> 153 |     await this.page.getByRole('button', { name: 'Continue' }).click();
+      |                                                               ^ Error: locator.click: Target page, context or browser has been closed
+  154 |   }
+  155 | 
+  156 |   async classicEditibleSpecsUpdateSpec(timeout = TIMEOUT) {
+  157 |     const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+  158 |     await updateButton.waitFor({ state: 'visible', timeout });
+  159 |     await updateButton.click({ force: true });
+  160 |     await this.page.waitForTimeout(1000);
+  161 |     
+  162 |     const specButton = this.page.getByRole('button', { name: 'Specifications Engine,' });
+  163 |     await specButton.waitFor({ state: 'visible', timeout });
+  164 |     await specButton.click({ force: true });
+  165 |     await this.page.waitForTimeout(1000);
+  166 |     
+  167 |     const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });
+  168 |     await axleTypeInput.waitFor({ state: 'visible', timeout });
+  169 |     await axleTypeInput.click();
+  170 |     await this.page.getByRole('textbox', { name: 'Axle Type' }).fill('Semifloating asdfsss', { timeout });
+  171 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).click();
+  172 |     await this.page.getByRole('textbox', { name: 'Body Maker' }).fill('Fisher asdsss', { timeout });
+  173 |     await this.page.getByRole('textbox', { name: 'Cylinders' }).click();
+  174 |     await this.page.getByRole('textbox', { name: 'Cylinders' }).fill('8 3333', { timeout });
+  175 |     await this.page.getByRole('textbox', { name: 'Displacement' }).click();
+  176 |     await this.page.getByRole('textbox', { name: 'Displacement' }).fill('330 cu. in. 22222', { timeout });
+  177 |     await this.page.getByRole('textbox', { name: 'Front Tread' }).click();
+  178 |     await this.page.getByRole('textbox', { name: 'Front Tread' }).fill('61.8 inches asdasd', { timeout });
+  179 |     await this.page.getByRole('textbox', { name: 'Fuel' }).click();
+  180 |     await this.page.getByRole('textbox', { name: 'Fuel' }).fill('25 Gallons sdadad', { timeout });
+  181 |     await this.page.getByRole('textbox', { name: 'Height' }).click();
+  182 |     await this.page.getByRole('textbox', { name: 'Height' }).fill('55.5 inches adasd', { timeout });
+  183 |     await this.page.getByRole('textbox', { name: 'Length' }).click();
+  184 |     await this.page.getByRole('textbox', { name: 'Length' }).fill('217 inches adasd', { timeout });
+  185 |     
+  186 |     await this.page.getByRole('button', { name: 'Continue' }).click();
+  187 |     await this.page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+  188 |   }
+  189 | 
+  190 |   async runCheckoutFlow() {
+  191 |     // 1. Click Access Record
+  192 |     await this.clickAccessRecordButton();
+  193 | 
+  194 |     // 2. Wait for email popup and fill details
+  195 |     const emailInput = this.page.locator('input[type="email"]').first();
+  196 |     const phoneInput = this.page.locator('input[type="tel"]').first();
+  197 |     
+  198 |     await emailInput.waitFor({ state: 'visible', timeout: TIMEOUT });
+  199 |     
+  200 |     await emailInput.fill(PreviewPage.generateUniqueEmail());
+  201 |     await phoneInput.fill(PreviewPage.generateUsPhoneNumber());
+  202 |     
+  203 |     // 3. Click Proceed to checkout and wait for the navigation together
+  204 |     await Promise.all([
+  205 |       this.page.waitForURL(/.*\/checkout(?:-\d+)?.*/, { timeout: TIMEOUT }),
+  206 |       this.page.getByRole('button', { name: /proceed to checkout/i }).click(),
+  207 |     ]);
+  208 |   }
+  209 | 
+  210 |   // Helper: Generate a unique email
+  211 |   static generateUniqueEmail() {
+  212 |     const primaryEmails = [
+  213 |       'indus.shahnawaz1460@gmail.com',
+  214 |       'techworms134@gmail.com',
+  215 |       'h.m.shahnawaz123@gmail.com',
+  216 |       'hommy.stress123@gmail.com',
+  217 |       'working.with56@gmail.com'
+  218 |     ];
+  219 |     
+  220 |     // Pick a random primary email from the list
+  221 |     const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
+  222 |     const [localPart, domainPart] = chosenEmail.split('@');
+  223 |     
+  224 |     // Gmail supports plus-addressing (e.g. user+timestamp@gmail.com)
+  225 |     // This routes emails directly to the main inbox to prevent bounces
+  226 |     return `${localPart}+${Date.now()}@${domainPart}`;
+  227 |   }
+  228 | 
+  229 |   // Helper: Generate a valid US phone number (XXX) XXX-XXXX
+  230 |   static generateUsPhoneNumber() {
+  231 |     const areaCode = Math.floor(Math.random() * 800) + 200; // 200-999
+  232 |     const prefix = Math.floor(Math.random() * 800) + 200;   // 200-999
+  233 |     const lineNumber = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
+  234 |     return `(${areaCode}) ${prefix}-${lineNumber}`;
+  235 |   }
+  236 | }
+  237 | 
+  238 | class PreviewToCheckoutPriceValidator {
+  239 |   constructor(page) {
+  240 |     this.page = page;
+  241 |   }
+  242 | 
+  243 |   async selectRandomPlanAndHandleUpsell() {
+  244 |     // Locate all plan buttons dynamically by their role on the page
+  245 |     const planButtons = this.page.locator('div[role="button"]').filter({
+  246 |       hasText: /Report|Check|UVC/i
+  247 |     });
+  248 |     
+  249 |     // Wait for the first plan button to load and render on the DOM before counting
+  250 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+  251 |     
+  252 |     const count = await planButtons.count();
+  253 |     if (count === 0) {
 ```
