@@ -105,6 +105,7 @@ jobs:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
+        PLAYWRIGHT_BLOB_OUTPUT_DIR: blob-report
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/streaming-${{ matrix.batch.id }}-${{ matrix.project }}-results.json
 
     - name: Upload Report Artifact
@@ -112,7 +113,9 @@ jobs:
       if: always()
       with:
         name: report-streaming-${{ matrix.project }}-${{ matrix.batch.id }}
-        path: playwright-report/
+        path: |
+          blob-report/
+          playwright-report/
         retention-days: 30
 
   # ─────────────────────────────────────────────────────────
@@ -160,6 +163,7 @@ jobs:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
+        PLAYWRIGHT_BLOB_OUTPUT_DIR: blob-report
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/non-streaming-${{ matrix.project }}-results.json
 
     - name: Upload Report Artifact
@@ -167,7 +171,9 @@ jobs:
       if: always()
       with:
         name: report-non-streaming-${{ matrix.project }}
-        path: playwright-report/
+        path: |
+          blob-report/
+          playwright-report/
         retention-days: 30
 
   # ─────────────────────────────────────────────────────────
@@ -188,14 +194,21 @@ jobs:
     - name: Download all reports
       uses: actions/download-artifact@v4
       with:
-        path: playwright-report
+        path: downloaded-artifacts
         pattern: report-*
         merge-multiple: true
+
+    - name: Prepare reports directory
+      run: |
+        mkdir -p playwright-report blob-report
+        cp -r downloaded-artifacts/blob-report/* blob-report/ 2>/dev/null || true
+        cp downloaded-artifacts/*-results.json playwright-report/ 2>/dev/null || true
 
     - name: Send Slack Notification
       if: always()
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
         GITHUB_SERVER: ${{ github.server_url }}
         GITHUB_REPO: ${{ github.repository }}
         GITHUB_RUN: ${{ github.run_id }}
@@ -206,28 +219,10 @@ jobs:
       run: |
         node slack-notify.js
 
-    - name: Notify failures in alert channel
-      if: always()
-      env:
-        SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
-      run: |
-        sudo apt-get install -y jq
-        FAILED_TESTS=0
-        for f in playwright-report/*-results.json; do
-          if [ -f "$f" ]; then
-            FAIL_COUNT=$(jq '.stats.unexpected // 0' "$f" 2>/dev/null || echo "0")
-            FAILED_TESTS=$(( FAILED_TESTS + FAIL_COUNT ))
-          fi
-        done
-        if [ "$FAILED_TESTS" -gt 0 ] && [ -n "$SLACK_FAILURE_WEBHOOK_URL" ]; then
-          ALERT_PAYLOAD='{"text": "🚨 *PROD ALERT:* Playwright E2E tests detected '"$FAILED_TESTS"' failure(s) in Streaming/Non-Streaming Flow. <@U09UE83AWGP>\n<https://shahnawaz-cmd.github.io/dvh-functional-stability-regression/|View HTML Failure Report>"}'
-          curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
-        fi
-
     - name: Merge Blob Reports into single consolidated HTML Report
       if: always()
       run: |
-        npx playwright merge-reports --reporter=html ./playwright-report || true
+        npx playwright merge-reports --reporter=html ./blob-report --output playwright-report || true
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
