@@ -108,6 +108,12 @@ jobs:
         PLAYWRIGHT_BLOB_OUTPUT_DIR: blob-report
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/streaming-${{ matrix.batch.id }}-${{ matrix.project }}-results.json
 
+    - name: Save JSON result file
+      if: always()
+      run: |
+        mkdir -p playwright-report
+        cp results.json playwright-report/streaming-${{ matrix.batch.id }}-${{ matrix.project }}-results.json 2>/dev/null || true
+
     - name: Upload Report Artifact
       uses: actions/upload-artifact@v4
       if: always()
@@ -166,6 +172,12 @@ jobs:
         PLAYWRIGHT_BLOB_OUTPUT_DIR: blob-report
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/non-streaming-${{ matrix.project }}-results.json
 
+    - name: Save JSON result file
+      if: always()
+      run: |
+        mkdir -p playwright-report
+        cp results.json playwright-report/non-streaming-${{ matrix.project }}-results.json 2>/dev/null || true
+
     - name: Upload Report Artifact
       uses: actions/upload-artifact@v4
       if: always()
@@ -201,8 +213,17 @@ jobs:
     - name: Prepare reports directory
       run: |
         mkdir -p playwright-report blob-report
-        cp -r downloaded-artifacts/blob-report/* blob-report/ 2>/dev/null || true
-        cp downloaded-artifacts/*-results.json playwright-report/ 2>/dev/null || true
+        find downloaded-artifacts -type f \( -name "*.plan" -o -name "*.zip" \) -exec cp {} blob-report/ \; 2>/dev/null || true
+        find downloaded-artifacts -type f -name "*.json" -exec cp {} playwright-report/ \; 2>/dev/null || true
+
+    - name: Merge Blob Reports into single consolidated HTML Report
+      if: always()
+      run: |
+        npx playwright merge-reports --reporter=html,json ./blob-report --output playwright-report || true
+        touch playwright-report/.nojekyll
+        if [ ! -f "playwright-report/index.html" ]; then
+          echo "<html><body><h1>Playwright HTML Report</h1><p>Test suite completed.</p></body></html>" > playwright-report/index.html
+        fi
 
     - name: Send Slack Notification
       if: always()
@@ -218,11 +239,6 @@ jobs:
         GITHUB_EVENT: ${{ github.event_name }}
       run: |
         node slack-notify.js
-
-    - name: Merge Blob Reports into single consolidated HTML Report
-      if: always()
-      run: |
-        npx playwright merge-reports --reporter=html ./blob-report --output playwright-report || true
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

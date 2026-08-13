@@ -11,17 +11,30 @@ const failedTestNames = [];
 
 let detectedFlowName = 'Streaming'; // Default
 
-if (fs.existsSync('playwright-report')) {
-    const reportFiles = fs.readdirSync('playwright-report').filter(f => f.endsWith('-results.json') || f.endsWith('.json'));
-    
-    if (reportFiles.some(f => f.includes('non-streaming'))) {
-        detectedFlowName = 'Non-Streaming';
-    } else if (reportFiles.some(f => f.includes('streaming'))) {
-        detectedFlowName = 'Streaming';
+const scanDir = (dir) => {
+    if (!fs.existsSync(dir)) return [];
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    let files = [];
+    for (const entry of entries) {
+        const fullPath = `${dir}/${entry.name}`;
+        if (entry.isDirectory()) {
+            files = files.concat(scanDir(fullPath));
+        } else if (entry.isFile() && (entry.name.endsWith('-results.json') || entry.name.endsWith('.json'))) {
+            files.push(fullPath);
+        }
     }
+    return files;
+};
 
-    for (const file of reportFiles) {
-        const filePath = `playwright-report/${file}`;
+const allReportFiles = [...scanDir('playwright-report'), ...scanDir('downloaded-artifacts')];
+
+if (allReportFiles.some(f => f.includes('non-streaming'))) {
+    detectedFlowName = 'Non-Streaming';
+} else if (allReportFiles.some(f => f.includes('streaming'))) {
+    detectedFlowName = 'Streaming';
+}
+
+for (const filePath of allReportFiles) {
         try {
             const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             const stats = data.stats;
@@ -56,7 +69,6 @@ if (fs.existsSync('playwright-report')) {
             console.error(`Error reading ${filePath}:`, e);
         }
     }
-}
 
 // Flaky tests passed on retry, so they count towards successful executions, not failures
 const totalTests = totalPassed + totalFailed + totalSkipped + totalFlaky;
