@@ -1,72 +1,25 @@
 // run-flow.js
 const { execSync } = require('child_process');
-const { chromium } = require('@playwright/test');
-const config = require('./playwright.config');
-require('dotenv').config();
+const { execSync: detect } = require('child_process');
 
-async function runFlowDetectionAndExecute() {
-  const rawArgs = process.argv.slice(2);
-  const isHeaded = rawArgs.includes('--headed');
-  const projectArg = rawArgs.find(a => a.startsWith('--project='));
-  const projectName = projectArg ? projectArg.split('=')[1].replace(/['"]/g, '') : null;
-
-  // Resolve browser settings from playwright.config.js
-  const projectConfig = config.projects.find(p => p.name === projectName) || config.projects[0];
-  const browserType = projectConfig.use?.browserName || 'chromium';
-  const baseURL = config.use?.baseURL || process.env.BASE_URL;
-
-  console.log(`--- [Flow Orchestrator] Detecting Cookie & Flow (${browserType}, Headed: ${isHeaded}) ---`);
-
-  const browser = await require('@playwright/test')[browserType].launch({ headless: !isHeaded });
-  const context = await browser.newContext(projectConfig.use || {});
-  const page = await context.newPage();
-
-  let flowType = null; // No fallback default
+function runFlow() {
+  console.log('🚀 Running Single Flow Detection...');
+  let flowType = 'streaming';
 
   try {
-    if (baseURL) {
-      await page.goto(baseURL, { waitUntil: 'networkidle' });
-
-      const cookies = await context.cookies();
-      const flowCookie = cookies.find((c) => c.name === 'checkout_flow');
-
-      if (flowCookie) {
-        flowType = flowCookie.value;
-      } else {
-        // Check localStorage if cookie is not present
-        const lsFlow = await page.evaluate(() => {
-          try {
-            const settings = JSON.parse(localStorage.getItem('site_settings') || '{}');
-            return settings.checkout_flow || null;
-          } catch (e) {
-            return null;
-          }
-        });
-        if (lsFlow) {
-          flowType = lsFlow;
-        }
-      }
+    const output = execSync('node detect-flow.js', { encoding: 'utf8' });
+    console.log(output);
+    if (output.includes('Detected Checkout Flow : non_streaming')) {
+      flowType = 'non_streaming';
+    } else if (output.includes('Detected Checkout Flow : streaming')) {
+      flowType = 'streaming';
     }
-  } catch (error) {
-    console.error('[Flow Orchestrator] Error detecting cookies:', error.message);
-  } finally {
-    await browser.close();
-  }
-
-  const isNonStreaming = flowType === 'non_streaming';
-  const isStreaming = flowType === 'streaming';
-
-  console.log('--------------------------------------------------');
-  console.log(`Detected Checkout Flow : ${flowType || 'UNKNOWN'}`);
-  console.log(`Is Non-Streaming Flow  : ${isNonStreaming}`);
-  console.log(`Is Streaming Flow      : ${isStreaming}`);
-  console.log('--------------------------------------------------');
-
-  if (!flowType) {
-    console.error('❌ Flow Detection Failed: Could not detect checkout_flow cookie or localStorage setting.');
+  } catch (e) {
+    console.error('❌ Flow Detection Failed. Stopping execution.');
     process.exit(1);
   }
 
+  const rawArgs = process.argv.slice(2);
   const formattedArgs = rawArgs.map(arg => {
     if (arg.includes(' ') || arg.includes('(') || arg.includes(')') || arg.includes('|')) {
       return `'${arg.replace(/'/g, "'\\''")}'`;
@@ -74,33 +27,13 @@ async function runFlowDetectionAndExecute() {
     return arg;
   }).join(' ');
 
-  if (isNonStreaming) {
-    console.log('🚀 Triggering NON-STREAMING Suite: non_streaming_flow/nonstreaming.spec.js');
-    // For non-streaming suite, strip batch grep filter if it's meant for TC_ (streaming) cases
-    const nsArgsList = rawArgs.filter(a => !a.startsWith('--grep=') && !a.startsWith('--grep'));
-    const nsFormattedArgs = nsArgsList.map(arg => {
-      if (arg.includes(' ') || arg.includes('(') || arg.includes(')') || arg.includes('|')) {
-        return `'${arg.replace(/'/g, "'\\''")}'`;
-      }
-      return arg;
-    }).join(' ');
-
-    try {
-      execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${nsFormattedArgs}`, { stdio: 'inherit' });
-    } catch (e) {
-      console.log('⚠️ Non-streaming suite execution finished or no matching tests.');
-    }
-  } else if (isStreaming) {
-    console.log('🚀 Triggering STREAMING Suite: tests/streaming2-e2e.spec.js');
-    try {
-      execSync(`npx playwright test tests/streaming2-e2e.spec.js ${formattedArgs}`, { stdio: 'inherit' });
-    } catch (e) {
-      console.log('⚠️ Streaming suite execution finished or no matching tests.');
-    }
+  if (flowType === 'non_streaming') {
+    console.log('🎯 Launching Non-Streaming Suite: non_streaming_flow/nonstreaming.spec.js');
+    execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${formattedArgs}`, { stdio: 'inherit' });
   } else {
-    console.error(`❌ Flow Detection Failed: Unknown flowType value "${flowType}".`);
-    process.exit(1);
+    console.log('🎯 Launching Streaming Suite: tests/streaming2-e2e.spec.js');
+    execSync(`npx playwright test tests/streaming2-e2e.spec.js ${formattedArgs}`, { stdio: 'inherit' });
   }
 }
 
-runFlowDetectionAndExecute();
+runFlow();

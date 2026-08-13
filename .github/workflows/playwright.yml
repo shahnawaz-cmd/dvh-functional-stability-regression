@@ -16,7 +16,47 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-matrix:
+  # ─────────────────────────────────────────────────────────
+  # STEP 1: Single Flow Detection Job (Runs ONCE at start)
+  # ─────────────────────────────────────────────────────────
+  detect-flow:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    outputs:
+      flow_type: ${{ steps.flow-check.outputs.flow_type }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Get Playwright Version
+      id: playwright-version
+      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      
+    - name: Detect Website Flow
+      id: flow-check
+      run: node detect-flow.js
+      env:
+        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
+
+  # ─────────────────────────────────────────────────────────
+  # STEP 2A: STREAMING Flow Matrix Job (Runs ONLY if flow_type == 'streaming')
+  # ─────────────────────────────────────────────────────────
+  test-streaming:
+    needs: [detect-flow]
+    if: needs.detect-flow.outputs.flow_type == 'streaming'
     timeout-minutes: 120
     runs-on: ubuntu-latest
     strategy:
@@ -44,9 +84,6 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
-    - name: Get Playwright Version
-      id: playwright-version
-      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
     - name: Cache Playwright Browsers
       id: playwright-cache
       uses: actions/cache@v4
@@ -56,27 +93,80 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
       if: steps.playwright-cache.outputs.cache-hit != 'true'
-      
-    - name: Run Flow Orchestrator - ${{ matrix.project }} (${{ matrix.batch.name }})
-      run: node run-flow.js --project="${{ matrix.project }}" --workers=2 --grep="${{ matrix.batch.grep }}" --reporter=html,json
+
+    - name: Run Streaming Suite - ${{ matrix.project }} (${{ matrix.batch.name }})
+      run: npx playwright test tests/streaming2-e2e.spec.js --project="${{ matrix.project }}" --workers=2 --grep="${{ matrix.batch.grep }}" --reporter=html,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
         PLAYWRIGHT_HTML_REPORT: playwright-report/${{ matrix.batch.id }}-html
-        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/${{ matrix.batch.id }}-${{ matrix.project }}-results.json
-        
-    - name: Upload Artifact - Report
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/streaming-${{ matrix.batch.id }}-${{ matrix.project }}-results.json
+
+    - name: Upload Report Artifact
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: playwright-report-${{ matrix.project }}-${{ matrix.batch.id }}
+        name: report-streaming-${{ matrix.project }}-${{ matrix.batch.id }}
         path: playwright-report/
         retention-days: 30
 
+  # ─────────────────────────────────────────────────────────
+  # STEP 2B: NON-STREAMING Flow Matrix Job (Runs ONLY if flow_type == 'non_streaming')
+  # ─────────────────────────────────────────────────────────
+  test-non-streaming:
+    needs: [detect-flow]
+    if: needs.detect-flow.outputs.flow_type == 'non_streaming'
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - "Mobile Chrome"
+          - "Mobile Safari"
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+
+    - name: Run Non-Streaming Suite - ${{ matrix.project }}
+      run: npx playwright test non_streaming_flow/nonstreaming.spec.js --project="${{ matrix.project }}" --workers=2 --reporter=html,json
+      env:
+        BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
+        PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
+        PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
+        PLAYWRIGHT_HTML_REPORT: playwright-report/non-streaming-html
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/non-streaming-${{ matrix.project }}-results.json
+
+    - name: Upload Report Artifact
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: report-non-streaming-${{ matrix.project }}
+        path: playwright-report/
+        retention-days: 30
+
+  # ─────────────────────────────────────────────────────────
+  # STEP 3: Consolidated Slack Notification & Pages Deployment
+  # ─────────────────────────────────────────────────────────
   notify:
     if: always()
-    needs: [test-matrix]
+    needs: [detect-flow, test-streaming, test-non-streaming]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -90,7 +180,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         path: playwright-report
-        pattern: playwright-report-*
+        pattern: report-*
         merge-multiple: true
 
     - name: Send Slack Notification
