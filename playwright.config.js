@@ -18,6 +18,14 @@ module.exports = defineConfig({
   },
   projects: [
     {
+      name: 'Desktop Chrome',
+      use: {
+        browserName: 'chromium',
+        viewport: { width: 1920, height: 1080 },
+        isMobile: false,
+      },
+    },
+    {
       name: 'Mobile Chrome',
       use: {
         browserName: 'chromium',

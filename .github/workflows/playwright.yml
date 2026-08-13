@@ -128,6 +128,7 @@ jobs:
       fail-fast: false
       matrix:
         project:
+          - "Desktop Chrome"
           - "Mobile Chrome"
           - "Mobile Safari"
 
@@ -225,10 +226,14 @@ jobs:
           curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
         fi
 
-    - name: Ensure HTML index report exists
+    - name: Merge HTML reports into single consolidated report
       if: always()
       run: |
-        if [ ! -f "playwright-report/index.html" ]; then
+        mkdir -p html-report
+        npx playwright merge-reports --reporter=html playwright-report || true
+        if [ -d "playwright-report" ] && [ -f "playwright-report/index.html" ]; then
+          echo "Consolidated HTML report created successfully."
+        else
           FIRST_HTML_DIR=$(find playwright-report -maxdepth 2 -type f -name "index.html" | head -n 1)
           if [ -n "$FIRST_HTML_DIR" ]; then
             cp "$FIRST_HTML_DIR" playwright-report/index.html
