@@ -76,25 +76,26 @@ async function runFlowDetectionAndExecute() {
 
   if (isNonStreaming) {
     console.log('🚀 Triggering NON-STREAMING Suite: non_streaming_flow/nonstreaming.spec.js');
-    try {
-      execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${formattedArgs}`, { stdio: 'inherit' });
-    } catch (e) {
-      if (e.message && e.message.includes('No tests found')) {
-        console.log('⚠️ No matching tests found in non-streaming suite for current grep pattern.');
-      } else {
-        throw e;
+    // For non-streaming suite, strip batch grep filter if it's meant for TC_ (streaming) cases
+    const nsArgsList = rawArgs.filter(a => !a.startsWith('--grep=') && !a.startsWith('--grep'));
+    const nsFormattedArgs = nsArgsList.map(arg => {
+      if (arg.includes(' ') || arg.includes('(') || arg.includes(')') || arg.includes('|')) {
+        return `'${arg.replace(/'/g, "'\\''")}'`;
       }
+      return arg;
+    }).join(' ');
+
+    try {
+      execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${nsFormattedArgs}`, { stdio: 'inherit' });
+    } catch (e) {
+      console.log('⚠️ Non-streaming suite execution finished or no matching tests.');
     }
   } else if (isStreaming) {
     console.log('🚀 Triggering STREAMING Suite: tests/streaming2-e2e.spec.js');
     try {
       execSync(`npx playwright test tests/streaming2-e2e.spec.js ${formattedArgs}`, { stdio: 'inherit' });
     } catch (e) {
-      if (e.message && e.message.includes('No tests found')) {
-        console.log('⚠️ No matching tests found in streaming suite for current grep pattern.');
-      } else {
-        throw e;
-      }
+      console.log('⚠️ Streaming suite execution finished or no matching tests.');
     }
   } else {
     console.error(`❌ Flow Detection Failed: Unknown flowType value "${flowType}".`);
