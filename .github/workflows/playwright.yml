@@ -109,6 +109,24 @@ jobs:
         BATCH3_OUTCOME: ${{ steps.batch3.outcome }}
       run: |
         node slack-notify.js
+
+    - name: Notify failures in alert channel
+      if: always()
+      env:
+        SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
+      run: |
+        sudo apt-get install -y jq
+        FAILED_TESTS=0
+        for f in playwright-report/batch1-results.json playwright-report/batch2-results.json playwright-report/batch3-results.json; do
+          if [ -f "$f" ]; then
+            FAIL_COUNT=$(jq '.stats.unexpected // 0' "$f" 2>/dev/null || echo "0")
+            FAILED_TESTS=$(( FAILED_TESTS + FAIL_COUNT ))
+          fi
+        done
+        if [ "$FAILED_TESTS" -gt 0 ] && [ -n "$SLACK_FAILURE_WEBHOOK_URL" ]; then
+          ALERT_PAYLOAD='{"text": "🚨 *PROD ALERT:* Playwright E2E tests detected '"$FAILED_TESTS"' failure(s) in Streaming Flow. <@U09UE83AWGP>\n<https://shahnawaz-cmd.github.io/dvh-functional-stability-regression/|View HTML Failure Report>"}'
+          curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
+        fi
         
     - name: Fail workflow if any batch failed
       if: always()

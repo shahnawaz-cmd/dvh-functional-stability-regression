@@ -228,12 +228,37 @@ test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }, test
 //   await page.close();
 // });
 
-test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page }) => {
+// Pool of Classic mapped VINs
+const CLASSIC_MAPPED_VINS = [
+  'XP29G72104639',
+  'M176103674',
+  '3N67K5M340214',
+  '1H57H5Z447879',
+  '242378Z126752',
+  'PH27G62105038',
+  'CL41M3C146664'
+];
+
+// Helper to pick a random Classic VIN and randomize its last 4 characters
+const getRandomizedClassicVin = () => {
+  const baseVin = CLASSIC_MAPPED_VINS[Math.floor(Math.random() * CLASSIC_MAPPED_VINS.length)];
+  const chars = baseVin.split('');
+  const digits = '0123456789';
+  for (let i = chars.length - 4; i < chars.length; i++) {
+    chars[i] = digits[Math.floor(Math.random() * digits.length)];
+  }
+  return chars.join('');
+};
+
+test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
+  const classicVin = getRandomizedClassicVin();
   try {
+    await context.clearCookies();
+    await context.clearPermissions();
     await home.navigate();
-    await home.decodeVin('242370B111346');
+    await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
     await preview.classicEdtibleFeatureYMM();
@@ -242,12 +267,15 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page }) => {
   }
 });
 
-test('TC_14_Classic_Manual_Input_Validation', async ({ page }) => {
+test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
+  const classicVin = getRandomizedClassicVin();
   try {
+    await context.clearCookies();
+    await context.clearPermissions();
     await home.navigate();
-    await home.decodeVin('242370B111346');
+    await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
     await preview.ClassicEditibleSpecsManualInput();
@@ -256,12 +284,16 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page }) => {
   }
 });
 
-test('TC_15_Classic_Editible_Specs_Update', async ({ page }) => {
+test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
+  const classicVin = getRandomizedClassicVin();
+
   try {
+    await context.clearCookies();
+    await context.clearPermissions();
     await home.navigate();
-    await home.decodeVin('242370B111346');
+    await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
     await preview.classicEditibleSpecsUpdateSpec();

@@ -150,7 +150,9 @@ class PreviewPage {
     await this.page.getByRole('textbox', { name: 'Number of Doors' }).fill('4', { timeout });
     await this.page.getByRole('textbox', { name: 'Drive Type' }).click();
     await this.page.getByRole('textbox', { name: 'Drive Type' }).fill('AWD', { timeout });
-    await this.page.getByRole('button', { name: 'Continue' }).click();
+    const getRecordsBtn = this.page.getByRole('button', { name: /Get Records/i }).first();
+    await getRecordsBtn.waitFor({ state: 'visible', timeout });
+    await getRecordsBtn.click();
   }
 
   async classicEditibleSpecsUpdateSpec(timeout = TIMEOUT) {
