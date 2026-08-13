@@ -2,21 +2,17 @@ const fs = require('fs');
 const https = require('https');
 const url = require('url');
 
-const files = [
-    'playwright-report/batch1-results.json',
-    'playwright-report/batch2-results.json',
-    'playwright-report/batch3-results.json'
-];
-
 let totalPassed = 0;
 let totalFailed = 0;
 let totalSkipped = 0;
 let totalFlaky = 0;
 
-for (const file of files) {
-    try {
-        if (fs.existsSync(file)) {
-            const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+if (fs.existsSync('playwright-report')) {
+    const reportFiles = fs.readdirSync('playwright-report').filter(f => f.endsWith('-results.json') || f.endsWith('.json'));
+    for (const file of reportFiles) {
+        const filePath = `playwright-report/${file}`;
+        try {
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             const stats = data.stats;
             if (stats) {
                 totalPassed += stats.expected || 0;
@@ -24,11 +20,9 @@ for (const file of files) {
                 totalSkipped += stats.skipped || 0;
                 totalFlaky += stats.flaky || 0;
             }
-        } else {
-            console.warn(`Report file not found: ${file}`);
+        } catch (e) {
+            console.error(`Error reading ${filePath}:`, e);
         }
-    } catch (e) {
-        console.error(`Error reading ${file}:`, e);
     }
 }
 

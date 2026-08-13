@@ -13,7 +13,16 @@ async function detectFlow() {
   let flowType = null;
 
   try {
-    await page.goto(baseURL, { waitUntil: 'load' });
+    for (let navAttempt = 1; navAttempt <= 3; navAttempt++) {
+      try {
+        await page.goto(baseURL, { waitUntil: 'load', timeout: 30000 });
+        break;
+      } catch (navError) {
+        console.warn(`[Flow Detection] Navigation attempt ${navAttempt} failed (${navError.message}). Retrying...`);
+        if (navAttempt === 3) throw navError;
+        await page.waitForTimeout(2000);
+      }
+    }
     
     // Poll up to 10 seconds for checkout_flow cookie or localStorage setting
     for (let attempt = 0; attempt < 20; attempt++) {

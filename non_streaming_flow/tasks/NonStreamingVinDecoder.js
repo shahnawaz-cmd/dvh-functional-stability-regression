@@ -35,8 +35,17 @@ class NonStreamingVinDecoder {
   }
 
   generateUSVin(isMVL = false) {
-    const baseVin = '1FMCU9GD3JUC83708';
-    return this.generateRandomVin(baseVin, 2);
+    const baseVins = [
+      '2C4RC1BG3SR518739',
+      'WA1BNAFY8J2112512',
+      '1C4RJFBG7KC671605',
+      'JM3KFBBL3R0438560',
+      '1FMCU9GD3JUC83708'
+    ];
+    const baseVin = baseVins[Math.floor(Math.random() * baseVins.length)];
+    // Randomize last 2 to 3 characters on every run
+    const numToReplace = Math.floor(Math.random() * 2) + 2; // 2 or 3 digits
+    return this.generateRandomVin(baseVin, numToReplace);
   }
 
   generateEuVin() {
@@ -48,11 +57,37 @@ class NonStreamingVinDecoder {
     return this.generateRandomVin(baseVin, 1);
   }
 
-  async perform(page) {
+  generateClassicVin() {
+    const classicVins = [
+      'XP29G72104639',
+      'M176103674',
+      '3N67K5M340214',
+      '1H57H5Z447879',
+      '242378Z126752',
+      'PH27G62105038',
+      'CL41M3C146664'
+    ];
+    const baseVin = classicVins[Math.floor(Math.random() * classicVins.length)];
+    const chars = baseVin.split('');
+    const digits = '0123456789';
+    for (let i = chars.length - 4; i < chars.length; i++) {
+      chars[i] = digits[Math.floor(Math.random() * digits.length)];
+    }
+    return chars.join('');
+  }
+
+  async perform(page, { isClassic = false, isEU = false } = {}) {
     const isMVL = page.url().includes('motorcyclevinlookup.com');
     const isTC14 = this.skipSuccessClick;
-    const vin = isTC14 ? this.generateEuVin() : this.generateUSVin(isMVL);
-    console.log(`[DecodeVinTask] Generated VIN (${isTC14 ? 'EU' : 'US'}): ${vin}`);
+    let vin;
+    if (isClassic) {
+      vin = this.generateClassicVin();
+    } else if (isEU || isTC14) {
+      vin = this.generateEuVin();
+    } else {
+      vin = this.generateUSVin(isMVL);
+    }
+    console.log(`[NonStreamingVinDecoder] Generated VIN (${isClassic ? 'Classic' : (isEU || isTC14) ? 'EU' : 'US'}): ${vin}`);
 
     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
@@ -136,6 +171,13 @@ class NonStreamingVinDecoder {
           successClicked = true;
           break;
         }
+      }
+    }
+
+    if (!successClicked) {
+      if (page.url().includes('/preview') || page.url().includes('vin-check/preview') || page.url().includes('/report/')) {
+        console.log('[NonStreamingVinDecoder] Preview page URL verified:', page.url());
+        successClicked = true;
       }
     }
 
