@@ -140,9 +140,11 @@ class NonStreamingVinDecoder {
       .or(page.locator('text=We found historical records for the'))
       .or(page.locator('text=Success!'));
 
-    await successLocator.first().waitFor({ state: 'visible', timeout: 20000 }).catch(() => {
-      console.log('[DecodeVinTask] Timeout waiting for success locator visibility');
-    });
+    // Race between URL redirection to /preview and banner text visibility
+    await Promise.race([
+      page.waitForURL(/.*(preview|report).*/, { timeout: 15000 }).catch(() => {}),
+      successLocator.first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {})
+    ]);
 
     const successLocators = [
       page.getByText('Records found for', { exact: false }),
@@ -175,6 +177,7 @@ class NonStreamingVinDecoder {
     }
 
     if (!successClicked) {
+      await page.waitForURL(/.*(preview|report).*/, { timeout: 20000 }).catch(() => {});
       if (page.url().includes('/preview') || page.url().includes('vin-check/preview') || page.url().includes('/report/')) {
         console.log('[NonStreamingVinDecoder] Preview page URL verified:', page.url());
         successClicked = true;

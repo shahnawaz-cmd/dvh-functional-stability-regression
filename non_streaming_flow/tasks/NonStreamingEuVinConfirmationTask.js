@@ -9,8 +9,7 @@ class NonStreamingEuVinConfirmationTask {
       .or(page.getByRole('button', { name: /^no/i }));
 
     try {
-      await noButton.first().waitFor({ state: 'visible', timeout: 10000 });
-      await noButton.first().scrollIntoViewIfNeeded();
+      await noButton.first().waitFor({ state: 'visible', timeout: 4000 });
       await noButton.first().click({ force: true });
       console.log('✅ [NonStreamingEuVinConfirmationTask] Clicked "No" button prompt');
 
@@ -32,8 +31,8 @@ class NonStreamingEuVinConfirmationTask {
       await trimCombobox.click();
       await page.getByRole('button', { name: '1.4 GLP Turbo 120HP' }).click();
 
-      await page.getByRole('button', { name: 'Update Vehicle Details' }).click();
-      await page.waitForTimeout(2000);
+      await page.getByRole('button', { name: 'Update Vehicle Details' }).click({ force: true });
+      await page.waitForURL(/.*(preview|report).*/, { timeout: 15000 }).catch(() => {});
       console.log('✅ [NonStreamingEuVinConfirmationTask] EU VIN details updated');
     } catch (e) {
       console.log('ℹ️ [NonStreamingEuVinConfirmationTask] "No" button prompt not found; VIN decoded directly on Preview page (VIN is US / direct preview).');

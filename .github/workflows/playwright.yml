@@ -100,12 +100,11 @@ jobs:
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Run Streaming Suite - ${{ matrix.project }} (${{ matrix.batch.name }})
-      run: npx playwright test tests/streaming2-e2e.spec.js --project="${{ matrix.project }}" --workers=2 --grep="${{ matrix.batch.grep }}" --reporter=html,json
+      run: npx playwright test tests/streaming2-e2e.spec.js --project="${{ matrix.project }}" --workers=2 --grep="${{ matrix.batch.grep }}" --reporter=blob,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/${{ matrix.batch.id }}-html
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/streaming-${{ matrix.batch.id }}-${{ matrix.project }}-results.json
 
     - name: Upload Report Artifact
@@ -156,12 +155,11 @@ jobs:
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Run Non-Streaming Suite - ${{ matrix.project }}
-      run: npx playwright test non_streaming_flow/nonstreaming.spec.js --project="${{ matrix.project }}" --workers=2 --reporter=html,json
+      run: npx playwright test non_streaming_flow/nonstreaming.spec.js --project="${{ matrix.project }}" --workers=2 --reporter=blob,json
       env:
         BASE_URL: ${{ secrets.BASE_URL || 'https://detailedvehiclehistory.com/' }}
         PAYPAL_EMAIL: ${{ secrets.PAYPAL_EMAIL }}
         PAYPAL_PASSWORD: ${{ secrets.PAYPAL_PASSWORD }}
-        PLAYWRIGHT_HTML_REPORT: playwright-report/non-streaming-html
         PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/non-streaming-${{ matrix.project }}-results.json
 
     - name: Upload Report Artifact
@@ -226,19 +224,10 @@ jobs:
           curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
         fi
 
-    - name: Merge HTML reports into single consolidated report
+    - name: Merge Blob Reports into single consolidated HTML Report
       if: always()
       run: |
-        mkdir -p html-report
-        npx playwright merge-reports --reporter=html playwright-report || true
-        if [ -d "playwright-report" ] && [ -f "playwright-report/index.html" ]; then
-          echo "Consolidated HTML report created successfully."
-        else
-          FIRST_HTML_DIR=$(find playwright-report -maxdepth 2 -type f -name "index.html" | head -n 1)
-          if [ -n "$FIRST_HTML_DIR" ]; then
-            cp "$FIRST_HTML_DIR" playwright-report/index.html
-          fi
-        fi
+        npx playwright merge-reports --reporter=html ./playwright-report || true
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

@@ -4,10 +4,11 @@ const { HomePage } = require('../tests/pages/HomePage');
 
 const { CalculateVinDecodeTimeTask } = require('./tasks/CalculateVinDecodeTimeTask');
 
-// Non-Streaming Main Test Suite (Ready for test case definitions)
+// Non-Streaming Main Test Suite
 test.describe('Non-Streaming Main Test Suite', () => {
+
   test('TC_NS_01_Non_Streaming_17_Character_VIN_Validation', async ({ page, isMobile }) => {
-    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
     console.log('--- Executing Non-Streaming 17-Character VIN Decode Task ---');
     const home = new HomePage(page);
     await home.navigate();
@@ -17,7 +18,7 @@ test.describe('Non-Streaming Main Test Suite', () => {
   });
 
   test('TC_NS_02_Non_Streaming_Classic_VIN_Validation', async ({ page, isMobile }) => {
-    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
     console.log('--- Executing Non-Streaming Classic VIN Decode Task ---');
     const home = new HomePage(page);
     await home.navigate();
@@ -29,7 +30,7 @@ test.describe('Non-Streaming Main Test Suite', () => {
   });
 
   test('TC_NS_03_Non_Streaming_EU_VIN_Confirmation_Validation', async ({ page, isMobile }) => {
-    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
     console.log('--- Executing Non-Streaming EU VIN Confirmation Task ---');
     const home = new HomePage(page);
     await home.navigate();
@@ -45,7 +46,7 @@ test.describe('Non-Streaming Main Test Suite', () => {
   });
 
   test('TC_NS_04_Non_Streaming_Revisit_Banner_Validation', async ({ page, isMobile }) => {
-    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
     console.log('--- Executing Non-Streaming Revisit Banner Flow Task ---');
     const home = new HomePage(page);
     await home.navigate();
@@ -63,7 +64,7 @@ test.describe('Non-Streaming Main Test Suite', () => {
   });
 
   test('TC_NS_05_Non_Streaming_Revisit_Banner_Sticker_Validation', async ({ page, isMobile }) => {
-    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
     console.log('--- Executing Non-Streaming Revisit Banner (Window Sticker) Flow Task ---');
     
     // 1. Navigate to /window-sticker page path relative to baseURL
@@ -82,7 +83,7 @@ test.describe('Non-Streaming Main Test Suite', () => {
   });
 
   test('TC_NS_06_Non_Streaming_Exit_Intent_Popup_Preview_Validation', async ({ page, isMobile }) => {
-    test.skip(isMobile, 'Exit intent pop-up test is desktop mouse-leave only; skipping on mobile devices.');
+    test.skip(({ isMobile }) => isMobile, 'Exit intent pop-up test is desktop mouse-leave only; skipping on mobile devices.');
     console.log('--- Executing Non-Streaming Exit Intent Pop-up Preview Task ---');
     const home = new HomePage(page);
     await home.navigate();
@@ -98,5 +99,23 @@ test.describe('Non-Streaming Main Test Suite', () => {
 
     await expect(page).toHaveURL(/.*(preview|report).*/i);
     console.log('Successfully completed Exit Intent Pop-up Preview Validation in non-streaming flow');
+  });
+
+  test('TC_NS_07_Non_Streaming_Classic_Editable_Specs_Validation', async ({ page, isMobile }) => {
+    test.skip(({ isMobile }) => !isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Classic Editable Specs Task ---');
+    const home = new HomePage(page);
+    await home.navigate();
+
+    // 1. Decode Classic VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page, { isClassic: true });
+    console.log(`Classic VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Execute Classic Editable Specs Task
+    const { NonStreamingClassicEditableSpecsTask } = require('./tasks/NonStreamingClassicEditableSpecsTask');
+    const classicSpecsTask = new NonStreamingClassicEditableSpecsTask();
+    await classicSpecsTask.perform(page);
+
+    console.log('Successfully completed Classic Editable Specs Validation in non-streaming flow');
   });
 });
