@@ -67,14 +67,35 @@ async function runFlowDetectionAndExecute() {
     process.exit(1);
   }
 
-  const formattedArgs = rawArgs.map(arg => arg.includes(' ') ? `"${arg}"` : arg).join(' ');
+  const formattedArgs = rawArgs.map(arg => {
+    if (arg.includes(' ') || arg.includes('(') || arg.includes(')') || arg.includes('|')) {
+      return `'${arg.replace(/'/g, "'\\''")}'`;
+    }
+    return arg;
+  }).join(' ');
 
   if (isNonStreaming) {
     console.log('🚀 Triggering NON-STREAMING Suite: non_streaming_flow/nonstreaming.spec.js');
-    execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${formattedArgs}`, { stdio: 'inherit' });
+    try {
+      execSync(`npx playwright test non_streaming_flow/nonstreaming.spec.js ${formattedArgs}`, { stdio: 'inherit' });
+    } catch (e) {
+      if (e.message && e.message.includes('No tests found')) {
+        console.log('⚠️ No matching tests found in non-streaming suite for current grep pattern.');
+      } else {
+        throw e;
+      }
+    }
   } else if (isStreaming) {
     console.log('🚀 Triggering STREAMING Suite: tests/streaming2-e2e.spec.js');
-    execSync(`npx playwright test tests/streaming2-e2e.spec.js ${formattedArgs}`, { stdio: 'inherit' });
+    try {
+      execSync(`npx playwright test tests/streaming2-e2e.spec.js ${formattedArgs}`, { stdio: 'inherit' });
+    } catch (e) {
+      if (e.message && e.message.includes('No tests found')) {
+        console.log('⚠️ No matching tests found in streaming suite for current grep pattern.');
+      } else {
+        throw e;
+      }
+    }
   } else {
     console.error(`❌ Flow Detection Failed: Unknown flowType value "${flowType}".`);
     process.exit(1);
