@@ -25,8 +25,13 @@ class HomePage {
     // Wait for the page to be fully loaded
     await this.page.waitForLoadState('load');
     
-    // Explicitly wait 1 second for base URL stability
-    await this.page.waitForTimeout(1000);
+    // Check if running on Safari / WebKit engine
+    const isSafari = this.page.context().browser()?.browserType().name() === 'webkit';
+    if (isSafari) {
+      await this.page.waitForTimeout(1000);
+    } else {
+      await this.page.waitForTimeout(1000);
+    }
     
     // Condition-based wait for the input to be visible and ready
     await this.vinInput.waitFor({ state: 'visible', timeout: TIMEOUT });
