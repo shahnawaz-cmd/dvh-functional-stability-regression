@@ -219,7 +219,7 @@ jobs:
     - name: Merge Blob Reports into single consolidated HTML Report
       if: always()
       run: |
-        npx playwright merge-reports ./blob-report --reporter=html --output playwright-report
+        PLAYWRIGHT_HTML_OUTPUT_DIR=playwright-report npx playwright merge-reports ./blob-report --reporter=html,json || true
         touch playwright-report/.nojekyll
 
     - name: Send Slack Notification
