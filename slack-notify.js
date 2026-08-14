@@ -50,7 +50,7 @@ for (const filePath of allReportFiles) {
                 for (const suite of suites || []) {
                     for (const spec of suite.specs || []) {
                         for (const testItem of spec.tests || []) {
-                            if (testItem.status === 'unexpected' || testItem.results?.some(r => r.status === 'failed' || r.status === 'timedOut')) {
+                            if (testItem.status === 'unexpected') {
                                 const projectName = testItem.projectName ? `[${testItem.projectName}] ` : '';
                                 const testTitle = `${projectName}${spec.title}`;
                                 if (!failedTestNames.includes(testTitle)) {

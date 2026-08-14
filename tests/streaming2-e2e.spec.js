@@ -10,15 +10,7 @@ const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tas
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
 
-test.beforeEach(async ({ page }, testInfo) => {
-  // Desktop Chrome restriction: Only TC_07 and TC_08 run on Desktop Chrome
-  const isDesktop = testInfo.project.name.toLowerCase().includes('desktop');
-  const isTC07 = testInfo.title.startsWith('TC_07');
-  const isTC08 = testInfo.title.startsWith('TC_08');
-  if (isDesktop && !isTC07 && !isTC08) {
-    test.skip(true, 'Streaming cases (except TC_07 and TC_08) are restricted to Mobile browsers');
-  }
-});
+
 
 test.afterEach(async ({ page }) => {
   if (!page.isClosed()) {
