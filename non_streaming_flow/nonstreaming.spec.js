@@ -174,6 +174,62 @@ test.describe('Non-Streaming Main Test Suite', () => {
     console.log('Successfully completed Default Plan Price Check (Window Sticker) Validation in non-streaming flow');
   });
 
+  test('TC_NS_11_Non_Streaming_Classic_Editable_Specs_Only_Validation', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Classic Editable Specifications Only Task ---');
+    const home = new HomePage(page);
+    await home.navigate();
+
+    // 1. Decode Classic VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page, { isClassic: true });
+    console.log(`Classic VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Execute Classic Editable Specs Only Task
+    const { NonStreamingClassicEditableSpecsOnlyTask } = require('./tasks/NonStreamingClassicEditableSpecsOnlyTask');
+    const specsOnlyTask = new NonStreamingClassicEditableSpecsOnlyTask();
+    await specsOnlyTask.perform(page);
+
+    console.log('Successfully completed Classic Editable Specifications Only Validation in non-streaming flow');
+  });
+
+  test('TC_NS_12_Non_Streaming_Upsell_Text_Match', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Upsell Text & Price Match Task ---');
+    const home = new HomePage(page);
+    await home.navigate();
+
+    // 1. Decode VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page);
+    console.log(`VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Execute Upsell Text Match Task directly on Preview Page
+    const { NonStreamingUpsellTextMatchTask } = require('./tasks/NonStreamingUpsellTextMatchTask');
+    const upsellTask = new NonStreamingUpsellTextMatchTask();
+    await upsellTask.perform(page, 'vhr');
+
+    console.log('Successfully completed Upsell Text Match Validation in non-streaming flow');
+  });
+
+  test('TC_NS_13_Non_Streaming_Upsell_Text_Match_Sticker', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Window Sticker Upsell Text & Price Match Task ---');
+    
+    // 1. Navigate to /window-sticker
+    await page.goto('/window-sticker');
+    await page.waitForLoadState('domcontentloaded');
+
+    // 2. Decode VIN to land on Window Sticker Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page);
+    console.log(`VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 3. Execute Upsell Text Match Task for sticker flow
+    const { NonStreamingUpsellTextMatchTask } = require('./tasks/NonStreamingUpsellTextMatchTask');
+    const upsellTask = new NonStreamingUpsellTextMatchTask();
+    await upsellTask.perform(page, 'sticker');
+
+    console.log('Successfully completed Window Sticker Upsell Text Match Validation in non-streaming flow');
+  });
+
   /*
   test('TC_NS_08_Non_Streaming_Coupon_Verification', async ({ page, isMobile }) => {
     test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
