@@ -118,4 +118,85 @@ test.describe('Non-Streaming Main Test Suite', () => {
 
     console.log('Successfully completed Classic Editable Specs Validation in non-streaming flow');
   });
+
+  test('TC_NS_08_Non_Streaming_Classic_Editable_Specs_Manual_Validation', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Classic Editable Specs Manual Update Task ---');
+    const home = new HomePage(page);
+    await home.navigate();
+
+    // 1. Decode Classic VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page, { isClassic: true });
+    console.log(`Classic VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Execute Classic Editable Specs Manual Task
+    const { NonStreamingClassicEditableSpecsManualTask } = require('./tasks/NonStreamingClassicEditableSpecsManualTask');
+    const manualTask = new NonStreamingClassicEditableSpecsManualTask();
+    await manualTask.perform(page);
+
+    console.log('Successfully completed Classic Editable Specs Manual Validation in non-streaming flow');
+  });
+
+  test('TC_NS_09_Non_Streaming_Default_Plan_Price_Check', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Default Plan Price Check Task ---');
+    const home = new HomePage(page);
+    await home.navigate();
+
+    // 1. Decode VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page);
+    console.log(`VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Execute Default Plan Price Check Task
+    const { NonStreamingDefaultPlanPriceCheckTask } = require('./tasks/NonStreamingDefaultPlanPriceCheckTask');
+    const priceTask = new NonStreamingDefaultPlanPriceCheckTask();
+    await priceTask.perform(page);
+
+    console.log('Successfully completed Default Plan Price Check Validation in non-streaming flow');
+  });
+
+  test('TC_NS_10_Non_Streaming_Default_Plan_Price_Check_Sticker', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Default Plan Price Check (Window Sticker) Task ---');
+    
+    // 1. Navigate to /window-sticker page path relative to baseURL
+    await page.goto('/window-sticker');
+
+    // 2. Decode VIN on /window-sticker to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page);
+    console.log(`Window Sticker VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 3. Execute Default Plan Price Check Task
+    const { NonStreamingDefaultPlanPriceCheckTask } = require('./tasks/NonStreamingDefaultPlanPriceCheckTask');
+    const priceTask = new NonStreamingDefaultPlanPriceCheckTask();
+    await priceTask.perform(page);
+
+    console.log('Successfully completed Default Plan Price Check (Window Sticker) Validation in non-streaming flow');
+  });
+
+  /*
+  test('TC_NS_08_Non_Streaming_Coupon_Verification', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Coupon Verification Task ---');
+    const { NonStreamingCouponFlowTask } = require('./tasks/NonStreamingCouponFlowTask');
+    const couponTask = new NonStreamingCouponFlowTask();
+    await couponTask.verifyCoupon(page, 'preview15', '15%');
+  });
+
+  test('TC_NS_09_Non_Streaming_Low_To_High_Coupon_Flow', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Low to High Coupon Flow Task ---');
+    const { NonStreamingCouponFlowTask } = require('./tasks/NonStreamingCouponFlowTask');
+    const couponTask = new NonStreamingCouponFlowTask();
+    await couponTask.verifyLowToHighCouponFlow(page);
+  });
+
+  test('TC_NS_10_Non_Streaming_Coupon_Banner_Persistence', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Coupon Banner Persistence Task ---');
+    const { NonStreamingCouponFlowTask } = require('./tasks/NonStreamingCouponFlowTask');
+    const couponTask = new NonStreamingCouponFlowTask();
+    await couponTask.verifyCouponBannerOnOtherPages(page);
+  });
+  */
 });
