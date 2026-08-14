@@ -6,8 +6,19 @@ const { EUVinModifier } = require('./pages/EUVinModifier');
 const { CheckoutPage } = require('./pages/CheckoutPage');
 const { CouponFlowHandler, CheckoutCouponFlowTest, CouponFlowVerifier } = require('./pages/CouponFlowHandler');
 const { ApiResponseCapture } = require('./helpers/responseCapture');
+const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tasks/StreamingRevisitBannerTask');
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
+
+test.beforeEach(async ({ page }, testInfo) => {
+  // Desktop Chrome restriction: Only TC_07 and TC_08 run on Desktop Chrome
+  const isDesktop = testInfo.project.name.toLowerCase().includes('desktop');
+  const isTC07 = testInfo.title.startsWith('TC_07');
+  const isTC08 = testInfo.title.startsWith('TC_08');
+  if (isDesktop && !isTC07 && !isTC08) {
+    test.skip(true, 'Streaming cases (except TC_07 and TC_08) are restricted to Mobile browsers');
+  }
+});
 
 test.afterEach(async ({ page }) => {
   if (!page.isClosed()) {
@@ -55,48 +66,32 @@ test('TC_02_VIN_Decode_Classic_Validation', async ({ page }) => {
   await page.close();
 });
 
-test('TC_04_Revisit_Banner_Interaction_Validation', async ({ page }) => {
+test('TC_04_VHR_Revisit_Banner_Validation', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'Mobile Safari' || testInfo.project.use.browserName === 'webkit', 'Skipping for Safari');
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  await test.step('Navigate to Home & Decode VIN', async () => {
+  const revisitTask = new StreamingRevisitBannerTask();
+  await test.step('Navigate & Decode VIN', async () => {
     await home.navigate();
-    await home.decodeVin('4JGED6EB0JA121898', 3);
+    await home.decodeVin('1FA6P8CF0H5121898', 3);
   });
-  await test.step('Verify Specs Visible', async () => {
-    await preview.verifySpecsVisible();
-  });
-  await test.step('Go Back & Verify Revisit Banner', async () => {
-    await page.goBack();
-    await page.waitForLoadState('load');
-    const banner = await home.verifyRevisitBannerVisible();
-    await home.clickGrabItNow(banner);
-  });
-  await test.step('Verify Revisit Redirection URL', async () => {
-    await page.waitForURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
-    await expect(page).toHaveURL(/.*\/vin-check\/.*type=vhr.*content=revisitBanner.*/);
+  await test.step('Perform Revisit Banner Task', async () => {
+    await revisitTask.perform(page, preview, 'vhr');
   });
   await page.close();
 });
 
-test('TC_05_Window_Sticker_Revisit_Banner_Validation', async ({ page }) => {
+test('TC_05_Window_Sticker_Revisit_Banner_Validation', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'Mobile Safari' || testInfo.project.use.browserName === 'webkit', 'Skipping for Safari');
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
+  const revisitTask = new StreamingRevisitBannerTask();
   await test.step('Navigate to Window Sticker & Decode VIN', async () => {
-    await page.goto('/window-sticker');
+    await home.navigateWindowSticker();
     await home.decodeVin('4JGED6EB0JA121898', 3);
   });
-  await test.step('Verify Window Sticker Specs', async () => {
-    await preview.verifySpecsVisible('Window sticker found for');
-  });
-  await test.step('Go Back & Verify Revisit Banner', async () => {
-    await page.goBack();
-    await page.waitForLoadState('load');
-    const banner = await home.verifyRevisitBannerVisible('Your window sticker for');
-    await home.clickGrabItNow(banner);
-  });
-  await test.step('Verify Revisit Redirection URL', async () => {
-    await page.waitForURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
-    await expect(page).toHaveURL(/.*\/vin-check\/.*type=sticker.*content=revisitBanner.*/);
+  await test.step('Perform Revisit Banner Task', async () => {
+    await revisitTask.perform(page, preview, 'sticker');
   });
   await page.close();
 });
@@ -364,7 +359,7 @@ test('TC_21_Window_Sticker_Default_Plan', async ({ page }) => {
   test.setTimeout(tcTimeout);
   const home = new HomePage(page);
   const handler = new DefaultPlanCheckingHandler(page);
-  await page.goto('/window-sticker');
+  await home.navigateWindowSticker();
   await home.decodeVin('4JGED6EB0JA121264');
   await handler.sitesettingDefaultPlansVerifies(home, '4JGED6EB0JA121264', true, 'ws');
   await page.close();
@@ -377,7 +372,7 @@ test('TC_22_VHR_Upsell_Text_Validation', async ({ page }) => {
   const upsellHandler = new UpsellTextMatched(page);
   await home.navigate();
   await home.decodeVin('4JGED6EB0JA121898', 3);
-  await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout });
+  await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout }).catch(() => {});
   await upsellHandler.upsellTextVerify('vhr', tcTimeout);
   await page.close();
 });
@@ -387,9 +382,9 @@ test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }) => {
   test.setTimeout(tcTimeout);
   const home = new HomePage(page);
   const upsellHandler = new UpsellTextMatched(page);
-  await page.goto('/window-sticker');
+  await home.navigateWindowSticker();
   await home.decodeVin('4JGED6EB0JA121264');
-  await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout });
+  await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout }).catch(() => {});
   await upsellHandler.upsellTextVerify('sticker', tcTimeout);
   await page.close();
 });

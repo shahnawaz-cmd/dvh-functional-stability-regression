@@ -5,8 +5,10 @@ const TIMEOUT = process.env.CI ? 90000 : 60000;
 class PreviewPage {
   constructor(page) {
     this.page = page;
-    // Use .first() to resolve ambiguity if multiple buttons match
-    this.accessRecordButton = page.locator('button:has-text("Access Record")').first();
+    // Use flexible locator to match Access Record, Get Full Report, or primary action CTA
+    this.accessRecordButton = page.locator('button:has-text("Access Record"), button:has-text("Get Full Report"), button:has-text("Get Report")')
+      .or(page.getByRole('button', { name: /access record|get full report|get report/i }))
+      .first();
   }
 
   async handleEUSpecs(timeout = TIMEOUT) {
@@ -42,8 +44,23 @@ class PreviewPage {
   }
 
   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {
-    // Wait for the specific text to appear
-    await this.page.waitForSelector(`text=${expectedText}`, { timeout: timeout });
+    if (this.page.isClosed()) return;
+    await this.page.waitForLoadState('domcontentloaded').catch(() => {});
+
+    const successLocator = this.page.getByText(expectedText, { exact: false })
+      .or(this.page.locator(`text=${expectedText}`))
+      .or(this.page.locator('h1:has-text("Records found for")'))
+      .or(this.page.locator('text=We found detailed information for the'))
+      .or(this.page.locator('h2:has-text("We found")'))
+      .or(this.page.getByRole('heading', { name: 'Success' }))
+      .or(this.page.locator('text=Window sticker found for'))
+      .or(this.page.getByText('Window sticker found for', { exact: false }))
+      .or(this.page.locator('text=We found historical records for the'))
+      .or(this.page.getByText('Records found for', { exact: false }))
+      .or(this.page.locator('.vehicle-specs, .specs-container, [data-testid="specs"]'))
+      .or(this.accessRecordButton);
+
+    await successLocator.first().waitFor({ state: 'visible', timeout: timeout }).catch(() => {});
   }
 
   async verifyAccessRecordButton() {

@@ -230,6 +230,34 @@ test.describe('Non-Streaming Main Test Suite', () => {
     console.log('Successfully completed Window Sticker Upsell Text Match Validation in non-streaming flow');
   });
 
+  test('TC_NS_14_Non_Streaming_Preview_To_Checkout_Redirection', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');
+    console.log('--- Executing Non-Streaming Preview To Checkout Redirection Task ---');
+    await page.goto('https://dvh.vehiclehistory.report/');
+    await page.waitForLoadState('domcontentloaded');
+
+    // 1. Decode US VIN to land on Preview page
+    const { vin, durationSeconds } = await CalculateVinDecodeTimeTask.execute(page, { isClassic: false });
+    console.log(`US VIN decoded (${durationSeconds}s): ${vin}`);
+
+    // 2. Select Random Plan and Handle Upsell on Preview page
+    const { NonStreamingSelectRandomPlanAndHandleUpsellTask } = require('./tasks/NonStreamingSelectRandomPlanAndHandleUpsellTask');
+    const planUpsellTask = new NonStreamingSelectRandomPlanAndHandleUpsellTask();
+    const planData = await planUpsellTask.perform(page);
+    console.log(`Selected plan details: ${JSON.stringify(planData)}`);
+
+    // 3. Perform Checkout Time Calculation Task (fill email & click proceed)
+    const { CalculateCheckoutTimeTask } = require('./tasks/CalculateCheckoutTimeTask');
+    const { durationSeconds: checkoutSeconds, checkoutUrl } = await CalculateCheckoutTimeTask.execute(page);
+
+    // 4. Validate dynamic plan price + upsell total on Checkout page DOM
+    const { NonStreamingCheckoutPriceValidatorTask } = require('./tasks/NonStreamingCheckoutPriceValidatorTask');
+    const priceValidatorTask = new NonStreamingCheckoutPriceValidatorTask();
+    await priceValidatorTask.perform(page, planData);
+
+    console.log(`Successfully completed Preview to Checkout Redirection (${checkoutSeconds}s) and Checkout Price Validation in non-streaming flow`);
+  });
+
   /*
   test('TC_NS_08_Non_Streaming_Coupon_Verification', async ({ page, isMobile }) => {
     test.skip(!isMobile, 'Mobile test case; skipping on Desktop Chrome.');

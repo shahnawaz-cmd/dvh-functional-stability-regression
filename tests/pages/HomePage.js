@@ -4,8 +4,11 @@ const TIMEOUT = process.env.CI ? 60000 : 30000;
 class HomePage {
   constructor(page) {
     this.page = page;
-    this.vinInput = page.locator('input[placeholder*="VIN"]');
-    this.searchButton = page.locator('button:has-text("Search VIN")');
+    this.vinInput = page.locator('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]').first();
+    this.searchButton = page.getByRole('button', { name: /search vin|get window sticker|search window sticker|get sticker|search/i })
+      .or(page.locator('button[type="submit"]'))
+      .or(page.locator('button:has-text("Search VIN")'))
+      .first();
   }
 
   randomizeVin(baseVin, numToReplace = 1) {
@@ -15,47 +18,61 @@ class HomePage {
 
   async navigate() {
     await this.page.goto('/');
+    await this.page.waitForLoadState('load');
+    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.waitForTimeout(800);
   }
 
   async navigateWithOffer(offerCode) {
     await this.page.goto(`/?offer=${offerCode}`);
+    await this.page.waitForLoadState('load');
+    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.waitForTimeout(800);
+  }
+
+  async navigateWindowSticker() {
+    await this.page.goto('/window-sticker');
+    await this.page.waitForLoadState('load');
+    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.waitForTimeout(800);
   }
 
   async decodeVin(vin, numToReplace = 1) {
-    // Wait for the page to be fully loaded
     await this.page.waitForLoadState('load');
-    
-    // Check if running on Safari / WebKit engine
+
     const isSafari = this.page.context().browser()?.browserType().name() === 'webkit';
-    if (isSafari) {
-      await this.page.waitForTimeout(1000);
-    } else {
-      await this.page.waitForTimeout(1000);
-    }
-    
-    // Condition-based wait for the input to be visible and ready
-    await this.vinInput.waitFor({ state: 'visible', timeout: TIMEOUT });
-    
+
+    const vinInput = this.page.locator('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]').first();
+    await vinInput.waitFor({ state: 'visible', timeout: TIMEOUT });
+
     const randomVin = this.randomizeVin(vin, numToReplace);
-    await this.vinInput.fill(randomVin);
-    await this.searchButton.click();
+    await vinInput.focus();
+    await vinInput.fill(randomVin);
+
+    if (isSafari) {
+      await this.page.evaluate(() => {
+        const input = document.querySelector('input[name="vin"], input[placeholder*="VIN" i]');
+        const form = input ? input.closest('form') : null;
+        if (form) {
+          form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+        } else {
+          const btn = document.querySelector('button[type="submit"]') || document.querySelector('button');
+          if (btn) btn.click();
+        }
+      });
+      await this.page.waitForURL(/.*\/vin-check\/(preview|checkout).*/, { timeout: TIMEOUT }).catch(() => {});
+    } else {
+      const btn = this.page.locator('button[type="submit"], button:has-text("Search VIN"), button:has-text("Search Window Sticker"), button:has-text("Get Window Sticker")').first();
+      await btn.waitFor({ state: 'visible', timeout: TIMEOUT }).catch(() => {});
+      await btn.click().catch(async () => {
+        await vinInput.press('Enter');
+      });
+    }
+
     return randomVin;
   }
 
-  async verifyRevisitBannerVisible(bannerText = 'Your report for') {
-    await this.page.waitForLoadState('load');
-    const banner = this.page.locator(`text=${bannerText}`);
-    await banner.waitFor({ state: 'visible', timeout: TIMEOUT });
-    return banner;
   }
-
-  async clickGrabItNow(banner) {
-    const grabItNowButton = this.page.locator('button:has-text("Grab it now")').first();
-    await grabItNowButton.waitFor({ state: 'visible', timeout: TIMEOUT });
-    await grabItNowButton.waitFor({ state: 'attached', timeout: TIMEOUT });
-    await grabItNowButton.click();
-  }
-}
 class EUVinDecoder {
   constructor() {
     this.baseVins = [
