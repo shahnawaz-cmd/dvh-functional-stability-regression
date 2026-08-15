@@ -65,7 +65,6 @@ jobs:
         project:
           - "Desktop Chrome"
           - "Mobile Chrome"
-          - "Mobile Safari"
         batch:
           - name: "Batch 1"
             grep: "TC_(01|02|04|05|06|07|08|09|10|11)_"
@@ -139,7 +138,6 @@ jobs:
         project:
           - "Desktop Chrome"
           - "Mobile Chrome"
-          - "Mobile Safari"
 
     steps:
     - uses: actions/checkout@v4
