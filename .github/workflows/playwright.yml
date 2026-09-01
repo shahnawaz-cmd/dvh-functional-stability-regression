@@ -214,9 +214,9 @@ jobs:
     - name: Prepare reports directory
       run: |
         mkdir -p playwright-report blob-report allure-results
-        find downloaded-artifacts -type f -name "*.blob" -exec cp {} blob-report/ \; 2>/dev/null || true
+        find downloaded-artifacts -type f \( -name "*.blob" -o -name "*.zip" \) -exec cp {} blob-report/ \; 2>/dev/null || true
         find downloaded-artifacts -type f -name "*.json" -exec cp {} playwright-report/ \; 2>/dev/null || true
-        find downloaded-artifacts -type f -path "*/allure-results/*" -exec cp {} allure-results/ \; 2>/dev/null || true
+        find downloaded-artifacts -type f \( -name "*-result.json" -o -name "*-attachment.*" -o -name "*-container.json" \) -exec cp {} allure-results/ \; 2>/dev/null || true
 
     - name: Merge Blob Reports into single consolidated HTML Report
       if: always()

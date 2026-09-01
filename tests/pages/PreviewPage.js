@@ -276,8 +276,21 @@ class PreviewPage {
     const model = await this.selectDropdownOption('Select model', target.model, 'Camaro', timeout);
     const trim = await this.selectDropdownOption('Select trim', target.trim, 'SS', timeout);
 
-    await this.page.getByRole('button', { name: 'Continue' }).click({ force: true });
-    await this.page.getByRole('button', { name: 'Confirm & Get Records' }).click({ force: true });
+    const continueBtn = this.page.getByRole('button', { name: /^Continue$/i })
+      .or(this.page.locator('button:has-text("Continue")')).first();
+    if (await continueBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
+      await continueBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await continueBtn.click({ force: true });
+      await this.page.waitForTimeout(600);
+    }
+
+    const confirmBtn = this.page.getByRole('button', { name: /Confirm & Get Records|Get Records|Update/i })
+      .or(this.page.locator('button:has-text("Confirm & Get Records"), button:has-text("Get Records")')).first();
+    if (await confirmBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await confirmBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await confirmBtn.click({ force: true });
+      await this.page.waitForTimeout(600);
+    }
 
     return { year, make, model, trim };
   }
