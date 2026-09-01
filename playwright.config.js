@@ -4,8 +4,19 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   testMatch: ['**/*.spec.js'],
   timeout: 120000,
-  retries: 1, // Reduced to 1 retry
-  reporter: [['html', { open: 'never' }]],
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+    ['allure-playwright', {
+      outputFolder: 'allure-results',
+      detail: true,
+      suiteTitle: true,
+      environmentInfo: {
+        Environment: 'Production',
+        Platform: process.platform,
+      },
+    }],
+  ],
   fullyParallel: true,
   workers: 2,
   use: {

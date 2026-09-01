@@ -103,6 +103,8 @@ const failedSection = (failedTestNames.length > 0)
   ? `\n\n*❌ Failed Test Cases (${failedTestNames.length}):*\n` + failedTestNames.map(name => `• \`${name}\``).join('\n')
   : '';
 
+const pagesBaseUrl = `https://${githubRepo.split('/')[0]}.github.io/${githubRepo.split('/')[1]}`;
+
 const payload = {
     blocks: [
         {
@@ -117,7 +119,7 @@ const payload = {
             type: "section",
             text: {
                 type: "mrkdwn",
-                text: `*QA Test Suite for ${detectedFlowName} Flow Validation Completed (${githubEvent === 'schedule' ? 'Scheduled Run' : 'Push/Manual Run'}).*\n\n*Overall Status:* ${overallStatus}${tagText}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}${failedSection}\n\n*📅 Run Time:* \`${runTimeStr}\`\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>\n🌐 <https://${githubRepo.split('/')[0]}.github.io/${githubRepo.split('/')[1]}/|View Public HTML Report>`
+                text: `*QA Test Suite for ${detectedFlowName} Flow Validation Completed (${githubEvent === 'schedule' ? 'Scheduled Run' : 'Push/Manual Run'}).*\n\n*Overall Status:* ${overallStatus}${tagText}\n\n*📊 Test Results Summary:*\n• *Total Tests:* ${totalTests}\n• *✅ Passed:* ${totalPassed}\n• *❌ Failed:* ${totalFailed}\n• *⏭️ Skipped:* ${totalSkipped}\n• *⚠️ Flaky:* ${totalFlaky}${failedSection}\n\n*📅 Run Time:* \`${runTimeStr}\`\n*Branch:* \`${githubRef}\`\n*Triggered by:* \`${githubActor}\`\n*Event:* \`${githubEvent}\`\n*Commit:* \`${githubSha}\`\n\n🔗 <${githubServer}/${githubRepo}/actions/runs/${githubRun}|View Workflow Run>\n🌐 <${pagesBaseUrl}/|View Playwright HTML Report>\n📊 <${pagesBaseUrl}/allure/|View Allure Report>`
             }
         }
     ]

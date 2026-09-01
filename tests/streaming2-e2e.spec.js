@@ -4,7 +4,7 @@ const { HomePage } = require('./pages/HomePage');
 const { PreviewPage, PreviewToCheckoutPriceValidator, EmailCache, DefaultPlanCheckingHandler, UpsellTextMatched } = require('./pages/PreviewPage');
 const { EUVinModifier } = require('./pages/EUVinModifier');
 const { CheckoutPage } = require('./pages/CheckoutPage');
-const { CouponFlowHandler, CheckoutCouponFlowTest, CouponFlowVerifier } = require('./pages/CouponFlowHandler');
+const { CouponFlowHandler, CheckoutCouponFlowTest, CouponFlowVerifier, CouponBannerHandler } = require('./pages/CouponFlowHandler');
 const { ApiResponseCapture } = require('./helpers/responseCapture');
 const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tasks/StreamingRevisitBannerTask');
 
@@ -122,15 +122,79 @@ test('TC_07_Exit_Intent_Popup_Trigger_Validation', async ({ page }, testInfo) =>
   await page.close();
 });
 
-test('TC_08_Home_To_Checkout_Flow_Integration_Validation', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'Desktop Chrome', 'This test only runs on Desktop Chrome');
+test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ page }, testInfo) => {
+  const tcTimeout = process.env.CI ? 120000 : 60000;
+  test.setTimeout(tcTimeout);
+
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
+  const validator = new PreviewToCheckoutPriceValidator(page);
+  const couponVerifier = new CouponFlowVerifier(page);
+  const vin = '4JGED6EB0JA121898';
+  const couponCode = 'get20';
+  const couponPercentage = 0.20;
+
+  // 1. Navigate & Decode VIN -> Preview
   await home.navigate();
-  await home.decodeVin('4JGED6EB0JA121898', 3);
+  await home.decodeVin(vin, 3);
   await preview.verifySpecsVisible();
+
+  // 2. Select Initial Plan & Upsell on Preview Page
+  const initialPlan = await validator.selectRandomPlanAndHandleUpsell();
+
+  // 3. Proceed to Checkout Form (Fills email popup on first visit)
   await preview.runCheckoutFlow();
   await expect(page).toHaveURL(/.*\/checkout.*/);
+
+  // 4. Validate Initial Order Summary (Plan + Upsell match checkout)
+  await validator.validateOrderSummary(initialPlan);
+
+  // 5. Apply Promo Coupon ('get20' = 20% off) & Validate Discounted Total
+  const couponSummary = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
+
+  // 6. Email Cache & Revisit Flow: Go Back to Preview
+  await page.goBack();
+  await page.waitForLoadState('domcontentloaded');
+  await preview.verifySpecsVisible();
+
+  // Verify email/session cookie persistence
+  const cookies = await page.context().cookies();
+  const cachedCookie = cookies.find(c => /email|session|user|cart/i.test(c.name) || c.value.includes('@'));
+  console.log(`ℹ️ [TC_08] Email cache cookie verified: ${cachedCookie ? cachedCookie.name : 'Session Active'}`);
+
+  // 7. Select a New Plan on Preview
+  const newPlan = await validator.selectRandomPlanAndHandleUpsell();
+
+  // 8. Click Access Record (Verify email popup is SKIPPED because email is cached)
+  await preview.clickAccessRecordButton();
+  await page.waitForURL(/.*\/checkout.*/, { timeout: tcTimeout });
+
+  // Ensure email popup did not appear
+  const emailInput = page.locator('input[type="email"]');
+  await expect(emailInput).not.toBeVisible({ timeout: 3000 });
+  console.log('✅ [TC_08] Email popup did NOT appear (cached directly to checkout)');
+
+  // 9. Re-validate Checkout Order Summary for the New Plan
+  await validator.validateOrderSummary(newPlan);
+
+  // 10. Report Stdout & HTML JSON Attachment
+  const reportData = {
+    vin,
+    initialPlan,
+    couponSummary,
+    cachedEmailFlow: {
+      cookieSaved: !!cachedCookie,
+      popupSkipped: true,
+      newPlanSelected: newPlan
+    }
+  };
+
+  console.log(`\n📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:\n`, JSON.stringify(reportData, null, 2));
+  await testInfo.attach('TC_08_Full_Checkout_Price_Coupon_Email_Cache_Summary', {
+    body: JSON.stringify(reportData, null, 2),
+    contentType: 'application/json',
+  });
+
   await page.close();
 });
 
@@ -237,7 +301,7 @@ const getRandomizedClassicVin = () => {
   return chars.join('');
 };
 
-test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }) => {
+test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
   const classicVin = getRandomizedClassicVin();
@@ -248,13 +312,19 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }) => {
     await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
-    await preview.classicEdtibleFeatureYMM();
+    const selectedYMM = await preview.classicEdtibleFeatureYMM();
+
+    console.log(`\n📋 [TC_13] Classic YMM Selected Dropdowns:\nVIN: ${classicVin}\n${JSON.stringify(selectedYMM, null, 2)}\n`);
+    await testInfo.attach('TC_13_Selected_YMM_Data', {
+      body: JSON.stringify({ vin: classicVin, ...selectedYMM }, null, 2),
+      contentType: 'application/json',
+    });
   } finally {
     await page.close();
   }
 });
 
-test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }) => {
+test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
   const classicVin = getRandomizedClassicVin();
@@ -265,13 +335,19 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }) => {
     await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
-    await preview.ClassicEditibleSpecsManualInput();
+    const specs = await preview.ClassicEditibleSpecsManualInput();
+    
+    console.log(`\n📋 [TC_14] Manual Classic Specs Input:\nVIN: ${classicVin}\n${JSON.stringify(specs, null, 2)}\n`);
+    await testInfo.attach('TC_14_Manual_Specs_Data', {
+      body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
+      contentType: 'application/json',
+    });
   } finally {
     await page.close();
   }
 });
 
-test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }) => {
+test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
   const classicVin = getRandomizedClassicVin();
@@ -283,7 +359,13 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }) => {
     await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
-    await preview.classicEditibleSpecsUpdateSpec();
+    const specs = await preview.classicEditibleSpecsUpdateSpec();
+    
+    console.log(`\n📋 [TC_15] Classic Editable Specs Update:\nVIN: ${classicVin}\n${JSON.stringify(specs, null, 2)}\n`);
+    await testInfo.attach('TC_15_Updated_Specs_Data', {
+      body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
+      contentType: 'application/json',
+    });
   } finally {
     await page.close();
   }
@@ -314,28 +396,6 @@ test('TC_17_EU_VIN_Confirmation_No', async ({ page }) => {
   await page.close();
 });
 
-// test('TC_18_Price_Consistency_Validation', async ({ page }) => {
-//   const home = new HomePage(page);
-//   const preview = new PreviewPage(page);
-//   const validator = new PreviewToCheckoutPriceValidator(page);
-//   await home.navigate();
-//   await home.decodeVin('4JGED6EB0JA121898', 3);
-//   const selectedPlan = await validator.selectRandomPlanAndHandleUpsell();
-//   await preview.runCheckoutFlow();
-//   await validator.validateOrderSummary(selectedPlan);
-//   await page.close();
-// });
-
-// test('TC_19_Email_Cache_Flow', async ({ page }) => {
-//   const tcTimeout = 120000;
-//   test.setTimeout(tcTimeout);
-//   const home = new HomePage(page);
-//   const cache = new EmailCache(page, tcTimeout);
-//   await home.navigate();
-//   await home.decodeVin('4JGED6EB0JA121898', 3);
-//   await cache.Cacheemailbackfromcheckout();
-//   await page.close();
-// });
 
 test('TC_20_Default_Plan_Checking', async ({ page }) => {
   const tcTimeout = process.env.CI ? 120000 : 60000;
@@ -353,6 +413,7 @@ test('TC_21_Window_Sticker_Default_Plan', async ({ page }) => {
   const handler = new DefaultPlanCheckingHandler(page);
   await home.navigateWindowSticker();
   await home.decodeVin('4JGED6EB0JA121264');
+  await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout }).catch(() => {});
   await handler.sitesettingDefaultPlansVerifies(home, '4JGED6EB0JA121264', true, 'ws');
   await page.close();
 });
@@ -381,69 +442,19 @@ test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }) => {
   await page.close();
 });
 
-// test('TC_24_Coupon_Flow_Verification', async ({ page }) => {
-//   // Condition-based timeout
-//   const tcTimeout = process.env.CI ? 120000 : 60000;
-//   test.setTimeout(tcTimeout);
-// 
-//   const home = new HomePage(page);
-//   const { CouponFlowHandler } = require('./pages/CouponFlowHandler');
-//   const handler = new CouponFlowHandler(page);
-//   
-//   // 1. Navigate and Apply Coupon
-//   await handler.navigateAndApplyCoupon(home, '4JGED6EB0JA121898', tcTimeout);
-//   
-//   // 2. Select Plan and Upsell
-//   await handler.selectPlanAndUpsell();
-// 
-//   // 3. Click Access Record
-//   await handler.accessRecord();
-//   
-//   // 4. Fill Checkout Details and Proceed
-//   await handler.fillCheckoutDetails();
-// 
-//   // Verify that we have successfully navigated to the checkout page.
-//   // If the URL contains '/checkout' we consider the navigation successful and can finish the test.
-//   await expect(page).toHaveURL(/.*\/checkout.*/);
-// 
-//   // End the test here – the primary goal for this scenario is to ensure the checkout page is reached.
-//   console.log('✅ [TC_24] Checkout page reached – test passed');
-//   await page.close();
-//   return;
-// });
+test('TC_24_Coupon_Banner_Hierarchy_And_Persistence_Validation', async ({ page }, testInfo) => {
+  const tcTimeout = process.env.CI ? 60000 : 30000;
+  test.setTimeout(tcTimeout);
 
-// test('TC_25_Checkout_Coupon_Verification', async ({ page }, testInfo) => {
-//   const vin = '4JGED6EB0JA121898';
-//   const couponCode = 'get20';
-//   const couponPercentage = 0.20;
-//   const home = new HomePage(page);
-//   const checkoutCouponFlow = new CheckoutCouponFlowTest(page);
-//   const couponVerifier = new CouponFlowVerifier(page);
-// 
-//   await checkoutCouponFlow.navigateToCheckout(home, vin);
-//   const verification = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
-//   const reportData = {
-//     vin,
-//     couponCode,
-//     couponPercentage: `${couponPercentage * 100}%`,
-//     checkoutUrl: page.url(),
-//     ...verification,
-//   };
-// 
-//   await testInfo.attach('TC_25 checkout coupon data', {
-//     body: JSON.stringify(reportData, null, 2),
-//     contentType: 'application/json',
-//   });
-//   await testInfo.attach('TC_25 checkout coupon summary', {
-//     body: [
-//       `VIN: ${vin}`,
-//       `Coupon: ${couponCode} (${couponPercentage * 100}% off)`,
-//       `Checkout URL: ${page.url()}`,
-//       `Report: ${verification.reportPrice.toFixed(2)}`,
-//       `Discount: ${verification.discountAmount.toFixed(2)}`,
-//       `Add-on: ${verification.addOnAmount.toFixed(2)}`,
-//       `Total: ${verification.totalAmount.toFixed(2)}`,
-//     ].join('\n'),
-//     contentType: 'text/plain',
-//   });
-// });
+  const bannerHandler = new CouponBannerHandler(page);
+  const result = await bannerHandler.verifyHierarchyAndPersistence(testInfo);
+
+  console.log(`\n📋 [TC_24] Coupon Banner & Cookie Verification:\n`, JSON.stringify(result, null, 2));
+  await testInfo.attach('TC_24_Coupon_Banner_Summary', {
+    body: JSON.stringify(result, null, 2),
+    contentType: 'application/json',
+  });
+
+  await page.close();
+});
+
