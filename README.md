@@ -1,27 +1,57 @@
-# DVH Functional Stability Regression & Streaming Flow Automation
+# DVH Functional Stability Regression & Flow Automation
 
-Automated End-to-End (E2E) testing framework for vehicle history report (VHR) and window sticker streaming flows built with [Playwright](https://playwright.dev/) and [Allure Report](https://allurereport.org/).
+Automated End-to-End (E2E) testing framework for vehicle history report (VHR) and window sticker checkout flows built with [Playwright](https://playwright.dev/) and [Allure Report](https://allurereport.org/).
+
+The framework features **Automated Dynamic Flow Detection** that seamlessly routes test execution between **Streaming Flow** and **Non-Streaming Flow** based on the live production environment.
 
 ---
 
-## 🚀 Features
+## 🧭 Dynamic Flow Detection Architecture
 
-- **Cross-Browser & Multi-Device Testing**: Supports Desktop Chrome and Mobile Chrome (emulated mobile viewport & user agent).
+The application dynamically serves two distinct checkout architectures depending on server-side feature flags, A/B testing, or site configuration:
+
+```
+                          ┌────────────────────────┐
+                          │    detect-flow.js      │
+                          │ (Cookie & LocalStorage)│
+                          └───────────┬────────────┘
+                                      │
+                     ┌────────────────┴────────────────┐
+                     ▼                                 ▼
+         ┌───────────────────────┐         ┌───────────────────────┐
+         │    Streaming Flow     │         │  Non-Streaming Flow   │
+         │ (checkout_flow: stream)│        │(checkout_flow: non_str)│
+         └───────────┬───────────┘         └───────────┬───────────┘
+                     │                                 │
+                     ▼                                 ▼
+       tests/streaming2-e2e.spec.js       non_streaming_flow/
+                                          nonstreaming.spec.js
+```
+
+### Flow Comparison & UI Differences
+
+| Feature / Aspect | 🚀 Streaming Flow (`streaming`) | 📦 Non-Streaming Flow (`non_streaming`) |
+| :--- | :--- | :--- |
+| **Test Suite** | [`tests/streaming2-e2e.spec.js`](tests/streaming2-e2e.spec.js) | `non_streaming_flow/nonstreaming.spec.js` |
+| **Preview Experience** | Live streaming VIN decode with real-time counters | Synchronous report preview loading |
+| **YMM / Specs Modification** | 2-step modal confirmation (`Continue` ➔ `Confirm & Get Records`) with backend API sync | Single-step direct spec update form |
+| **Classic VIN Handling** | 100% dynamic DB capture (1960–1980, active Makes, Models, Trims) | Preset classic specs validation |
+| **Plan Selection & Upsell** | Dynamic plan grid (`div[role="button"]`) with live upsell add-on toggles | Classic radio card plan selector with static add-on checkbox |
+| **Email Caching Flow** | Access Record modal with session caching (`cart_vin`) | Direct checkout email input persistence |
+| **Exit-Intent Mechanism** | Mouse-exit mouseleave trigger with 15% discount redemption | Classic popup modal with coupon auto-apply |
+
+---
+
+## 🚀 Key Framework Features
+
+- **Automated Flow Routing (`run-flow.js`)**: Queries the live site on launch, identifies the active checkout flow, and dispatches the exact matching test suite without manual intervention.
+- **Cross-Browser & Multi-Device Testing**: Supports Desktop Chrome and Mobile Chrome (emulated mobile viewport & touch events).
 - **Batched Test Execution**: Structured batch scripts for parallel and multi-worker execution.
-- **E2E Flow Validations**:
-  - 17-character standard & Classic VIN decoding
-  - 100% dynamic classic Year (1960–1980), Make, Model, and Trim database option capture
-  - 2-step modal confirmation (`Continue` ➔ `Confirm & Get Records`) with backend API synchronization
-  - Interactive spec popups and editable classic YMM specs
-  - Revisit banner triggers and navigation
-  - Exit-intent popups and discount offer redemption
-  - VHR & Window Sticker upsell text matching
-  - Default plan setting verification
-  - Zero-bounce unique email generation with 2-digit sub-addressing (`user+42@gmail.com`)
 - **Dual Reporting Architecture**:
   - **Allure Report**: Rich visual reporting with test step details, JSON data attachments, DOM screenshot evidence, and historical trends.
   - **Playwright HTML Report**: Built-in test runner report with step-by-step traces and videos on failure.
-- **CI/CD Integration & GitHub Pages**:
+- **CI/CD Matrix & GitHub Pages**:
+  - `detect-flow` job detects the active flow once at the start of the GitHub Actions pipeline.
   - Automated dual report aggregation published to **GitHub Pages**.
   - Automated Slack alerts with formatted execution summaries.
 
@@ -32,20 +62,23 @@ Automated End-to-End (E2E) testing framework for vehicle history report (VHR) an
 ```
 ├── .github/
 │   └── workflows/
-│       └── playwright.yml    # CI/CD workflow (dual report deployment to gh-pages)
-├── tests/
+│       └── playwright.yml    # CI/CD workflow (flow detection + gh-pages deployment)
+├── tests/                    # Streaming Flow Test Suite
 │   ├── helpers/              # API response capturing & utility helpers
 │   ├── pages/                # Page Object Model (POM) classes
 │   │   ├── HomePage.js       # Search & VIN decode flow
 │   │   ├── PreviewPage.js    # Plans, upsells, YMM & Specs modals, email flow
 │   │   ├── CheckoutPage.js   # Stripe / PayPal checkout interactions
 │   │   └── CouponFlowHandler.js # Promo coupons & order summary verifications
-│   └── streaming2-e2e.spec.js # E2E Test Suite
+│   └── streaming2-e2e.spec.js # Streaming E2E Test Suite
+├── non_streaming_flow/       # Non-Streaming Flow Test Suite
+│   └── nonstreaming.spec.js  # Non-Streaming E2E Test Suite
+├── detect-flow.js            # Live flow detection script (cookie & localStorage)
+├── run-flow.js               # Flow router & wrapper execution script
 ├── allure-results/           # Raw Allure test result artifacts
 ├── allure-report/            # Generated static HTML Allure report
 ├── playwright-report/        # Playwright HTML report output
 ├── playwright.config.js      # Playwright & Allure reporter configuration
-├── run-flow.js               # Dynamic flow detector runner
 ├── slack-notify.js           # Slack Webhook notification script
 ├── package.json              # Node dependencies & runner scripts
 └── README.md                 # Project documentation
@@ -82,29 +115,40 @@ Automated End-to-End (E2E) testing framework for vehicle history report (VHR) an
 
 ## 🧪 Running Tests
 
-### Standard Test Execution
-Run all active tests:
+### 1. Smart Flow-Aware Execution (Recommended)
+Automatically detects whether the site is running **Streaming** or **Non-Streaming** flow and executes the correct suite:
 ```bash
 npm test
+# or
+npm run test:flow
 ```
 
-### Run by Specific Test Case
+### 2. Run Specific Suites Directly
 ```bash
-# Classic YMM & Specs tests
+# Force Streaming Flow suite
+npx playwright test tests/streaming2-e2e.spec.js
+
+# Force Non-Streaming Flow suite
+npx playwright test non_streaming_flow/nonstreaming.spec.js
+```
+
+### 3. Run by Test Grep Pattern
+```bash
+# Classic YMM & Specs tests (Streaming)
 npx playwright test tests/streaming2-e2e.spec.js --grep="TC_(13|14|15)_"
 
 # Home to Checkout Price, Coupon & Email Cache
 npx playwright test tests/streaming2-e2e.spec.js --grep="TC_08_"
 ```
 
-### Desktop Batches
+### 4. Desktop Batches
 ```bash
 npm run test:desktop:batch:1
 npm run test:desktop:batch:2
 npm run test:desktop:batch:3
 ```
 
-### Mobile Batches
+### 5. Mobile Batches
 ```bash
 npm run test:mobile:batch:1
 npm run test:mobile:batch:2
