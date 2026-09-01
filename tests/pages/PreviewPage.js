@@ -430,7 +430,7 @@ class PreviewPage {
     ]);
   }
 
-  // Helper: Generate a unique email
+  // Helper: Generate a unique email with short 2-digit suffix
   static generateUniqueEmail() {
     const primaryEmails = [
       'indus.shahnawaz1460@gmail.com',
@@ -444,9 +444,9 @@ class PreviewPage {
     const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
     const [localPart, domainPart] = chosenEmail.split('@');
     
-    // Gmail supports plus-addressing (e.g. user+timestamp@gmail.com)
-    // This routes emails directly to the main inbox to prevent bounces
-    return `${localPart}+${Date.now()}@${domainPart}`;
+    // Short 2-digit random suffix (e.g. +42) to keep email short and fully visible
+    const shortSuffix = Math.floor(Math.random() * 90 + 10);
+    return `${localPart}+${shortSuffix}@${domainPart}`;
   }
 
   // Helper: Generate a valid US phone number (XXX) XXX-XXXX

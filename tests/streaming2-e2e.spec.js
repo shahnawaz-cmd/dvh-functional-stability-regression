@@ -122,81 +122,81 @@ test('TC_07_Exit_Intent_Popup_Trigger_Validation', async ({ page }, testInfo) =>
   await page.close();
 });
 
-// test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ page }, testInfo) => {
-//   const tcTimeout = process.env.CI ? 90000 : 60000;
-//   test.setTimeout(tcTimeout);
-// 
-//   const home = new HomePage(page);
-//   const preview = new PreviewPage(page);
-//   const validator = new PreviewToCheckoutPriceValidator(page);
-//   const couponVerifier = new CouponFlowVerifier(page);
-//   const vin = '4JGED6EB0JA121898';
-//   const couponCode = 'get20';
-//   const couponPercentage = 0.20;
-// 
-//   // 1. Navigate & Decode VIN -> Preview
-//   await home.navigate();
-//   await home.decodeVin(vin, 3);
-//   await preview.verifySpecsVisible();
-// 
-//   // 2. Select Initial Plan & Upsell on Preview Page
-//   const initialPlan = await validator.selectRandomPlanAndHandleUpsell();
-// 
-//   // 3. Proceed to Checkout Form (Fills email popup on first visit)
-//   await preview.runCheckoutFlow();
-//   await expect(page).toHaveURL(/.*\/checkout.*/);
-// 
-//   // 4. Validate Initial Order Summary (Plan + Upsell match checkout)
-//   await validator.validateOrderSummary(initialPlan);
-// 
-//   // 5. Apply Promo Coupon ('get20' = 20% off) & Validate Discounted Total
-//   const couponSummary = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
-// 
-//   // 6. Email Cache & Revisit Flow: Go Back to Preview
-//   await page.goBack();
-//   await page.waitForLoadState('domcontentloaded');
-//   await preview.verifySpecsVisible();
-// 
-//   // Verify email/session cookie persistence
-//   const cookies = await page.context().cookies();
-//   const cachedCookie = cookies.find(c => /email|session|user|cart/i.test(c.name) || c.value.includes('@'));
-//   console.log(`ℹ️ [TC_08] Email cache cookie verified: ${cachedCookie ? cachedCookie.name : 'Session Active'}`);
-// 
-//   // 7. Select a New Plan on Preview
-//   const newPlan = await validator.selectRandomPlanAndHandleUpsell();
-// 
-//   // 8. Click Access Record (Verify email popup is SKIPPED because email is cached)
-//   await preview.clickAccessRecordButton();
-//   await page.waitForURL(/.*\/checkout.*/, { timeout: tcTimeout });
-// 
-//   // Ensure email popup did not appear
-//   const emailInput = page.locator('input[type="email"]');
-//   await expect(emailInput).not.toBeVisible({ timeout: 3000 });
-//   console.log('✅ [TC_08] Email popup did NOT appear (cached directly to checkout)');
-// 
-//   // 9. Re-validate Checkout Order Summary for the New Plan
-//   await validator.validateOrderSummary(newPlan);
-// 
-//   // 10. Report Stdout & HTML JSON Attachment
-//   const reportData = {
-//     vin,
-//     initialPlan,
-//     couponSummary,
-//     cachedEmailFlow: {
-//       cookieSaved: !!cachedCookie,
-//       popupSkipped: true,
-//       newPlanSelected: newPlan
-//     }
-//   };
-// 
-//   console.log(`\n📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:\n`, JSON.stringify(reportData, null, 2));
-//   await testInfo.attach('TC_08_Full_Checkout_Price_Coupon_Email_Cache_Summary', {
-//     body: JSON.stringify(reportData, null, 2),
-//     contentType: 'application/json',
-//   });
-// 
-//   await page.close();
-// });
+test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ page }, testInfo) => {
+  const tcTimeout = process.env.CI ? 90000 : 60000;
+  test.setTimeout(tcTimeout);
+
+  const home = new HomePage(page);
+  const preview = new PreviewPage(page);
+  const validator = new PreviewToCheckoutPriceValidator(page);
+  const couponVerifier = new CouponFlowVerifier(page);
+  const vin = '4JGED6EB0JA121898';
+  const couponCode = 'get20';
+  const couponPercentage = 0.20;
+
+  // 1. Navigate & Decode VIN -> Preview
+  await home.navigate();
+  await home.decodeVin(vin, 3);
+  await preview.verifySpecsVisible();
+
+  // 2. Select Initial Plan & Upsell on Preview Page
+  const initialPlan = await validator.selectRandomPlanAndHandleUpsell();
+
+  // 3. Proceed to Checkout Form (Fills email popup on first visit)
+  await preview.runCheckoutFlow();
+  await expect(page).toHaveURL(/.*\/checkout.*/);
+
+  // 4. Validate Initial Order Summary (Plan + Upsell match checkout)
+  await validator.validateOrderSummary(initialPlan);
+
+  // 5. Apply Promo Coupon ('get20' = 20% off) & Validate Discounted Total
+  const couponSummary = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
+
+  // 6. Email Cache & Revisit Flow: Go Back to Preview
+  await page.goBack();
+  await page.waitForLoadState('domcontentloaded');
+  await preview.verifySpecsVisible();
+
+  // Verify email/session cookie persistence
+  const cookies = await page.context().cookies();
+  const cachedCookie = cookies.find(c => /email|session|user|cart/i.test(c.name) || c.value.includes('@'));
+  console.log(`ℹ️ [TC_08] Email cache cookie verified: ${cachedCookie ? cachedCookie.name : 'Session Active'}`);
+
+  // 7. Select a New Plan on Preview
+  const newPlan = await validator.selectRandomPlanAndHandleUpsell();
+
+  // 8. Click Access Record (Verify email popup is SKIPPED because email is cached)
+  await preview.clickAccessRecordButton();
+  await page.waitForURL(/.*\/checkout.*/, { timeout: tcTimeout });
+
+  // Ensure email popup did not appear
+  const emailInput = page.locator('input[type="email"]');
+  await expect(emailInput).not.toBeVisible({ timeout: 3000 });
+  console.log('✅ [TC_08] Email popup did NOT appear (cached directly to checkout)');
+
+  // 9. Re-validate Checkout Order Summary for the New Plan
+  await validator.validateOrderSummary(newPlan);
+
+  // 10. Report Stdout & HTML JSON Attachment
+  const reportData = {
+    vin,
+    initialPlan,
+    couponSummary,
+    cachedEmailFlow: {
+      cookieSaved: !!cachedCookie,
+      popupSkipped: true,
+      newPlanSelected: newPlan
+    }
+  };
+
+  console.log(`\n📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:\n`, JSON.stringify(reportData, null, 2));
+  await testInfo.attach('TC_08_Full_Checkout_Price_Coupon_Email_Cache_Summary', {
+    body: JSON.stringify(reportData, null, 2),
+    contentType: 'application/json',
+  });
+
+  await page.close();
+});
 
 // test('TC_09_Full_Checkout_Flow_Stripe_Visa_US_Validation', async ({ page }, testInfo) => {
 //   const home = new HomePage(page);
