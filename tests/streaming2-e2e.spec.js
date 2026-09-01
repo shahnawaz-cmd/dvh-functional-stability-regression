@@ -319,6 +319,16 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo
       body: JSON.stringify({ vin: classicVin, ...selectedYMM }, null, 2),
       contentType: 'application/json',
     });
+
+    // Wait 5s+ for frontend to fully update with the modified data
+    await page.waitForTimeout(5000);
+
+    // Capture screenshot of the updated frontend and attach to report
+    const ss13 = await page.screenshot({ fullPage: false });
+    await testInfo.attach('TC_13_Updated_Frontend_Screenshot', {
+      body: ss13,
+      contentType: 'image/png',
+    });
   } finally {
     await page.close();
   }
@@ -341,6 +351,16 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo
     await testInfo.attach('TC_14_Manual_Specs_Data', {
       body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
       contentType: 'application/json',
+    });
+
+    // Wait 5s+ for frontend to fully update with the modified data
+    await page.waitForTimeout(5000);
+
+    // Capture screenshot of the updated frontend and attach to report
+    const ss14 = await page.screenshot({ fullPage: false });
+    await testInfo.attach('TC_14_Updated_Frontend_Screenshot', {
+      body: ss14,
+      contentType: 'image/png',
     });
   } finally {
     await page.close();
@@ -365,6 +385,16 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) 
     await testInfo.attach('TC_15_Updated_Specs_Data', {
       body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
       contentType: 'application/json',
+    });
+
+    // Wait 5s+ for frontend to fully update with the modified data
+    await page.waitForTimeout(5000);
+
+    // Capture screenshot of the updated frontend and attach to report
+    const ss15 = await page.screenshot({ fullPage: false });
+    await testInfo.attach('TC_15_Updated_Frontend_Screenshot', {
+      body: ss15,
+      contentType: 'image/png',
     });
   } finally {
     await page.close();

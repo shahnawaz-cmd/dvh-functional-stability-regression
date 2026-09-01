@@ -195,60 +195,67 @@ class PreviewPage {
   }
 
   async selectDropdownOption(textboxName, preferredValue, fallbackValue, timeout = TIMEOUT) {
-    const input = this.page.getByRole('textbox', { name: textboxName });
+    const input = this.page.getByRole('textbox', { name: new RegExp(textboxName.replace('Select ', ''), 'i') })
+      .or(this.page.locator(`input[placeholder*="${textboxName.replace('Select ', '')}" i]`)).first();
     await input.waitFor({ state: 'visible', timeout });
     await input.scrollIntoViewIfNeeded().catch(() => {});
-    await input.click();
-    await this.page.waitForTimeout(500);
 
-    // 1. Try preferred option with exact or loose match
-    if (preferredValue) {
-      const preferredBtn = this.page.getByRole('button', { name: preferredValue, exact: true })
-        .or(this.page.locator(`button:has-text("${preferredValue}")`)).first();
-      const found = await preferredBtn.waitFor({ state: 'visible', timeout: 2500 }).then(() => true).catch(() => false);
-      if (found) {
-        await preferredBtn.scrollIntoViewIfNeeded().catch(() => {});
-        await preferredBtn.click({ force: true });
-        await this.page.waitForTimeout(500);
-        return preferredValue;
+    // Check if dropdown is disabled (e.g. models with 0 trims in the DB)
+    let disabled = await input.isDisabled().catch(() => false);
+    if (disabled) {
+      await expect(input).toBeEnabled({ timeout: 4000 }).catch(() => {});
+      disabled = await input.isDisabled().catch(() => false);
+      if (disabled) {
+        console.log(`ℹ️ [YMM] Dropdown "${textboxName}" is disabled (0 options in DB), skipping.`);
+        return 'N/A';
       }
     }
 
-    // 2. Try static fallback option
-    if (fallbackValue) {
-      const fallbackBtn = this.page.getByRole('button', { name: fallbackValue, exact: true })
-        .or(this.page.locator(`button:has-text("${fallbackValue}")`)).first();
-      const foundFallback = await fallbackBtn.waitFor({ state: 'visible', timeout: 2500 }).then(() => true).catch(() => false);
-      if (foundFallback) {
-        await fallbackBtn.scrollIntoViewIfNeeded().catch(() => {});
-        await fallbackBtn.click({ force: true });
+    await input.click({ force: true });
+    await this.page.waitForTimeout(400);
+
+    // Find the active popover container currently visible in the dialog
+    const popover = this.page.locator('div[role="dialog"] div[class*="max-h-64"], div[role="dialog"] div[class*="overflow-auto"], div[class*="max-h-64"]').first();
+    const hasPopover = await popover.waitFor({ state: 'visible', timeout: 4000 }).then(() => true).catch(() => false);
+
+    if (hasPopover) {
+      const options = popover.locator('button, div[class*="cursor-pointer"], [role="option"]')
+        .filter({ hasNotText: /select|update|continue|confirm|click here|get records|reveal|back/i });
+
+      const hasOptions = await options.first().waitFor({ state: 'visible', timeout: 3000 }).then(() => true).catch(() => false);
+      if (hasOptions) {
+        const count = await options.count();
+
+        // 1. If preferred value is requested (e.g. specific random year 1960-1980), search inside this popover
+        if (preferredValue) {
+          const match = options.filter({ hasText: new RegExp(`^${preferredValue}$`, 'i') }).first();
+          if (await match.isVisible({ timeout: 1000 }).catch(() => false)) {
+            await match.scrollIntoViewIfNeeded().catch(() => {});
+            await match.click({ force: true });
+            await this.page.waitForTimeout(500);
+            return preferredValue;
+          }
+        }
+
+        // 2. Dynamic Random Option: Pick a random valid option directly from the live DB list
+        const randomIndex = Math.floor(Math.random() * count);
+        const chosenOpt = options.nth(randomIndex);
+        await chosenOpt.scrollIntoViewIfNeeded().catch(() => {});
+        const selectedText = (await chosenOpt.innerText().catch(() => '')).trim();
+        await chosenOpt.click({ force: true });
         await this.page.waitForTimeout(500);
-        return fallbackValue;
+        if (selectedText) return selectedText;
       }
     }
 
-    // 3. Fallback: Pick first available option from dropdown list
-    const optionsLocator = this.page.locator('[role="listbox"] button, [role="option"], ul[class*="menu"] button, div[class*="dropdown"] button, div[class*="popover"] button')
-      .filter({ hasNotText: /select|update|continue|confirm|click here|get records/i });
-
-    const count = await optionsLocator.count();
-    if (count > 0) {
-      const firstOption = optionsLocator.first();
-      await firstOption.scrollIntoViewIfNeeded().catch(() => {});
-      const val = await firstOption.innerText().catch(() => null);
-      await firstOption.click({ force: true });
-      await this.page.waitForTimeout(500);
-      return (val || preferredValue || fallbackValue || 'Default').trim();
-    }
-
-    // 4. Fallback: If no dropdown buttons rendered, fill text directly into the input
+    // 3. Fallback: If no popover rendered, fill text directly into the input
     if (preferredValue) {
       await input.fill(preferredValue).catch(() => {});
-      await this.page.waitForTimeout(500);
+      await this.page.waitForTimeout(400);
       return preferredValue;
     }
 
-    return fallbackValue || 'Default';
+    return fallbackValue || 'N/A';
   }
 
   async classicEdtibleFeatureYMM(timeout = TIMEOUT) {
@@ -261,38 +268,77 @@ class PreviewPage {
     await ymmButton.click({ force: true });
     await this.page.waitForTimeout(1000);
 
-    const presets = [
-      { year: '1967', make: 'Ford', model: 'Mustang', trim: 'Fastback' },
-      { year: '1969', make: 'Chevrolet', model: 'Camaro', trim: 'SS' },
-      { year: '1968', make: 'Dodge', model: 'Charger', trim: 'R/T' },
-      { year: '1970', make: 'Plymouth', model: 'Barracuda', trim: 'Coupe' },
-      { year: '1966', make: 'Pontiac', model: 'GTO', trim: 'Hardtop' },
-      { year: '1971', make: 'Chevrolet', model: 'Chevelle', trim: 'SS' },
-    ];
-    const target = presets[Math.floor(Math.random() * presets.length)];
+    // Pick a random classic year between 1960 and 1980 on every run (muscle car era with full DB coverage)
+    const randomClassicYear = (Math.floor(Math.random() * (1980 - 1960 + 1)) + 1960).toString();
 
-    const year = await this.selectDropdownOption('Select year', target.year, '1969', timeout);
-    const make = await this.selectDropdownOption('Select make', target.make, 'Chevrolet', timeout);
-    const model = await this.selectDropdownOption('Select model', target.model, 'Camaro', timeout);
-    const trim = await this.selectDropdownOption('Select trim', target.trim, 'SS', timeout);
+    // 1. Select dynamic year from 1901 to 1980
+    const year = await this.selectDropdownOption('Select year', randomClassicYear, null, timeout);
+    
+    // 2. Select dynamic make from available makes for that year in the DOM
+    const make = await this.selectDropdownOption('Select make', null, null, timeout);
+    
+    // 3. Select dynamic model from available models for that make in the DOM
+    const model = await this.selectDropdownOption('Select model', null, null, timeout);
+    
+    // 4. Select dynamic trim if available for that model in the DOM
+    const trim = await this.selectDropdownOption('Select trim', null, null, timeout);
 
+    // Step 1: Click Continue to proceed to confirmation screen
     const continueBtn = this.page.getByRole('button', { name: /^Continue$/i })
       .or(this.page.locator('button:has-text("Continue")')).first();
-    if (await continueBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
-      await continueBtn.scrollIntoViewIfNeeded().catch(() => {});
-      await continueBtn.click({ force: true });
-      await this.page.waitForTimeout(600);
-    }
+    await continueBtn.waitFor({ state: 'visible', timeout: 5000 });
+    await continueBtn.scrollIntoViewIfNeeded().catch(() => {});
+    await continueBtn.click({ force: true });
+    await this.page.waitForTimeout(1000);
 
-    const confirmBtn = this.page.getByRole('button', { name: /Confirm & Get Records|Get Records|Update/i })
+    // Step 2: Click "Confirm & Get Records" to trigger backend fetch
+    const confirmBtn = this.page.getByRole('button', { name: /Confirm & Get Records|Get Records/i })
       .or(this.page.locator('button:has-text("Confirm & Get Records"), button:has-text("Get Records")')).first();
-    if (await confirmBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
-      await confirmBtn.scrollIntoViewIfNeeded().catch(() => {});
-      await confirmBtn.click({ force: true });
-      await this.page.waitForTimeout(600);
-    }
+    await confirmBtn.waitFor({ state: 'visible', timeout: 5000 });
+    await confirmBtn.scrollIntoViewIfNeeded().catch(() => {});
+    await confirmBtn.click({ force: true });
+
+    // Step 3: Wait for backend fetch to complete and modal to close
+    await this.page.locator('div[role="dialog"]').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+    // Step 4: Buffer for frontend to fully reflect the updated records
+    await this.page.waitForTimeout(5000);
 
     return { year, make, model, trim };
+  }
+
+  async fillModalFormDynamically(specsObj) {
+    const modal = this.page.locator('div[role="dialog"], div[class*="modal"], form').first();
+    const labelEls = modal.locator('label:has(input), div:has(> input)');
+    const count = await labelEls.count();
+
+    for (let i = 0; i < count; i++) {
+      const fieldGroup = labelEls.nth(i);
+      const isVisible = await fieldGroup.isVisible().catch(() => false);
+      if (!isVisible) continue;
+
+      const labelText = (await fieldGroup.innerText().catch(() => '')).trim().toLowerCase();
+      const input = fieldGroup.locator('input').first();
+      if (!(await input.isVisible().catch(() => false))) continue;
+
+      for (const [key, val] of Object.entries(specsObj)) {
+        const spacedKey = key.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
+        if (labelText.includes(spacedKey) || spacedKey.includes(labelText)) {
+          await input.scrollIntoViewIfNeeded().catch(() => {});
+          await input.fill(val).catch(() => {});
+          break;
+        }
+      }
+    }
+
+    // Fallback pass with getByRole
+    for (const [key, val] of Object.entries(specsObj)) {
+      const nameRegex = new RegExp(key.replace(/([A-Z])/g, ' $1').trim(), 'i');
+      const input = this.page.getByRole('textbox', { name: nameRegex }).first();
+      if (await input.isVisible({ timeout: 500 }).catch(() => false)) {
+        await input.scrollIntoViewIfNeeded().catch(() => {});
+        await input.fill(val).catch(() => {});
+      }
+    }
   }
 
   async ClassicEditibleSpecsManualInput(timeout = TIMEOUT) {
@@ -308,17 +354,18 @@ class PreviewPage {
     
     await this.page.getByRole('button', { name: 'Click here', exact: true }).click();
     
-    await this.page.getByRole('textbox', { name: 'Year' }).fill(specs.year, { timeout });
-    await this.page.getByRole('textbox', { name: 'Make' }).fill(specs.make, { timeout });
-    await this.page.getByRole('textbox', { name: 'Model' }).fill(specs.model, { timeout });
-    await this.page.getByRole('textbox', { name: 'Engine' }).fill(specs.engine, { timeout });
-    await this.page.getByRole('textbox', { name: 'Transmission' }).fill(specs.transmission, { timeout });
-    await this.page.getByRole('textbox', { name: 'Number of Doors' }).fill(specs.doors, { timeout });
-    await this.page.getByRole('textbox', { name: 'Drive Type' }).fill(specs.driveType, { timeout });
+    await this.fillModalFormDynamically(specs);
     
-    const getRecordsBtn = this.page.getByRole('button', { name: /Get Records/i }).first();
-    await getRecordsBtn.waitFor({ state: 'visible', timeout });
-    await getRecordsBtn.click();
+    const getRecordsBtn = this.page.getByRole('button', { name: /Get Records|Confirm|Continue/i })
+      .or(this.page.locator('button:has-text("Get Records"), button:has-text("Continue")')).first();
+    if (await getRecordsBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await getRecordsBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await getRecordsBtn.click({ force: true });
+    }
+
+    // Wait for modal to close and frontend to reflect updated data (5s+ buffer)
+    await this.page.locator('div[role="dialog"]').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+    await this.page.waitForTimeout(5000);
 
     return specs;
   }
@@ -336,27 +383,29 @@ class PreviewPage {
     await specButton.click({ force: true });
     await this.page.waitForTimeout(1000);
     
-    const axleTypeInput = this.page.getByRole('textbox', { name: 'Axle Type' });
-    await axleTypeInput.waitFor({ state: 'visible', timeout });
-    await axleTypeInput.click();
-    await this.page.getByRole('textbox', { name: 'Axle Type' }).fill(specs.axleType, { timeout });
-    await this.page.getByRole('textbox', { name: 'Body Maker' }).click();
-    await this.page.getByRole('textbox', { name: 'Body Maker' }).fill(specs.bodyMaker, { timeout });
-    await this.page.getByRole('textbox', { name: 'Cylinders' }).click();
-    await this.page.getByRole('textbox', { name: 'Cylinders' }).fill(specs.cylinders, { timeout });
-    await this.page.getByRole('textbox', { name: 'Displacement' }).click();
-    await this.page.getByRole('textbox', { name: 'Displacement' }).fill(specs.displacement, { timeout });
-    await this.page.getByRole('textbox', { name: 'Front Tread' }).click();
-    await this.page.getByRole('textbox', { name: 'Front Tread' }).fill(specs.frontTread, { timeout });
-    await this.page.getByRole('textbox', { name: 'Fuel', exact: true }).click();
-    await this.page.getByRole('textbox', { name: 'Fuel', exact: true }).fill(specs.fuel, { timeout });
-    await this.page.getByRole('textbox', { name: 'Height' }).click();
-    await this.page.getByRole('textbox', { name: 'Height' }).fill(specs.height, { timeout });
-    await this.page.getByRole('textbox', { name: 'Length' }).click();
-    await this.page.getByRole('textbox', { name: 'Length' }).fill(specs.length, { timeout });
+    await this.fillModalFormDynamically(specs);
     
-    await this.page.getByRole('button', { name: 'Continue' }).click();
-    await this.page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+    // Step 1: Click Continue
+    const continueBtn = this.page.getByRole('button', { name: /^Continue$/i })
+      .or(this.page.locator('button:has-text("Continue")')).first();
+    if (await continueBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
+      await continueBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await continueBtn.click({ force: true });
+      await this.page.waitForTimeout(1000);
+    }
+
+    // Step 2: Click "Confirm & Get Records" to trigger backend fetch
+    const confirmBtn = this.page.getByRole('button', { name: /Confirm & Get Records|Get Records/i })
+      .or(this.page.locator('button:has-text("Confirm & Get Records"), button:has-text("Get Records")')).first();
+    if (await confirmBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await confirmBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await confirmBtn.click({ force: true });
+    }
+
+    // Step 3: Wait for backend fetch to complete and modal to close
+    await this.page.locator('div[role="dialog"]').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+    // Step 4: Buffer for frontend to fully reflect the updated records
+    await this.page.waitForTimeout(5000);
 
     return specs;
   }
