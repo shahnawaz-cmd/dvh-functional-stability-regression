@@ -1,0 +1,14 @@
+✅ Verified site_settings (default_plan): {
+  id: '1',
+  name: 'Basic',
+  code: 'DVH1',
+  price: '19.99',
+  nos: '1',
+  gumroad: 'DVH1',
+  total: '19.989999771118164',
+  type: 'report',
+  currency_sign: '$',
+  currency_code: 'USD',
+  c_id: '16'
+}
+✅ Matched and clicked plan: 19.99 $

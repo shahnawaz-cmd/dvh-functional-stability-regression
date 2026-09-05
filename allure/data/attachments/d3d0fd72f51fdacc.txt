@@ -1,0 +1,3 @@
+DEBUG: Initial localStorage keys (upsell): ["_uetvid","site_settings","_gcl_ls","_uetvid_exp","_uetsid","exitPopupNotPreviewShown_Sat Sep 05 2026","_uetsid_exp"]
+✅ Validating Upsell for sticker: Text='Save 50%! Get a history report', Price='9.99'
+✅ Upsell text and price matched on UI.

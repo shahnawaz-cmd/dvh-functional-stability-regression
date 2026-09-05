@@ -1,0 +1,10 @@
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72108380
+{
+  "year": "1969",
+  "make": "Seat",
+  "model": "1500",
+  "trim": "Sedan"
+}
+

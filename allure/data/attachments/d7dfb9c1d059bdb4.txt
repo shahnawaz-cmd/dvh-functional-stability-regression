@@ -1,0 +1,14 @@
+
+📋 [TC_15] Classic Editable Specs Update:
+VIN: 242378Z129171
+{
+  "axleType": "Hypoid Semi-Floating",
+  "bodyMaker": "Fisher Body",
+  "cylinders": "8",
+  "displacement": "350 cu. in. (5.7L)",
+  "frontTread": "60.5 inches",
+  "fuel": "Gasoline 20 Gallons",
+  "height": "54.5 inches",
+  "length": "215.0 inches"
+}
+
