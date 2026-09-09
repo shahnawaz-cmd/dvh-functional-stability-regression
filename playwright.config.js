@@ -4,6 +4,7 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   testMatch: ['**/*.spec.js'],
   timeout: 120000,
+  retries: 2,
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
