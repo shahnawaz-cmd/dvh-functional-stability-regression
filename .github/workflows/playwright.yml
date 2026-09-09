@@ -15,6 +15,10 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # ─────────────────────────────────────────────────────────
   # STEP 1: Single Flow Detection Job (Runs ONCE at start)
@@ -41,8 +45,10 @@ jobs:
       with:
         path: ~/.cache/ms-playwright
         key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    - name: Fix APT sources & Install Playwright Browsers
+      run: |
+        sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google.list 2>/dev/null || true
+        npx playwright install --with-deps chromium
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       
     - name: Detect Website Flow
@@ -93,10 +99,12 @@ jobs:
       with:
         path: ~/.cache/ms-playwright
         key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
-    - name: Install Playwright OS Dependencies
-      run: npx playwright install-deps
+    - name: Fix APT sources & Install Playwright OS Dependencies
+      run: |
+        sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google.list 2>/dev/null || true
+        npx playwright install-deps chromium || (sudo apt-get update --fix-missing 2>/dev/null || true && npx playwright install-deps chromium)
     - name: Install Playwright Browsers
-      run: npx playwright install
+      run: npx playwright install chromium
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Run Streaming Suite - ${{ matrix.project }} (${{ matrix.batch.name }})
@@ -157,10 +165,12 @@ jobs:
       with:
         path: ~/.cache/ms-playwright
         key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
-    - name: Install Playwright OS Dependencies
-      run: npx playwright install-deps
+    - name: Fix APT sources & Install Playwright OS Dependencies
+      run: |
+        sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google.list 2>/dev/null || true
+        npx playwright install-deps chromium || (sudo apt-get update --fix-missing 2>/dev/null || true && npx playwright install-deps chromium)
     - name: Install Playwright Browsers
-      run: npx playwright install
+      run: npx playwright install chromium
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Run Non-Streaming Suite - ${{ matrix.project }}
