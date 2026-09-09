@@ -20,9 +20,10 @@ function runFlow() {
   }
 
   const rawArgs = process.argv.slice(2);
+  const isWin = process.platform === 'win32';
   const formattedArgs = rawArgs.map(arg => {
     if (arg.includes(' ') || arg.includes('(') || arg.includes(')') || arg.includes('|')) {
-      return `'${arg.replace(/'/g, "'\\''")}'`;
+      return isWin ? `"${arg.replace(/"/g, '\\"')}"` : `'${arg.replace(/'/g, "'\\''")}'`;
     }
     return arg;
   }).join(' ');

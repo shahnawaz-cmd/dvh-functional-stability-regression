@@ -7,6 +7,8 @@ const { CheckoutPage } = require('./pages/CheckoutPage');
 const { CouponFlowHandler, CheckoutCouponFlowTest, CouponFlowVerifier, CouponBannerHandler } = require('./pages/CouponFlowHandler');
 const { ApiResponseCapture } = require('./helpers/responseCapture');
 const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tasks/StreamingRevisitBannerTask');
+const { ClassicVinGenerator } = require('./tasks/ClassicVinGenerator');
+const { StreamingYmmEditTask } = require('./tasks/StreamingYmmEditTask');
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
 
@@ -280,31 +282,10 @@ test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ 
 // });
 
 // Pool of Classic mapped VINs
-const CLASSIC_MAPPED_VINS = [
-  'XP29G72104639',
-  'M176103674',
-  '3N67K5M340214',
-  '1H57H5Z447879',
-  '242378Z126752',
-  'PH27G62105038',
-  'CL41M3C146664'
-];
-
-// Helper to pick a random Classic VIN and randomize its last 4 characters
-const getRandomizedClassicVin = () => {
-  const baseVin = CLASSIC_MAPPED_VINS[Math.floor(Math.random() * CLASSIC_MAPPED_VINS.length)];
-  const chars = baseVin.split('');
-  const digits = '0123456789';
-  for (let i = chars.length - 4; i < chars.length; i++) {
-    chars[i] = digits[Math.floor(Math.random() * digits.length)];
-  }
-  return chars.join('');
-};
-
 test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  const classicVin = getRandomizedClassicVin();
+  const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
   try {
     await context.clearCookies();
     await context.clearPermissions();
@@ -312,7 +293,8 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo
     await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
-    const selectedYMM = await preview.classicEdtibleFeatureYMM();
+    const ymmTask = new StreamingYmmEditTask(page);
+    const selectedYMM = await ymmTask.execute();
 
     console.log(`\n📋 [TC_13] Classic YMM Selected Dropdowns:\nVIN: ${classicVin}\n${JSON.stringify(selectedYMM, null, 2)}\n`);
     await testInfo.attach('TC_13_Selected_YMM_Data', {
@@ -337,7 +319,7 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo
 test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo) => {
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  const classicVin = getRandomizedClassicVin();
+  const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
   try {
     await context.clearCookies();
     await context.clearPermissions();
@@ -448,7 +430,7 @@ test('TC_21_Window_Sticker_Default_Plan', async ({ page }) => {
   await page.close();
 });
 
-test('TC_22_VHR_Upsell_Text_Validation', async ({ page }) => {
+test('TC_22_VHR_Upsell_Text_Validation', async ({ page }, testInfo) => {
   const tcTimeout = process.env.CI ? 120000 : 60000;
   test.setTimeout(tcTimeout);
   const home = new HomePage(page);
@@ -456,11 +438,11 @@ test('TC_22_VHR_Upsell_Text_Validation', async ({ page }) => {
   await home.navigate();
   await home.decodeVin('4JGED6EB0JA121898', 3);
   await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout }).catch(() => {});
-  await upsellHandler.upsellTextVerify('vhr', tcTimeout);
+  await upsellHandler.upsellTextVerify('vhr', tcTimeout, testInfo);
   await page.close();
 });
 
-test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }) => {
+test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }, testInfo) => {
   const tcTimeout = process.env.CI ? 120000 : 60000;
   test.setTimeout(tcTimeout);
   const home = new HomePage(page);
@@ -468,7 +450,7 @@ test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }) => {
   await home.navigateWindowSticker();
   await home.decodeVin('4JGED6EB0JA121264');
   await page.waitForURL(/.*\/preview.*/, { timeout: tcTimeout }).catch(() => {});
-  await upsellHandler.upsellTextVerify('sticker', tcTimeout);
+  await upsellHandler.upsellTextVerify('sticker', tcTimeout, testInfo);
   await page.close();
 });
 

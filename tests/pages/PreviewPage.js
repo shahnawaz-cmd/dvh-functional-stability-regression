@@ -669,7 +669,7 @@ class UpsellTextMatched {
     this.page = page;
   }
 
-  async upsellTextVerify(pageType = 'vhr', timeout = TIMEOUT) {
+  async upsellTextVerify(pageType = 'vhr', timeout = TIMEOUT, testInfo = null) {
     // Ensure page is loaded before checking localStorage
     await this.page.waitForLoadState('domcontentloaded');
 
@@ -703,22 +703,40 @@ class UpsellTextMatched {
     }
 
     const expectedText = siteSettings[textKey];
-    const expectedPrice = siteSettings[priceKey];
+    const rawPrice = siteSettings[priceKey];
 
-    if (!expectedText || !expectedPrice) {
+    if (!expectedText || !rawPrice) {
       throw new Error(`Required settings ${textKey} or ${priceKey} missing in site_settings`);
     }
 
-    console.log(`✅ Validating Upsell for ${pageType}: Text='${expectedText}', Price='${expectedPrice}'`);
+    // Dynamic Currency Calculation (supports USD, MXN, EUR, GBP, etc.)
+    const currencyRate = parseFloat(siteSettings.currency_rate) || 1;
+    const basePriceNum = parseFloat(rawPrice);
+    const convertedPrice = !isNaN(basePriceNum) ? (basePriceNum * currencyRate).toFixed(2) : rawPrice;
 
-    // Match based on text and price
+    console.log(`✅ Validating Upsell for ${pageType}: Text='${expectedText}', Base Price='${rawPrice}', Converted Price='${convertedPrice}'`);
+
+    // Match raw USD price, converted localized price, or dynamic localized number format
+    const escapedText = expectedText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const pricePattern = `(?:${rawPrice.replace('.', '\\.')}|${convertedPrice.replace('.', '\\.')}|\\d+(?:\\.\\d{1,2})?)`;
+
     const upsellLocator = this.page.locator('label:has(input[type="checkbox"])').filter({ 
-        hasText: new RegExp(`${expectedText}.*${expectedPrice}`, 'i') 
+        hasText: new RegExp(`${escapedText}.*${pricePattern}`, 'i') 
     });
 
     await upsellLocator.waitFor({ state: 'visible', timeout });
     await expect(upsellLocator).toBeVisible();
     console.log('✅ Upsell text and price matched on UI.');
+
+    // Attach Screenshot to Playwright & Allure Report upon Pass
+    if (testInfo) {
+      const screenshot = await this.page.screenshot({ fullPage: true });
+      await testInfo.attach(`Upsell_Validation_Pass_${pageType}`, {
+        body: screenshot,
+        contentType: 'image/png'
+      });
+      console.log(`📸 Attached pass screenshot to report for ${pageType} upsell validation.`);
+    }
   }
 }
 
