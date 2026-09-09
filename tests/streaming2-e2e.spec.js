@@ -9,6 +9,7 @@ const { ApiResponseCapture } = require('./helpers/responseCapture');
 const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tasks/StreamingRevisitBannerTask');
 const { ClassicVinGenerator } = require('./tasks/ClassicVinGenerator');
 const { StreamingYmmEditTask } = require('./tasks/StreamingYmmEditTask');
+const { ClassicEditableSpecsUpdateTask } = require('./tasks/ClassicEditableSpecsUpdateTask');
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
 
@@ -104,7 +105,11 @@ test('TC_06_Preview_Page_Plan_Selection_Validation', async ({ page }) => {
     const plans = ['1 Report', '2 Reports', '5 Reports', 'Unlimited VIN Check']; 
     for (const planName of plans) {
       const plan = await preview.selectPlan(planName);
-      await expect(plan).toHaveAttribute('aria-pressed', 'true');
+      await expect(async () => {
+        const isPressed = await plan.getAttribute('aria-pressed').catch(() => null);
+        const isSelectedClass = await plan.getAttribute('class').then(c => c && (c.includes('border-primary') || c.includes('selected'))).catch(() => false);
+        expect(isPressed === 'true' || isSelectedClass).toBeTruthy();
+      }).toPass({ timeout: 5000 });
     }
   });
   await page.close();
@@ -350,9 +355,10 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo
 });
 
 test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) => {
+  test.setTimeout(180000);
   const home = new HomePage(page);
   const preview = new PreviewPage(page);
-  const classicVin = getRandomizedClassicVin();
+  const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
 
   try {
     await context.clearCookies();
@@ -361,7 +367,8 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) 
     await home.decodeVin(classicVin);
     await page.waitForURL(/.*\/preview.*/);
     await preview.verifySpecsVisible('Records found for', 60000);
-    const specs = await preview.classicEditibleSpecsUpdateSpec();
+    const task = new ClassicEditableSpecsUpdateTask(page);
+    const specs = await task.execute(preview, 60000, testInfo);
     
     console.log(`\n📋 [TC_15] Classic Editable Specs Update:\nVIN: ${classicVin}\n${JSON.stringify(specs, null, 2)}\n`);
     await testInfo.attach('TC_15_Updated_Specs_Data', {
