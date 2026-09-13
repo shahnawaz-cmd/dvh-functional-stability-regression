@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=GAZ, Model=69, Trim=Off-road vehicle 4 Doors
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4317111
+{
+  "year": "1971",
+  "make": "GAZ",
+  "model": "69",
+  "trim": "Off-road vehicle 4 Doors",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=International, Model=1200A, Trim=3/4 Ton Travelette Cab
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41J0R541075
+{
+  "year": "1966",
+  "make": "International",
+  "model": "1200A",
+  "trim": "3/4 Ton Travelette Cab",
+  "isUnmappedFlow": false
+}
+

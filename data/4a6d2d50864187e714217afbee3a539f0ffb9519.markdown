@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests/streaming2-e2e.spec.js >> TC_01_VIN_Decode_17_Character_Validation
+- Location: tests/streaming2-e2e.spec.js:24:1
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Access Record"), button:has-text("Get Full Report"), button:has-text("Get Report")').or(getByRole('button', { name: /access record|get full report|get report/i })).first() to be visible
+
+```
+
+# Test source
+
+```ts
+  61  |     length: '221.0 inches',
+  62  |   },
+  63  |   {
+  64  |     axleType: 'Independent Rear Suspension',
+  65  |     bodyMaker: 'General Motors',
+  66  |     cylinders: '8',
+  67  |     displacement: '327 cu. in. Turbo-Fire',
+  68  |     frontTread: '58.7 inches',
+  69  |     fuel: 'Gasoline 18 Gallons',
+  70  |     height: '52.8 inches',
+  71  |     length: '185.0 inches',
+  72  |   },
+  73  |   {
+  74  |     axleType: 'Dana 60 Heavy Duty',
+  75  |     bodyMaker: 'Budd Company',
+  76  |     cylinders: '8',
+  77  |     displacement: '390 cu. in. FE V8',
+  78  |     frontTread: '63.5 inches',
+  79  |     fuel: 'Gasoline 22 Gallons',
+  80  |     height: '57.2 inches',
+  81  |     length: '212.0 inches',
+  82  |   }
+  83  | ];
+  84  | 
+  85  | class PreviewPage {
+  86  |   constructor(page) {
+  87  |     this.page = page;
+  88  |     // Use flexible locator to match Access Record, Get Full Report, or primary action CTA
+  89  |     this.accessRecordButton = page.locator('button:has-text("Access Record"), button:has-text("Get Full Report"), button:has-text("Get Report")')
+  90  |       .or(page.getByRole('button', { name: /access record|get full report|get report/i }))
+  91  |       .first();
+  92  |   }
+  93  | 
+  94  |   async handleEUSpecs(timeout = TIMEOUT) {
+  95  |     await this.page.getByRole('button', { name: 'No, fix it' }).click();
+  96  |     await this.page.waitForTimeout(17000);
+  97  |     await this.page.getByRole('textbox', { name: 'Select year' }).click();
+  98  |     await this.page.getByRole('button', { name: '2022' }).click();
+  99  |     await this.page.getByRole('textbox', { name: 'Select make' }).click();
+  100 |     await this.page.getByRole('button', { name: 'Acura' }).click();
+  101 |     await this.page.getByRole('textbox', { name: 'Select model' }).click();
+  102 |     await this.page.getByRole('button', { name: 'MDX' }).click();
+  103 |     await this.page.getByRole('textbox', { name: 'Select trim' }).click();
+  104 |     await this.page.getByRole('button', { name: 'V6 FWD - V6' }).click();
+  105 |     await this.page.getByRole('button', { name: 'Get Records' }).click();
+  106 |   }
+  107 | 
+  108 |   async confirmSpecs() {
+  109 |     // Add logic here
+  110 |   }
+  111 | 
+  112 |   async selectPlan(planName) {
+  113 |     // Target plan card button by exact text or flex container
+  114 |     const plan = this.page.locator(`div[role="button"]:has(div:has-text("${planName}")), button:has-text("${planName}")`)
+  115 |       .or(this.page.locator(`div[role="button"]:has-text("${planName}")`)).first();
+  116 |     
+  117 |     // Explicit wait & scroll into view for mobile viewports
+  118 |     await plan.waitFor({ state: 'visible', timeout: TIMEOUT });
+  119 |     await plan.scrollIntoViewIfNeeded().catch(() => {});
+  120 |     await this.page.waitForTimeout(300);
+  121 |     
+  122 |     // Click with force and fallback tap for mobile touch screens
+  123 |     await plan.click({ force: true }).catch(async () => {
+  124 |       await plan.tap({ force: true });
+  125 |     });
+  126 |     
+  127 |     // Self-healing assertion: wait for aria-pressed="true" or selected class state
+  128 |     await expect(async () => {
+  129 |       const isPressed = await plan.getAttribute('aria-pressed').catch(() => null);
+  130 |       const isSelectedClass = await plan.getAttribute('class').then(c => c && (c.includes('border-primary') || c.includes('selected'))).catch(() => false);
+  131 |       expect(isPressed === 'true' || isSelectedClass).toBeTruthy();
+  132 |     }).toPass({ timeout: 5000 }).catch(async () => {
+  133 |       // Re-click fallback if state transition failed on mobile touch
+  134 |       await plan.click({ force: true });
+  135 |     });
+  136 |     
+  137 |     return plan;
+  138 |   }
+  139 | 
+  140 |   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {
+  141 |     if (this.page.isClosed()) return;
+  142 |     await this.page.waitForLoadState('domcontentloaded').catch(() => {});
+  143 | 
+  144 |     const successLocator = this.page.getByText(expectedText, { exact: false })
+  145 |       .or(this.page.locator(`text=${expectedText}`))
+  146 |       .or(this.page.locator('h1:has-text("Records found for")'))
+  147 |       .or(this.page.locator('text=We found detailed information for the'))
+  148 |       .or(this.page.locator('h2:has-text("We found")'))
+  149 |       .or(this.page.getByRole('heading', { name: 'Success' }))
+  150 |       .or(this.page.locator('text=Window sticker found for'))
+  151 |       .or(this.page.getByText('Window sticker found for', { exact: false }))
+  152 |       .or(this.page.locator('text=We found historical records for the'))
+  153 |       .or(this.page.getByText('Records found for', { exact: false }))
+  154 |       .or(this.page.locator('.vehicle-specs, .specs-container, [data-testid="specs"]'))
+  155 |       .or(this.accessRecordButton);
+  156 | 
+  157 |     await successLocator.first().waitFor({ state: 'visible', timeout: timeout }).catch(() => {});
+  158 |   }
+  159 | 
+  160 |   async verifyAccessRecordButton() {
+> 161 |     await this.accessRecordButton.waitFor({ state: 'visible', timeout: TIMEOUT });
+      |                                   ^ TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+  162 |     await this.accessRecordButton.isEnabled();
+  163 |   }
+  164 | 
+  165 |   async clickAccessRecordButton() {
+  166 |     await this.accessRecordButton.click();
+  167 |   }
+  168 | 
+  169 |   async closeAccessRecordPopup() {
+  170 |     const closeButton = this.page.getByRole('button', { name: /^Close$/ }).first();
+  171 |     await closeButton.waitFor({ state: 'visible', timeout: TIMEOUT });
+  172 |     await closeButton.click();
+  173 |     await closeButton.waitFor({ state: 'hidden', timeout: TIMEOUT });
+  174 |   }
+  175 | 
+  176 |   async triggerExitIntent() {
+  177 |     await this.page.mouse.move(640, 400, { steps: 10 });
+  178 |     await this.page.waitForTimeout(1000);
+  179 |     await this.page.mouse.wheel(0, 500);
+  180 |     await this.page.waitForTimeout(500);
+  181 |     await this.page.mouse.wheel(0, -500);
+  182 |     await this.page.waitForTimeout(500);
+  183 | 
+  184 |     await this.page.mouse.move(400, 600, { steps: 10 });
+  185 |     await this.page.waitForTimeout(300);
+  186 |     await this.page.mouse.move(400, 400, { steps: 10 });
+  187 |     await this.page.waitForTimeout(300);
+  188 |     await this.page.mouse.move(400, 200, { steps: 15 });
+  189 |     await this.page.waitForTimeout(300);
+  190 |     await this.page.mouse.move(400, 100, { steps: 15 });
+  191 |     await this.page.waitForTimeout(300);
+  192 |     await this.page.mouse.move(400, 10,  { steps: 10 });
+  193 |     await this.page.waitForTimeout(300);
+  194 | 
+  195 |     await this.page.evaluate(() => {
+  196 |       const opts = { bubbles: true, cancelable: true, clientX: 400, clientY: -1 };
+  197 |       document.dispatchEvent(new MouseEvent('mouseleave', opts));
+  198 |       document.dispatchEvent(new MouseEvent('mouseout',   opts));
+  199 |       window.dispatchEvent(new MouseEvent('mouseleave',   opts));
+  200 |       document.documentElement.dispatchEvent(new MouseEvent('mouseleave', opts));
+  201 |     });
+  202 | 
+  203 |     await this.page.waitForTimeout(3000);
+  204 |   }
+  205 | 
+  206 |   async verifyAndRedeemExitOffer() {
+  207 |     // Redeem 15% off
+  208 |     await this.page.getByRole('button', { name: 'Redeem 15% off' }).click();
+  209 |   }
+  210 | 
+  211 |   async selectDropdownOption(textboxName, preferredValue, fallbackValue, timeout = TIMEOUT) {
+  212 |     const input = this.page.getByRole('textbox', { name: new RegExp(textboxName.replace('Select ', ''), 'i') })
+  213 |       .or(this.page.locator(`input[placeholder*="${textboxName.replace('Select ', '')}" i]`)).first();
+  214 |     await input.waitFor({ state: 'visible', timeout });
+  215 |     await input.scrollIntoViewIfNeeded().catch(() => {});
+  216 | 
+  217 |     // Check if dropdown is disabled (e.g. models with 0 trims in the DB)
+  218 |     let disabled = await input.isDisabled().catch(() => false);
+  219 |     if (disabled) {
+  220 |       await expect(input).toBeEnabled({ timeout: 4000 }).catch(() => {});
+  221 |       disabled = await input.isDisabled().catch(() => false);
+  222 |       if (disabled) {
+  223 |         console.log(`ℹ️ [YMM] Dropdown "${textboxName}" is disabled (0 options in DB), skipping.`);
+  224 |         return 'N/A';
+  225 |       }
+  226 |     }
+  227 | 
+  228 |     await input.click({ force: true });
+  229 |     await this.page.waitForTimeout(400);
+  230 | 
+  231 |     // Find the active popover container currently visible in the dialog
+  232 |     const popover = this.page.locator('div[role="dialog"] div[class*="max-h-64"], div[role="dialog"] div[class*="overflow-auto"], div[class*="max-h-64"]').first();
+  233 |     const hasPopover = await popover.waitFor({ state: 'visible', timeout: 4000 }).then(() => true).catch(() => false);
+  234 | 
+  235 |     if (hasPopover) {
+  236 |       const options = popover.locator('button, div[class*="cursor-pointer"], [role="option"]')
+  237 |         .filter({ hasNotText: /select|update|continue|confirm|click here|get records|reveal|back/i });
+  238 | 
+  239 |       const hasOptions = await options.first().waitFor({ state: 'visible', timeout: 3000 }).then(() => true).catch(() => false);
+  240 |       if (hasOptions) {
+  241 |         const count = await options.count();
+  242 | 
+  243 |         // 1. If preferred value is requested (e.g. specific random year 1960-1980), search inside this popover
+  244 |         if (preferredValue) {
+  245 |           const match = options.filter({ hasText: new RegExp(`^${preferredValue}$`, 'i') }).first();
+  246 |           if (await match.isVisible({ timeout: 1000 }).catch(() => false)) {
+  247 |             await match.scrollIntoViewIfNeeded().catch(() => {});
+  248 |             await match.click({ force: true });
+  249 |             await this.page.waitForTimeout(500);
+  250 |             return preferredValue;
+  251 |           }
+  252 |         }
+  253 | 
+  254 |         // 2. Dynamic Random Option: Pick a random valid option directly from the live DB list
+  255 |         const randomIndex = Math.floor(Math.random() * count);
+  256 |         const chosenOpt = options.nth(randomIndex);
+  257 |         await chosenOpt.scrollIntoViewIfNeeded().catch(() => {});
+  258 |         const selectedText = (await chosenOpt.innerText().catch(() => '')).trim();
+  259 |         await chosenOpt.click({ force: true });
+  260 |         await this.page.waitForTimeout(500);
+  261 |         if (selectedText) return selectedText;
+```
