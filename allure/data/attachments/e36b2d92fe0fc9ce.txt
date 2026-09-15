@@ -1,0 +1,4 @@
+DEBUG: Initial localStorage keys (upsell): ["_uetvid","site_settings","_gcl_ls","_uetvid_exp","_uetsid","_uetsid_exp","exitPopupNotPreviewShown_Tue Sep 15 2026"]
+✅ Validating Upsell for vhr: Text='Save 50%! Get a Window Sticker', Base Price='9.99', Converted Price='9.99'
+✅ Upsell text and price matched on UI.
+📸 Attached pass screenshot to report for vhr upsell validation.

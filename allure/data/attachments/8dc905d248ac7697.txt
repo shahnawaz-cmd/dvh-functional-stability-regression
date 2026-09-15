@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Motobi, Model=Imperiale Sport, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2231474
+{
+  "year": "1961",
+  "make": "Motobi",
+  "model": "Imperiale Sport",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
