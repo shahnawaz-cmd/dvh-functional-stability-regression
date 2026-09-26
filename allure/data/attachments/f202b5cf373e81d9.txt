@@ -1,0 +1,14 @@
+✅ Verified site_settings (default_ws_plan): {
+  id: '548',
+  name: 'Full Price',
+  code: 'DVHST1',
+  price: '19.99',
+  nos: '1',
+  gumroad: 'DVHST1',
+  total: '19.989999771118164',
+  type: 'sticker',
+  currency_sign: '$',
+  currency_code: 'USD',
+  c_id: '16'
+}
+✅ Matched and clicked plan: 19.99 $

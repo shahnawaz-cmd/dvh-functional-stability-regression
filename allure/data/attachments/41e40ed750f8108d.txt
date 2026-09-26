@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Matchless, Model=G 12, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548136451
+{
+  "year": "1962",
+  "make": "Matchless",
+  "model": "G 12",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

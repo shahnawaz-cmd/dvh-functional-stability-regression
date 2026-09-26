@@ -1,0 +1,235 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests/streaming2-e2e.spec.js >> TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation
+- Location: tests/streaming2-e2e.spec.js:132:1
+
+# Error details
+
+```
+Error: locator.check: Clicking the checkbox did not change its state
+Call log:
+  - waiting for getByRole('checkbox').first()
+    - locator resolved to <input type="checkbox" class="h-4 w-4 shrink-0 accent-[var(--pv-accent)]"/>
+  - attempting click action
+    - scrolling into view if needed
+    - done scrolling
+    - forcing action
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+    - navigations have finished
+
+```
+
+# Test source
+
+```ts
+  400 |     await emailInput.waitFor({ state: 'visible', timeout: TIMEOUT });
+  401 |     
+  402 |     await emailInput.fill(PreviewPage.generateUniqueEmail());
+  403 |     await phoneInput.fill(PreviewPage.generateUsPhoneNumber());
+  404 |     
+  405 |     // 3. Click Proceed to checkout and wait for the navigation together
+  406 |     await Promise.all([
+  407 |       this.page.waitForURL(/.*\/checkout(?:-\d+)?.*/, { timeout: TIMEOUT }),
+  408 |       this.page.getByRole('button', { name: /proceed to checkout/i }).click(),
+  409 |     ]);
+  410 |   }
+  411 | 
+  412 |   // Helper: Generate a unique email with short 2-digit suffix
+  413 |   static generateUniqueEmail() {
+  414 |     const primaryEmails = [
+  415 |       'indus.shahnawaz1460@gmail.com',
+  416 |       'techworms134@gmail.com',
+  417 |       'h.m.shahnawaz123@gmail.com',
+  418 |       'hommy.stress123@gmail.com',
+  419 |       'working.with56@gmail.com'
+  420 |     ];
+  421 |     
+  422 |     // Pick a random primary email from the list
+  423 |     const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
+  424 |     const [localPart, domainPart] = chosenEmail.split('@');
+  425 |     
+  426 |     // Short 2-digit random suffix (e.g. +42) to keep email short and fully visible
+  427 |     const shortSuffix = Math.floor(Math.random() * 90 + 10);
+  428 |     return `${localPart}+${shortSuffix}@${domainPart}`;
+  429 |   }
+  430 | 
+  431 |   // Helper: Generate a valid US phone number (XXX) XXX-XXXX
+  432 |   static generateUsPhoneNumber() {
+  433 |     const areaCode = Math.floor(Math.random() * 800) + 200; // 200-999
+  434 |     const prefix = Math.floor(Math.random() * 800) + 200;   // 200-999
+  435 |     const lineNumber = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
+  436 |     return `(${areaCode}) ${prefix}-${lineNumber}`;
+  437 |   }
+  438 | }
+  439 | 
+  440 | class PreviewToCheckoutPriceValidator {
+  441 |   constructor(page) {
+  442 |     this.page = page;
+  443 |   }
+  444 | 
+  445 |   async selectRandomPlanAndHandleUpsell() {
+  446 |     // Locate all plan buttons dynamically by their role on the page
+  447 |     const planButtons = this.page.locator('div[role="button"]').filter({
+  448 |       hasText: /Report|Check|UVC/i
+  449 |     });
+  450 |     
+  451 |     // Wait for the first plan button to load and render on the DOM before counting
+  452 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+  453 |     
+  454 |     const count = await planButtons.count();
+  455 |     if (count === 0) {
+  456 |       throw new Error("No plan buttons found on the page.");
+  457 |     }
+  458 |     
+  459 |     // Select a random plan index
+  460 |     const randomIndex = Math.floor(Math.random() * count);
+  461 |     const planLocator = planButtons.nth(randomIndex);
+  462 |     
+  463 |     // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
+  464 |     await planLocator.scrollIntoViewIfNeeded();
+  465 |     await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
+  466 |     
+  467 |     // Dynamically extract the title and sale price from the card DOM (no hardcoding)
+  468 |     const innerText = await planLocator.innerText();
+  469 |     const lines = innerText.split('\n').map(l => l.trim()).filter(Boolean);
+  470 |     const planName = lines[0] || '1 Report';
+  471 | 
+  472 |     const strikethroughLocator = planLocator.locator('.line-through, [class*="line-through"], del, s, [class*="strike"]').first();
+  473 |     const hasStrike = await strikethroughLocator.isVisible().catch(() => false);
+  474 |     const strikethroughText = hasStrike ? await strikethroughLocator.innerText().catch(() => '') : '';
+  475 |     const strikethroughAmount = strikethroughText.match(/[\d.]+/)?.[0];
+  476 | 
+  477 |     const allPriceMatches = [...innerText.matchAll(/\$([\d.,]+)/g)].map(m => m[1]);
+  478 |     const candidates = allPriceMatches.filter(price => !strikethroughAmount || price !== strikethroughAmount);
+  479 |     const totalPlanPrice = candidates.length > 1 ? candidates[1] : (candidates[0] || '19.99');
+  480 |     
+  481 |     await planLocator.scrollIntoViewIfNeeded();
+  482 |     await planLocator.click({ force: true });
+  483 |     await this.page.waitForTimeout(800);
+  484 |     
+  485 |     console.log(`✅ Dynamically selected plan at index ${randomIndex}: "${planName}", Price: $${totalPlanPrice}`);
+  486 | 
+  487 |     // Handle Upsell
+  488 |     let upsellPrice = null;
+  489 |     // Use a broader locator for the checkbox since the exact text might change
+  490 |     const upsellCheckbox = this.page.getByRole('checkbox').first();
+  491 |     
+  492 |     if (planName !== 'Unlimited VIN Check') {
+  493 |       const isVisible = await upsellCheckbox.isVisible().catch(() => false);
+  494 |       if (isVisible) {
+  495 |         const upsellContainer = upsellCheckbox.locator('xpath=..'); // Adjust if needed
+  496 |         const upsellText = await upsellContainer.innerText();
+  497 |         const upsellMatch = upsellText.match(/\$\d+(\.\d{2})?/);
+  498 |         upsellPrice = upsellMatch ? upsellMatch[0].replace('$', '') : null;
+  499 |         
+> 500 |         await upsellCheckbox.check({ force: true });
+      |                              ^ Error: locator.check: Clicking the checkbox did not change its state
+  501 |         console.log(`✅ Upsell selected. Price: $${upsellPrice}`);
+  502 |       } else {
+  503 |         console.log('ℹ️ Upsell not visible, skipping.');
+  504 |       }
+  505 |     } else {
+  506 |       console.log('ℹ️ UVC plan selected: Upsell hidden.');
+  507 |     }
+  508 | 
+  509 |     return { planName, totalPlanPrice, upsellPrice };
+  510 |   }
+  511 | 
+  512 |   async validateOrderSummary(selectedData) {
+  513 |     // Navigate to checkout if not already there
+  514 |     if (!this.page.url().includes('/checkout')) {
+  515 |       const checkoutButton = this.page.getByRole('button', { name: /proceed to checkout/i });
+  516 |       await checkoutButton.waitFor({ state: 'visible', timeout: TIMEOUT });
+  517 |       await checkoutButton.click({ force: true });
+  518 |       await this.page.waitForURL(/.*\/checkout.*/);
+  519 |     }
+  520 | 
+  521 |     // Locate Order Summary container
+  522 |     const orderSummary = this.page.locator('aside:has(h2:has-text("Order summary")), aside:has-text("Order summary")');
+  523 |     await orderSummary.waitFor({ state: 'visible', timeout: TIMEOUT });
+  524 | 
+  525 |     const planPrice = parseFloat(selectedData.totalPlanPrice);
+  526 |     const upsellPrice = selectedData.upsellPrice ? parseFloat(selectedData.upsellPrice) : 0;
+  527 |     const expectedTotal = planPrice + upsellPrice;
+  528 |     const planNameRegex = new RegExp(selectedData.planName.replace('Unlimited', 'Un[lm]imited'), 'i');
+  529 | 
+  530 |     let foundTotal = planPrice;
+  531 | 
+  532 |     // Use expect.toPass to handle mobile client-side state hydration delays gracefully
+  533 |     await expect(async () => {
+  534 |       const summaryText = await orderSummary.innerText();
+  535 |       expect(summaryText).toMatch(planNameRegex);
+  536 | 
+  537 |       const totalMatch = summaryText.match(/Total[\s\S]*?\$?([\d.,]+)/i);
+  538 |       foundTotal = totalMatch ? parseFloat(totalMatch[1].replace(/,/g, '')) : planPrice;
+  539 | 
+  540 |       const isMatch = Math.abs(foundTotal - expectedTotal) < 0.1 || Math.abs(foundTotal - planPrice) < 0.1;
+  541 |       expect(isMatch, `Total price mismatch. Expected $${expectedTotal} or $${planPrice}, found $${foundTotal}`).toBe(true);
+  542 |     }).toPass({ timeout: 10000 });
+  543 | 
+  544 |     console.log(`✅ Package "${selectedData.planName}" & total price $${foundTotal} verified in Order summary.`);
+  545 | 
+  546 |     // Validate Add-on (if applicable)
+  547 |     if (selectedData.planName !== 'Unlimited VIN Check' && selectedData.upsellPrice) {
+  548 |       const addonLabel = orderSummary.locator('div:has-text("Add-on"), span:has-text("Add-on"), text=Window Sticker');
+  549 |       await expect(addonLabel.first()).toBeVisible({ timeout: 5000 }).catch(() => {});
+  550 |       console.log('✅ Add-on verified in Order summary.');
+  551 |     }
+  552 |   }
+  553 | }
+  554 | 
+  555 | class EmailCache {
+  556 |   constructor(page, timeout = TIMEOUT) {
+  557 |     this.page = page;
+  558 |     this.timeout = timeout;
+  559 |     this.preview = new PreviewPage(page);
+  560 |     this.validator = new PreviewToCheckoutPriceValidator(page);
+  561 |   }
+  562 | 
+  563 |   async Cacheemailbackfromcheckout() {
+  564 |     console.log("--- Starting TC_19 Email Cache Flow ---");
+  565 |     
+  566 |     // 1. Run checkout flow
+  567 |     await this.preview.runCheckoutFlow();
+  568 |     console.log("✅ Landed on checkout page (1st time)");
+  569 | 
+  570 |     // 2. Go back
+  571 |     await this.page.goBack();
+  572 |     await this.page.waitForLoadState('load');
+  573 |     console.log("✅ Navigated back to Preview page");
+  574 | 
+  575 |     // 3. Select new plan
+  576 |     const newData = await this.validator.selectRandomPlanAndHandleUpsell();
+  577 |     
+  578 |     // 4. Click Access Record (Expect NO email popup)
+  579 |     await this.preview.clickAccessRecordButton();
+  580 |     await this.page.waitForURL(/.*\/checkout.*/, { timeout: this.timeout });
+  581 |     
+  582 |     // Check that email popup is NOT visible
+  583 |     const emailInput = this.page.locator('input[type="email"]');
+  584 |     await expect(emailInput).not.toBeVisible({ timeout: 5000 });
+  585 |     console.log("✅ Email popup did NOT appear, directly navigated");
+  586 | 
+  587 |     // 5. Validate Order Summary updated
+  588 |     await this.validator.validateOrderSummary(newData);
+  589 |     console.log("✅ Order summary updated correctly");
+  590 |     
+  591 |     return true;
+  592 |   }
+  593 | }
+  594 | 
+  595 | class DefaultPlanCheckingHandler {
+  596 |   constructor(page) {
+  597 |     this.page = page;
+  598 |   }
+  599 | 
+  600 |   async sitesettingDefaultPlansVerifies(homeInstance, vin = '223870L108421', skipNavigation = false, planType = 'default') {
+```

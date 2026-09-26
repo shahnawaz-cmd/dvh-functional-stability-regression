@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=MG, Model=B GT, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B845431
+{
+  "year": "1977",
+  "make": "MG",
+  "model": "B GT",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+

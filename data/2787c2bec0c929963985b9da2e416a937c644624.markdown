@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests/streaming2-e2e.spec.js >> TC_14_Classic_Manual_Input_Validation
+- Location: tests/streaming2-e2e.spec.js:324:1
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Click here to update' }) to be visible
+
+```
+
+# Test source
+
+```ts
+  262 |       }
+  263 |     }
+  264 | 
+  265 |     // 3. Fallback: If no popover rendered, fill text directly into the input
+  266 |     if (preferredValue) {
+  267 |       await input.fill(preferredValue).catch(() => {});
+  268 |       await this.page.waitForTimeout(400);
+  269 |       return preferredValue;
+  270 |     }
+  271 | 
+  272 |     return fallbackValue || 'N/A';
+  273 |   }
+  274 | 
+  275 |   async classicEdtibleFeatureYMM(timeout = TIMEOUT) {
+  276 |     const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+  277 |     await updateButton.waitFor({ state: 'visible', timeout });
+  278 |     await updateButton.click({ force: true });
+  279 | 
+  280 |     const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+  281 |     await ymmButton.waitFor({ state: 'visible', timeout });
+  282 |     await ymmButton.click({ force: true });
+  283 |     await this.page.waitForTimeout(1000);
+  284 | 
+  285 |     // Pick a random classic year between 1960 and 1980 on every run (muscle car era with full DB coverage)
+  286 |     const randomClassicYear = (Math.floor(Math.random() * (1980 - 1960 + 1)) + 1960).toString();
+  287 | 
+  288 |     // 1. Select dynamic year from 1901 to 1980
+  289 |     const year = await this.selectDropdownOption('Select year', randomClassicYear, null, timeout);
+  290 |     
+  291 |     // 2. Select dynamic make from available makes for that year in the DOM
+  292 |     const make = await this.selectDropdownOption('Select make', null, null, timeout);
+  293 |     
+  294 |     // 3. Select dynamic model from available models for that make in the DOM
+  295 |     const model = await this.selectDropdownOption('Select model', null, null, timeout);
+  296 |     
+  297 |     // 4. Select dynamic trim if available for that model in the DOM
+  298 |     const trim = await this.selectDropdownOption('Select trim', null, null, timeout);
+  299 | 
+  300 |     // Step 1: Click Continue to proceed to confirmation screen
+  301 |     const continueBtn = this.page.getByRole('button', { name: /^Continue$/i })
+  302 |       .or(this.page.locator('button:has-text("Continue")')).first();
+  303 |     await continueBtn.waitFor({ state: 'visible', timeout: 5000 });
+  304 |     await continueBtn.scrollIntoViewIfNeeded().catch(() => {});
+  305 |     await continueBtn.click({ force: true });
+  306 |     await this.page.waitForTimeout(1000);
+  307 | 
+  308 |     // Step 2: Click "Confirm & Get Records" to trigger backend fetch
+  309 |     const confirmBtn = this.page.getByRole('button', { name: /Confirm & Get Records|Get Records/i })
+  310 |       .or(this.page.locator('button:has-text("Confirm & Get Records"), button:has-text("Get Records")')).first();
+  311 |     await confirmBtn.waitFor({ state: 'visible', timeout: 5000 });
+  312 |     await confirmBtn.scrollIntoViewIfNeeded().catch(() => {});
+  313 |     await confirmBtn.click({ force: true });
+  314 | 
+  315 |     // Step 3: Wait for backend fetch to complete and modal to close
+  316 |     await this.page.locator('div[role="dialog"]').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+  317 |     // Step 4: Buffer for frontend to fully reflect the updated records
+  318 |     await this.page.waitForTimeout(5000);
+  319 | 
+  320 |     return { year, make, model, trim };
+  321 |   }
+  322 | 
+  323 |   async fillModalFormDynamically(specsObj) {
+  324 |     const modal = this.page.locator('div[role="dialog"], div[class*="modal"], form').first();
+  325 |     const labelEls = modal.locator('label:has(input), div:has(> input)');
+  326 |     const count = await labelEls.count();
+  327 | 
+  328 |     for (let i = 0; i < count; i++) {
+  329 |       const fieldGroup = labelEls.nth(i);
+  330 |       const isVisible = await fieldGroup.isVisible().catch(() => false);
+  331 |       if (!isVisible) continue;
+  332 | 
+  333 |       const labelText = (await fieldGroup.innerText().catch(() => '')).trim().toLowerCase();
+  334 |       const input = fieldGroup.locator('input').first();
+  335 |       if (!(await input.isVisible().catch(() => false))) continue;
+  336 | 
+  337 |       for (const [key, val] of Object.entries(specsObj)) {
+  338 |         const spacedKey = key.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
+  339 |         if (labelText.includes(spacedKey) || spacedKey.includes(labelText)) {
+  340 |           await input.scrollIntoViewIfNeeded().catch(() => {});
+  341 |           await input.fill(val).catch(() => {});
+  342 |           break;
+  343 |         }
+  344 |       }
+  345 |     }
+  346 | 
+  347 |     // Fallback pass with getByRole
+  348 |     for (const [key, val] of Object.entries(specsObj)) {
+  349 |       const nameRegex = new RegExp(key.replace(/([A-Z])/g, ' $1').trim(), 'i');
+  350 |       const input = this.page.getByRole('textbox', { name: nameRegex }).first();
+  351 |       if (await input.isVisible({ timeout: 500 }).catch(() => false)) {
+  352 |         await input.scrollIntoViewIfNeeded().catch(() => {});
+  353 |         await input.fill(val).catch(() => {});
+  354 |       }
+  355 |     }
+  356 |   }
+  357 | 
+  358 |   async ClassicEditibleSpecsManualInput(timeout = TIMEOUT) {
+  359 |     const specs = REAL_CLASSIC_SPECS[Math.floor(Math.random() * REAL_CLASSIC_SPECS.length)];
+  360 |     
+  361 |     const updateButton = this.page.getByRole('button', { name: 'Click here to update' });
+> 362 |     await updateButton.waitFor({ state: 'visible', timeout });
+      |                        ^ TimeoutError: locator.waitFor: Timeout 90000ms exceeded.
+  363 |     await updateButton.click({ force: true });
+  364 |     
+  365 |     const ymmButton = this.page.getByRole('button', { name: 'Year, Make & Model The' });
+  366 |     await ymmButton.waitFor({ state: 'visible', timeout });
+  367 |     await ymmButton.click({ force: true });
+  368 |     
+  369 |     await this.page.getByRole('button', { name: 'Click here', exact: true }).click();
+  370 |     
+  371 |     await this.fillModalFormDynamically(specs);
+  372 |     
+  373 |     const getRecordsBtn = this.page.getByRole('button', { name: /Get Records|Confirm|Continue/i })
+  374 |       .or(this.page.locator('button:has-text("Get Records"), button:has-text("Continue")')).first();
+  375 |     if (await getRecordsBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+  376 |       await getRecordsBtn.scrollIntoViewIfNeeded().catch(() => {});
+  377 |       await getRecordsBtn.click({ force: true });
+  378 |     }
+  379 | 
+  380 |     // Wait for modal to close and frontend to reflect updated data (5s+ buffer)
+  381 |     await this.page.locator('div[role="dialog"]').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+  382 |     await this.page.waitForTimeout(5000);
+  383 | 
+  384 |     return specs;
+  385 |   }
+  386 | 
+  387 |   async classicEditibleSpecsUpdateSpec(timeout = TIMEOUT) {
+  388 |     const task = new ClassicEditableSpecsUpdateTask(this.page);
+  389 |     return await task.execute(this, timeout);
+  390 |   }
+  391 | 
+  392 |   async runCheckoutFlow() {
+  393 |     // 1. Click Access Record
+  394 |     await this.clickAccessRecordButton();
+  395 | 
+  396 |     // 2. Wait for email popup and fill details
+  397 |     const emailInput = this.page.locator('input[type="email"]').first();
+  398 |     const phoneInput = this.page.locator('input[type="tel"]').first();
+  399 |     
+  400 |     await emailInput.waitFor({ state: 'visible', timeout: TIMEOUT });
+  401 |     
+  402 |     await emailInput.fill(PreviewPage.generateUniqueEmail());
+  403 |     await phoneInput.fill(PreviewPage.generateUsPhoneNumber());
+  404 |     
+  405 |     // 3. Click Proceed to checkout and wait for the navigation together
+  406 |     await Promise.all([
+  407 |       this.page.waitForURL(/.*\/checkout(?:-\d+)?.*/, { timeout: TIMEOUT }),
+  408 |       this.page.getByRole('button', { name: /proceed to checkout/i }).click(),
+  409 |     ]);
+  410 |   }
+  411 | 
+  412 |   // Helper: Generate a unique email with short 2-digit suffix
+  413 |   static generateUniqueEmail() {
+  414 |     const primaryEmails = [
+  415 |       'indus.shahnawaz1460@gmail.com',
+  416 |       'techworms134@gmail.com',
+  417 |       'h.m.shahnawaz123@gmail.com',
+  418 |       'hommy.stress123@gmail.com',
+  419 |       'working.with56@gmail.com'
+  420 |     ];
+  421 |     
+  422 |     // Pick a random primary email from the list
+  423 |     const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
+  424 |     const [localPart, domainPart] = chosenEmail.split('@');
+  425 |     
+  426 |     // Short 2-digit random suffix (e.g. +42) to keep email short and fully visible
+  427 |     const shortSuffix = Math.floor(Math.random() * 90 + 10);
+  428 |     return `${localPart}+${shortSuffix}@${domainPart}`;
+  429 |   }
+  430 | 
+  431 |   // Helper: Generate a valid US phone number (XXX) XXX-XXXX
+  432 |   static generateUsPhoneNumber() {
+  433 |     const areaCode = Math.floor(Math.random() * 800) + 200; // 200-999
+  434 |     const prefix = Math.floor(Math.random() * 800) + 200;   // 200-999
+  435 |     const lineNumber = Math.floor(Math.random() * 9000) + 1000; // 1000-9999
+  436 |     return `(${areaCode}) ${prefix}-${lineNumber}`;
+  437 |   }
+  438 | }
+  439 | 
+  440 | class PreviewToCheckoutPriceValidator {
+  441 |   constructor(page) {
+  442 |     this.page = page;
+  443 |   }
+  444 | 
+  445 |   async selectRandomPlanAndHandleUpsell() {
+  446 |     // Locate all plan buttons dynamically by their role on the page
+  447 |     const planButtons = this.page.locator('div[role="button"]').filter({
+  448 |       hasText: /Report|Check|UVC/i
+  449 |     });
+  450 |     
+  451 |     // Wait for the first plan button to load and render on the DOM before counting
+  452 |     await planButtons.first().waitFor({ state: 'visible', timeout: TIMEOUT });
+  453 |     
+  454 |     const count = await planButtons.count();
+  455 |     if (count === 0) {
+  456 |       throw new Error("No plan buttons found on the page.");
+  457 |     }
+  458 |     
+  459 |     // Select a random plan index
+  460 |     const randomIndex = Math.floor(Math.random() * count);
+  461 |     const planLocator = planButtons.nth(randomIndex);
+  462 |     
+```
