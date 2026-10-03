@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Holden, Model=Kingswood, Trim=4/5 Seater Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: M176105914
+{
+  "year": "1979",
+  "make": "Holden",
+  "model": "Kingswood",
+  "trim": "4/5 Seater Sedan",
+  "isUnmappedFlow": false
+}
+
