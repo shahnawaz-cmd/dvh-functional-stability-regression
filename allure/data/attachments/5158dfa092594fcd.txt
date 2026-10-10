@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Vespa, Model=VBB Sportique, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41U2B976158
+{
+  "year": "1961",
+  "make": "Vespa",
+  "model": "VBB Sportique",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
