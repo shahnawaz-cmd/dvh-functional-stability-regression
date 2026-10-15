@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Raleigh, Model=Supermatic RM5, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41V9C611696
+{
+  "year": "1961",
+  "make": "Raleigh",
+  "model": "Supermatic RM5",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

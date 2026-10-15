@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Motobi, Model=Catria Lusso, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: PH27G62103564
+{
+  "year": "1960",
+  "make": "Motobi",
+  "model": "Catria Lusso",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
